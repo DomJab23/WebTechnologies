@@ -1,3 +1,200 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+nav{
+    height:80px;
+    background: whitesmoke;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 
+    'Lucida Grande', 'Lucida Sans', 
+    Arial, sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem calc((100vw - 1300px)/2);
+    
+
+}
+.navbar_menu{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    text-align: center;
+   
+}
+.navbar_menu_item{
+    height: 80px;
+}
+.navbar_menu_link{
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+
+
+}
+.logo{
+    background-image: url('photos/PETAPP.png');
+    align-items: left;
+    display: flex;
+    background-size: contain; /* Scale the image to fit */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-position: left; /* Center the image */
+    width: 250px; /* Set a width for the logo */
+    height: 250px; /* Set a height for the logo */
+}
+.firstPicture {
+    background-image: url('photos/dog2.jpeg');  /* Sets the background image */
+    background-repeat: no-repeat;        /* Prevents the image from repeating */
+    background-size: cover;              /* Ensures the image covers the section */
+    background-position: center;         /* Centers the image */
+    height: 500px;                       /* Sets a height for the section */
+    width: 100%;                         /* Full width of the section */
+    padding: 20px;                       /* Optional padding for content inside the section */
+    color: white;                        /* Makes the text white for better contrast */
+}
+.button{
+    background-color: lightgrey;
+    color:black;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    height: 60px;
+    width: 150px;
+}
+.button:hover{
+    background-color: gray;
+    transition: all 0.1s ease;
+}
+.hero-container{
+    align-items: center;
+    align-content: center;
+    padding-top: 10%;
+    padding-left: 2%;
+}
+  
+
+h2{
+    font-size: 50px;
+    font-weight: bold;
+  }
+.awards{
+    background-color: orange;
+    display: flex;
+    border: none;
+    height: 400px;
+}
+
+.flexContainer {
+    display: flex;
+    height: 800px;
+}
+.aboutUsText {
+    flex: 1;
+    padding: 10px;
+}
+.aboutUsPicture {
+    flex: 1;
+    padding: 10px;
+    background-image: url('photos/hamster.jpg');
+    background-repeat: no-repeat
+}
+.newsletter{
+    background-image: url('photos/dog_1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    height: 300px;
+}
+.prizes{
+    background-color: orange;
+    display: flex;
+    height: 100px;
+}
+.photos{
+    display: flex;
+    height: 400px;
+}
+.photo1{
+    flex:1;
+    background-image: url('photos/catt.jpg');
+    background-repeat: no-repeat;
+    height: 400px;
+    display:flex;
+    background-size: cover;
+    border: none;
+}
+.photo2{
+    flex:1;
+    background-image: url('photos/catt.jpg');
+    background-repeat: no-repeat;
+    height: 400px;
+    display:flex;
+    background-size: cover;
+    border: none;
+}
+.photo3{
+    flex:1;
+    background-image: url('photos/catt.jpg');
+    background-repeat: no-repeat;
+    height: 400px;
+    display:flex;
+    background-size: cover;
+    border: none;
+}
+.morePhotos{
+    display: flex;
+    height: 400px;
+}
+.photo4{
+    flex:1;
+    background-image: url('photos/catt.jpg');
+    background-repeat: no-repeat;
+    height: 400px;
+    display:flex;
+    background-size: cover;
+    border: none;
+}
+.photo5{
+    flex:1;
+    background-image: url('photos/catt.jpg');
+    background-repeat: no-repeat;
+    height: 400px;
+    display:flex;
+    background-size: cover;
+    border: none;
+}
+.photo6{
+    flex:1;
+    background-image: url('photos/catt.jpg');
+    background-repeat: no-repeat;
+    height: 400px;
+    display:flex;
+    background-size: cover;
+    border: none;
+}
+.contactFormAndMap{
+    display: flex;
+    height: 400px;
+}
+.contactForm{
+    flex:1;
+}
+.map{
+    flex:1;
+    background-image: url('photos/hamster.jpg');
+    background-repeat: no-repeat;
+    height: 500px;
+    display: flex;
+    background-size: cover;
+    border: none;
+}
