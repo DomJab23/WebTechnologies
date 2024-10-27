@@ -1,27 +1,36 @@
-nav{
-    height:80px;
+html, body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+nav {
+    height: 80px;
     background: whitesmoke;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 
-    'Lucida Grande', 'Lucida Sans', 
-    Arial, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0rem calc((100vw - 1300px)/2);
-    
-
+    padding: 0rem calc((100vw - 1300px) / 2);
 }
-.navbar_menu{
+
+.navbar_menu {
     list-style: none;
     display: flex;
     align-items: center;
     text-align: center;
-   
 }
-.navbar_menu_item{
+
+.navbar_menu_item {
     height: 80px;
 }
-.navbar_menu_link{
+
+.navbar_menu_link {
     color: black;
     display: flex;
     align-items: center;
@@ -29,30 +38,30 @@ nav{
     text-decoration: none;
     padding: 0 1rem;
     height: 100%;
-
-
 }
-.logo{ 
-    align-items: left;
+
+.logo {
     display: flex;
-    background-size: contain; /* Scale the image to fit */
-    background-repeat: no-repeat; /* Prevent the image from repeating */
-    background-position: left; /* Center the image */
-    width: 250px; /* Set a width for the logo */
-    height: 250px; /* Set a height for the logo */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    width: 250px;
+    height: 250px;
 }
-.firstPicture {  /* Sets the background image */
-    background-repeat: no-repeat;        /* Prevents the image from repeating */
-    background-size: cover;              /* Ensures the image covers the section */
-    background-position: center;         /* Centers the image */
-    height: 500px;                       /* Sets a height for the section */
-    width: 100%;                         /* Full width of the section */
-    padding: 20px;                       /* Optional padding for content inside the section */
-    color: white;                        /* Makes the text white for better contrast */
+
+.firstPicture {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    width: 100%;
+    padding: 20px;
+    color: white;
 }
-.button{
+
+.button {
     background-color: lightgrey;
-    color:black;
+    color: black;
     display: flex;
     text-align: center;
     align-items: center;
@@ -65,23 +74,25 @@ nav{
     height: 60px;
     width: 150px;
 }
-.button:hover{
+
+.button:hover {
     background-color: gray;
     transition: all 0.1s ease;
 }
-.hero-container{
+
+.hero-container {
     align-items: center;
     align-content: center;
     padding-top: 10%;
     padding-left: 2%;
 }
-  
 
-h2{
+h2 {
     font-size: 50px;
     font-weight: bold;
-  }
-.awards{
+}
+
+.awards {
     background-color: orange;
     display: flex;
     border: none;
@@ -90,96 +101,82 @@ h2{
 
 .flexContainer {
     display: flex;
-    height: 800px;
+    flex-wrap: wrap;
+    height: auto;
 }
-.aboutUsText {
+
+.aboutUsText, .aboutUsPicture {
     flex: 1;
     padding: 10px;
+    min-width: 300px;
 }
+
 .aboutUsPicture {
-    flex: 1;
-    padding: 10px;
-    background-repeat: no-repeat
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-.newsletter{
+
+.newsletter {
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
     height: 300px;
 }
-.prizes{
+
+.prizes {
     background-color: orange;
     display: flex;
     height: 100px;
 }
-.photos{
+
+.photos, .morePhotos, .contactFormAndMap {
     display: flex;
-    height: 400px;
+    flex-wrap: wrap;
+    height: auto;
 }
-.photo1{
-    flex:1;
+
+.photo1, .photo2, .photo3, .photo4, .photo5, .photo6, .map {
+    flex: 1;
     background-repeat: no-repeat;
-    height: 400px;
-    display:flex;
     background-size: cover;
     border: none;
+    min-height: 200px;
 }
-.photo2{
-    flex:1;
-    background-repeat: no-repeat;
-    height: 400px;
-    display:flex;
-    background-size: cover;
-    border: none;
+
+.contactForm {
+    flex: 1;
 }
-.photo3{
-    flex:1;
-    background-repeat: no-repeat;
-    height: 400px;
-    display:flex;
-    background-size: cover;
-    border: none;
-}
-.morePhotos{
-    display: flex;
-    height: 400px;
-}
-.photo4{
-    flex:1;
-    background-repeat: no-repeat;
-    height: 400px;
-    display:flex;
-    background-size: cover;
-    border: none;
-}
-.photo5{
-    flex:1;
-    background-repeat: no-repeat;
-    height: 400px;
-    display:flex;
-    background-size: cover;
-    border: none;
-}
-.photo6{
-    flex:1;
-    background-repeat: no-repeat;
-    height: 400px;
-    display:flex;
-    background-size: cover;
-    border: none;
-}
-.contactFormAndMap{
-    display: flex;
-    height: 400px;
-}
-.contactForm{
-    flex:1;
-}
-.map{
-    flex:1;
-    background-repeat: no-repeat;
-    height: 500px;
-    display: flex;
-    background-size: cover;
-    border: none;
+
+@media (max-width: 768px) {
+    .navbar_menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar_menu_item {
+        height: auto;
+    }
+
+    .navbar_menu_link {
+        padding: 10px 0;
+    }
+
+    .logo {
+        width: 100%;
+        height: auto;
+    }
+
+    .firstPicture, .aboutUsPicture, .map, .photo1, .photo2, .photo3, .photo4, .photo5, .photo6 {
+        height: auto;
+        min-height: 200px;
+    }
+
+    .hero-container {
+        padding-top: 5%;
+        padding-left: 5%;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
 }
