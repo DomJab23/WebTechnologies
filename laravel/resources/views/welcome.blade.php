@@ -48,10 +48,10 @@
     <nav>
         <div class="logo" style="background-image: url('{{ asset('assets/photos/PETAPP.png') }}');"></div>
         <ul class="navbar_menu">
-            <li class="navbar_menu_item"><a href="/" class="navbar_menu_link">About</a></li>
-            <li class="navbar_menu_item"><a href="/" class="navbar_menu_link">Gallery</a></li>
-            <li class="navbar_menu_item"><a href="/" class="navbar_menu_link">Contacts</a></li>
-            <li class="navbar_menu_item"><a href="/" class="navbar_menu_link">More</a></li>
+            <li class="navbar_menu_item"><a href="/about" class="navbar_menu_link">About</a></li>
+            <li class="navbar_menu_item"><a href="/gallery" class="navbar_menu_link">Gallery</a></li>
+            <li class="navbar_menu_item"><a href="/contacts" class="navbar_menu_link">Contacts</a></li>
+            <li class="navbar_menu_item"><a href="/more" class="navbar_menu_link">More</a></li>
         </ul>
     </nav>
 
