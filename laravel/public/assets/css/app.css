@@ -1,7 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 nav{
     height:80px;
     background: whitesmoke;
@@ -36,8 +32,7 @@ nav{
 
 
 }
-.logo{
-    background-image: url('photos/PETAPP.png');
+.logo{ 
     align-items: left;
     display: flex;
     background-size: contain; /* Scale the image to fit */
@@ -46,8 +41,7 @@ nav{
     width: 250px; /* Set a width for the logo */
     height: 250px; /* Set a height for the logo */
 }
-.firstPicture {
-    background-image: url('photos/dog2.jpeg');  /* Sets the background image */
+.firstPicture {  /* Sets the background image */
     background-repeat: no-repeat;        /* Prevents the image from repeating */
     background-size: cover;              /* Ensures the image covers the section */
     background-position: center;         /* Centers the image */
@@ -105,11 +99,9 @@ h2{
 .aboutUsPicture {
     flex: 1;
     padding: 10px;
-    background-image: url('photos/hamster.jpg');
     background-repeat: no-repeat
 }
 .newsletter{
-    background-image: url('photos/dog_1.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -126,7 +118,6 @@ h2{
 }
 .photo1{
     flex:1;
-    background-image: url('photos/catt.jpg');
     background-repeat: no-repeat;
     height: 400px;
     display:flex;
@@ -135,7 +126,6 @@ h2{
 }
 .photo2{
     flex:1;
-    background-image: url('photos/catt.jpg');
     background-repeat: no-repeat;
     height: 400px;
     display:flex;
@@ -144,7 +134,6 @@ h2{
 }
 .photo3{
     flex:1;
-    background-image: url('photos/catt.jpg');
     background-repeat: no-repeat;
     height: 400px;
     display:flex;
@@ -157,7 +146,6 @@ h2{
 }
 .photo4{
     flex:1;
-    background-image: url('photos/catt.jpg');
     background-repeat: no-repeat;
     height: 400px;
     display:flex;
@@ -166,7 +154,6 @@ h2{
 }
 .photo5{
     flex:1;
-    background-image: url('photos/catt.jpg');
     background-repeat: no-repeat;
     height: 400px;
     display:flex;
@@ -175,7 +162,6 @@ h2{
 }
 .photo6{
     flex:1;
-    background-image: url('photos/catt.jpg');
     background-repeat: no-repeat;
     height: 400px;
     display:flex;
@@ -191,7 +177,6 @@ h2{
 }
 .map{
     flex:1;
-    background-image: url('photos/hamster.jpg');
     background-repeat: no-repeat;
     height: 500px;
     display: flex;
