@@ -3,25 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PETAPP- Helping Animals</title>
+    <title>PETAPP - Helping Animals</title>
     <link rel="stylesheet" href="{{ asset('assets/css/app.css') }}">
     <link rel="icon" href="{{ asset('assets/photos/PetApp-favicon.png') }}" type="image/x-icon">
 
     <style>
         /* Example responsive styles */
-        .logo, .firstPicture, .aboutUsPicture, .map, .photo1, .photo2, .photo3, .photo4, .photo5, .photo6 {
-            background-size: cover;
-            background-position: center;
+        .logo-container {
+            display: flex;
+            justify-content: center; /* Center logo horizontally */
+            align-items: center; /* Center logo vertically */
+            margin: 10px; /* Optional: Add margin for spacing */
         }
 
         .logo {
-            width: 100%;
-            height: auto;
-            max-width: 250px;
-            max-height: 250px;
+            max-width: 250px; /* Set a max width for the logo */
+            height: auto; /* Maintain aspect ratio */
         }
 
         .firstPicture, .aboutUsPicture, .map, .photo1, .photo2, .photo3, .photo4, .photo5, .photo6 {
+            background-size: cover;
+            background-position: center;
             height: auto;
             min-height: 300px;
         }
@@ -46,7 +48,11 @@
 <body>
     <!-- Navbar Section -->
     <nav>
-        <div class="logo" style="background-image: url('{{ asset('assets/photos/PETAPP.png') }}');"></div>
+        <div class="logo-container">
+            <a href="/">
+                <img src="{{ asset('assets/photos/PETAPP.png') }}" alt="PETAPP Logo" class="logo">
+            </a>
+        </div>
         <ul class="navbar_menu">
             <li class="navbar_menu_item"><a href="/about" class="navbar_menu_link">About</a></li>
             <li class="navbar_menu_item"><a href="/gallery" class="navbar_menu_link">Gallery</a></li>
