@@ -43,6 +43,60 @@
                 min-height: 200px;
             }
         }
+
+        /* Modal styles */
+        body {font-family: Arial, Helvetica, sans-serif;}
+        input[type=text], input[type=password] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #04AA6D;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover { opacity: 0.8; }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+            padding-top: 60px;
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto 15% auto;
+            border: 1px solid #888;
+            width: 80%;
+        }
+        .close {
+            position: absolute;
+            right: 25px;
+            top: 0;
+            color: #000;
+            font-size: 35px;
+            font-weight: bold;
+        }
+        .animate {
+            animation: animatezoom 0.6s;
+        }
+        @keyframes animatezoom {
+            from {transform: scale(0)} 
+            to {transform: scale(1)}
+        }
     </style>
 </head>
 <body>
@@ -58,6 +112,7 @@
             <li class="navbar_menu_item"><a href="/gallery" class="navbar_menu_link">Gallery</a></li>
             <li class="navbar_menu_item"><a href="/contacts" class="navbar_menu_link">Contacts</a></li>
             <li class="navbar_menu_item"><a href="/more" class="navbar_menu_link">More</a></li>
+            <li class="navbar_menu_item"><button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button></li>
         </ul>
     </nav>
 
@@ -71,19 +126,15 @@
         </div>
     </section>
 
-    <!-- Adopt Pet Section -->
+    <!-- Other Sections (Adopt Pet, Awards, About Us, etc.) -->
     <section class="petAdoption">
         <h1>ADOPT PET</h1>
         <h2>cos</h2>
         <p>asas</p>
     </section>
-
-    <!-- Awards Section -->
     <section class="awards" style="background-color: orange;">
         <h1>Awards</h1>
     </section>
-
-    <!-- About Us Section -->
     <section class="aboutUs">
         <div class="flexContainer">
             <div class="aboutUsText">
@@ -94,8 +145,6 @@
             <div class="aboutUsPicture" style="background-image: url('{{ asset('assets/photos/hamster.jpg') }}');"></div>
         </div>
     </section>
-
-    <!-- Newsletter Section -->
     <section class="newsletter" style="background-image: url('{{ asset('assets/photos/dog_1.jpg') }}');">
         <div class="newsletterText">
             <h1>JOIN THE NEWSLETTER</h1>
@@ -106,14 +155,10 @@
             <a class="newsletterButton" href="/">JOIN NOW!</a>
         </div>
     </section>
-
-    <!-- Our Staff Section -->
     <section class="ourTeam">
         <h1>OUR STAFF</h1>
         <h2>Team of Professionals</h2>
     </section>
-
-    <!-- Photo Sections -->
     <section class="photos">
         <div class="photo1" style="background-image: url('{{ asset('assets/photos/catt.jpg') }}');"></div>
         <div class="photo2" style="background-image: url('{{ asset('assets/photos/catt.jpg') }}');"></div>
@@ -124,8 +169,6 @@
         <div class="photo5" style="background-image: url('{{ asset('assets/photos/catt.jpg') }}');"></div>
         <div class="photo6" style="background-image: url('{{ asset('assets/photos/catt.jpg') }}');"></div>
     </section>
-
-    <!-- Contact Section -->
     <section class="GetInTouch">
         <div class="title">
             <h1>CONTACTS</h1>
@@ -143,6 +186,18 @@
         </div>
     </section>
 
-    <script src="script.js"></script>
-</body>
-</html>
+    <!-- Modal Login Form -->
+    <div id="id01" class="modal">
+        <form class="modal-content animate" action="/action_page.php" method="post">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                <img src="{{ asset('assets/photos/img_avatar2.png') }}" alt="Avatar" class="avatar">
+            </div>
+            <div class="container">
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+                <button type="submit">Login</button>
+                <label>
+                    <input type="checkbox" checked="
