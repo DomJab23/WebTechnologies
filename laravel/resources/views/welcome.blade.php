@@ -187,6 +187,33 @@
             <div class="map" style="background-image: url('{{ asset('assets/photos/hamster.jpg') }}');"></div>
         </div>
     </section>
+    <!--Footer-->
+    <footer class="footer">
+    <!-- Logo and Text -->
+    <div class="footer-section logo-section">
+      
+      <p class="footer-text">Check our socials !</p>
+      <p class="social-media-icons">social media here</p>
+    </div>
+
+    <!-- Contact Information -->
+    <div class="footer-section contact-section">
+      <h4>Contact Information</h4>
+      <p>Email: contact@example.com</p>
+      <p>Phone: +123 456 7890</p>
+      <p>Address: 123 Example Street, City, Country</p>
+    </div>
+
+    <!-- Newsletter Signup -->
+    <div class="footer-section newsletter-section">
+      <h4>Newsletter</h4>
+      <p>Subscribe to our newsletter for updates.</p>
+      <form class="newsletter-form">
+        <input type="email" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </footer>
 
     <!-- Modal Login Form -->
     <div id="id01" class="modal">
@@ -206,11 +233,11 @@
                 <input type="password" placeholder="Enter Password" name="psw" required>
                 <button type="submit">Login</button>
                 <label>
-                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                    <input type="checkbox" checked="checked" name="remember"> Remember me</input>
                 </label>
             </div>
-            <div class="container" style="background-color:#f1f1f1">
-                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+            <div class="container" >
+                
                 <span class="psw">Forgot <a href="#">password?</a></span>
             </div>
         </form>
