@@ -55,10 +55,10 @@
             box-sizing: border-box;
         }
         button {
-            background-color: #04AA6D;
+            background-color: #04AA6D\;
             color: white;
             padding: 14px 20px;
-            margin: 8px 0;
+            margin: 18px 0;
             border: none;
             cursor: pointer;
             width: 100%;
@@ -140,7 +140,9 @@
             <div class="aboutUsText">
                 <h1>ABOUT US</h1>
                 <h2>WHY DO WE LOVE PETS?</h2>
-                <p>We are a group of animal-loving students dedicated to helping shelter pets find homes.</p>
+                <p>We are a group of animal-loving students who saw a growing need to help shelter pets find homes more easily. 
+                    With our shared passion for both technology and animal welfare, 
+                    we decided to create an online platform dedicated to connecting rescue pets with caring families.</p>
             </div>
             <div class="aboutUsPicture" style="background-image: url('{{ asset('assets/photos/hamster.jpg') }}');"></div>
         </div>
@@ -191,9 +193,12 @@
         <form class="modal-content animate" action="/action_page.php" method="post">
             <div class="imgcontainer">
                 <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-                <img src="{{ asset('assets/photos/img_avatar2.png') }}" alt="Avatar" class="avatar">
+                
+                <!--img src="{{ asset('assets/photos/img_avatar2.png') }}" alt="Avatar" class="avatar"-->
+                
             </div>
             <div class="container">
+                <h2>Sign in to your account.</h2>
                 <label for="uname"><b>Username</b></label>
                 <input type="text" placeholder="Enter Username" name="uname" required>
                 <label for="psw"><b>Password</b></label>
