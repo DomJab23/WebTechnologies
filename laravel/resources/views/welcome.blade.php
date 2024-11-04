@@ -10,23 +10,10 @@
 
 </head>
 <body>
-    <!-- Navbar Section -->
-    <nav>
-        <div class="logo-container">
-            <a href="/">
-                <img src="{{ asset('assets/photos/PETAPP.png') }}" alt="PETAPP Logo" class="logo">
-            </a>
-        </div>
-        <ul class="navbar_menu">
-            <li class="navbar_menu_item"><a href="/" class="navbar_menu_link">Home</a></li>
-            <li class="navbar_menu_item"><a href="/about" class="navbar_menu_link">About</a></li>
-            <li class="navbar_menu_item"><a href="/gallery" class="navbar_menu_link">Gallery</a></li>
-            <li class="navbar_menu_item"><a href="/contacts" class="navbar_menu_link">Contacts</a></li>
-            <li class="navbar_menu_item"><a href="/more" class="navbar_menu_link">More</a></li>
-            <li class="navbar_menu_item"><button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button></li>
-        </ul>
-    </nav>
 
+    @extends('layout')
+
+    @section('content')
     <!-- Hero Section -->
     <section class="firstPicture" style="background-image: url('{{ asset('assets/photos/dog2.jpeg') }}'); color: white;">
         <div class="hero-container">
@@ -151,6 +138,8 @@
             </div>
         </form>
     </div>
+
+    @endsection
 
     <script>
         // Get the modal
