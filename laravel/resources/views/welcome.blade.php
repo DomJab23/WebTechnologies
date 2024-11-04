@@ -4,101 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PETAPP - Helping Animals</title>
-    <link rel="stylesheet" href="{{ asset('assets/css/app.css') }}">
+    <link rel="stylesheet" href="../../assets/css/app.css">
     <link rel="stylesheet" href="../../assets/css/textColors.css">
-    <link rel="icon" href="{{ asset('assets/photos/PetApp-favicon.png') }}" type="image/x-icon">
+    <link rel="stylesheet" href="../../assets/css/tempBucket.css">
 
-    <style>
-        /* Example responsive styles */
-        .logo-container {
-            display: flex;
-            justify-content: center; /* Center logo horizontally */
-            align-items: center; /* Center logo vertically */
-            margin: 10px; /* Optional: Add margin for spacing */
-        }
-
-        .logo {
-            max-width: 250px; /* Set a max width for the logo */
-            height: auto; /* Maintain aspect ratio */
-        }
-
-        .firstPicture, .aboutUsPicture, .map, .photo {
-            background-size: cover;
-            background-position: center;
-            height: auto;
-            min-height: 300px;
-        }
-
-        @media (max-width: 768px) {
-            .navbar_menu {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .navbar_menu_item {
-                margin: 10px 0;
-            }
-
-            .firstPicture, .aboutUsPicture, .map, .photo {
-                min-height: 200px;
-            }
-        }
-
-        /* Modal styles */
-        body {font-family: Arial, Helvetica, sans-serif;}
-        input[type=text], input[type=password] {
-            width: 100%;
-            padding: 12px 20px;
-            margin: 8px 0;
-            display: inline-block;
-            border: 1px solid #ccc;
-            box-sizing: border-box;
-        }
-        button {
-            background-color: #04AA6D\;
-            color: white;
-            padding: 14px 20px;
-            margin: 18px 0;
-            border: none;
-            cursor: pointer;
-            width: 100%;
-        }
-        button:hover { opacity: 0.8; }
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0,0,0,0.4);
-            padding-top: 60px;
-        }
-        .modal-content {
-            background-color: #fefefe;
-            margin: 5% auto 15% auto;
-            border: 1px solid #888;
-            width: 80%;
-        }
-        .close {
-            position: absolute;
-            right: 25px;
-            top: 0;
-            color: #000;
-            font-size: 35px;
-            font-weight: bold;
-        }
-        .animate {
-            animation: animatezoom 0.6s;
-        }
-        @keyframes animatezoom {
-            from {transform: scale(0)} 
-            to {transform: scale(1)}
-        }
-    </style>
 </head>
 <body>
     <!-- Navbar Section -->
@@ -109,6 +18,7 @@
             </a>
         </div>
         <ul class="navbar_menu">
+            <li class="navbar_menu_item"><a href="/" class="navbar_menu_link">Home</a></li>
             <li class="navbar_menu_item"><a href="/about" class="navbar_menu_link">About</a></li>
             <li class="navbar_menu_item"><a href="/gallery" class="navbar_menu_link">Gallery</a></li>
             <li class="navbar_menu_item"><a href="/contacts" class="navbar_menu_link">Contacts</a></li>
@@ -120,7 +30,7 @@
     <!-- Hero Section -->
     <section class="firstPicture" style="background-image: url('{{ asset('assets/photos/dog2.jpeg') }}'); color: white;">
         <div class="hero-container">
-            <h1 class="orange">ANIMALS NEED</h1>
+            <h1 class="white">ANIMALS NEED</h1>
             <h2>YOUR HELP!</h2>
             <p>Make a difference with funds or action! Adopt any pet that speaks to your heart!</p>
             <a class="button" href="/">DONATE NOW!</a>
@@ -148,14 +58,15 @@
             <div class="aboutUsPicture" style="background-image: url('{{ asset('assets/photos/hamster.jpg') }}');"></div>
         </div>
     </section>
-    <section class="newsletter dog_1">
+    <section class="newsletter backDog_1">
         <div>
-            <h1 class="white">JOIN THE NEWSLETTER</h1>
+            <h1 class="white">JOIN OUR NEWSLETTER</h1>
             <h2>Stay Up To Date With All The Latest News!</h2>
             <form>
-                <input type="text" id="name" name="name">
+                <p>Enter e-mail:</p>
+                <input type="text" id="name" name="name" placeholder="Enter e-mail">
+                <button class="newsletterButton" href="/">JOIN NOW!</button>
             </form>
-            <button class="newsletterButton" href="/">JOIN NOW!</button>
         </div>
     </section>
     <section class="ourTeam">
@@ -222,9 +133,6 @@
             @csrf
             <div class="imgcontainer">
                 <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-                
-                <!--img src="{{ asset('assets/photos/img_avatar2.png') }}" alt="Avatar" class="avatar"-->
-                
             </div>
             <div class="container">
                 <h2>Sign in to your account.</h2>
