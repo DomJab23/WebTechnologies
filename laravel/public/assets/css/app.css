@@ -93,7 +93,6 @@ h2 {
 }
 h1 {
     font-size: 20px;
-    color: orange;
     font-weight: bolder;
 }
 h4{
@@ -150,7 +149,7 @@ h4{
     height: auto;
 }
 
-.photo1, .photo2, .photo3, .photo4, .photo5, .photo6, .map {
+.photo, .map {
     flex: 1;
     background-repeat: no-repeat;
     background-size: cover;
@@ -377,3 +376,10 @@ button:hover {
 label input[type=checkbox] {
     margin-top: 16px;
 }
+
+.dog_1 {
+    background-image: url('../photos/dog_1.jpg');
+    background-position-x: 170px;
+    background-color: #f0ae02;
+}
+

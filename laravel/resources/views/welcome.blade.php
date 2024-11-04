@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PETAPP - Helping Animals</title>
     <link rel="stylesheet" href="{{ asset('assets/css/app.css') }}">
+    <link rel="stylesheet" href="../../assets/css/textColors.css">
     <link rel="icon" href="{{ asset('assets/photos/PetApp-favicon.png') }}" type="image/x-icon">
 
     <style>
@@ -21,7 +22,7 @@
             height: auto; /* Maintain aspect ratio */
         }
 
-        .firstPicture, .aboutUsPicture, .map, .photo1, .photo2, .photo3, .photo4, .photo5, .photo6 {
+        .firstPicture, .aboutUsPicture, .map, .photo {
             background-size: cover;
             background-position: center;
             height: auto;
@@ -39,7 +40,7 @@
                 margin: 10px 0;
             }
 
-            .firstPicture, .aboutUsPicture, .map, .photo1, .photo2, .photo3, .photo4, .photo5, .photo6 {
+            .firstPicture, .aboutUsPicture, .map, .photo {
                 min-height: 200px;
             }
         }
@@ -119,7 +120,7 @@
     <!-- Hero Section -->
     <section class="firstPicture" style="background-image: url('{{ asset('assets/photos/dog2.jpeg') }}'); color: white;">
         <div class="hero-container">
-            <h1>ANIMALS NEED</h1>
+            <h1 class="orange">ANIMALS NEED</h1>
             <h2>YOUR HELP!</h2>
             <p>Make a difference with funds or action! Adopt any pet that speaks to your heart!</p>
             <a class="button" href="/">DONATE NOW!</a>
@@ -128,17 +129,17 @@
 
     <!-- Other Sections (Adopt Pet, Awards, About Us, etc.) -->
     <section class="petAdoption">
-        <h1>ADOPT PET</h1>
+        <h1 class="orange">ADOPT PET</h1>
         <h2>cos</h2>
         <p>asas</p>
     </section>
     <section class="awards" style="background-color: orange;">
-        <h1>Awards</h1>
+        <h1 class="white">Awards</h1>
     </section>
     <section class="aboutUs">
         <div class="flexContainer">
             <div class="aboutUsText">
-                <h1>ABOUT US</h1>
+                <h1 class="orange">ABOUT US</h1>
                 <h2>WHY DO WE LOVE PETS?</h2>
                 <p>We are a group of animal-loving students who saw a growing need to help shelter pets find homes more easily. 
                     With our shared passion for both technology and animal welfare, 
@@ -147,33 +148,33 @@
             <div class="aboutUsPicture" style="background-image: url('{{ asset('assets/photos/hamster.jpg') }}');"></div>
         </div>
     </section>
-    <section class="newsletter" style="background-image: url('{{ asset('assets/photos/dog_1.jpg') }}');">
-        <div class="newsletterText">
-            <h1>JOIN THE NEWSLETTER</h1>
+    <section class="newsletter dog_1">
+        <div>
+            <h1 class="white">JOIN THE NEWSLETTER</h1>
             <h2>Stay Up To Date With All The Latest News!</h2>
             <form>
                 <input type="text" id="name" name="name">
             </form>
-            <a class="newsletterButton" href="/">JOIN NOW!</a>
+            <button class="newsletterButton" href="/">JOIN NOW!</button>
         </div>
     </section>
     <section class="ourTeam">
-        <h1>OUR STAFF</h1>
+        <h1 class="orange">OUR STAFF</h1>
         <h2>Team of Professionals</h2>
     </section>
     <section class="photos">
-        <div class="photo1" style="background-image: url('{{ asset('assets/photos/catt.jpg') }}');"></div>
-        <div class="photo2" style="background-image: url('{{ asset('assets/photos/catt.jpg') }}');"></div>
-        <div class="photo3" style="background-image: url('{{ asset('assets/photos/catt.jpg') }}');"></div>
+        <div class="photo" style="background-image: url('{{ asset('assets/photos/catt.jpg') }}');"></div>
+        <div class="photo" style="background-image: url('{{ asset('assets/photos/catt.jpg') }}');"></div>
+        <div class="photo" style="background-image: url('{{ asset('assets/photos/catt.jpg') }}');"></div>
     </section>
     <section class="morePhotos">
-        <div class="photo4" style="background-image: url('{{ asset('assets/photos/catt.jpg') }}');"></div>
-        <div class="photo5" style="background-image: url('{{ asset('assets/photos/catt.jpg') }}');"></div>
-        <div class="photo6" style="background-image: url('{{ asset('assets/photos/catt.jpg') }}');"></div>
+        <div class="photo" style="background-image: url('{{ asset('assets/photos/catt.jpg') }}');"></div>
+        <div class="photo" style="background-image: url('{{ asset('assets/photos/catt.jpg') }}');"></div>
+        <div class="photo" style="background-image: url('{{ asset('assets/photos/catt.jpg') }}');"></div>
     </section>
     <section class="GetInTouch">
         <div class="title">
-            <h1>CONTACTS</h1>
+            <h1 class="orange">CONTACTS</h1>
             <h2>LET'S GET IN TOUCH</h2>
         </div>
         <div class="contactFormAndMap">
