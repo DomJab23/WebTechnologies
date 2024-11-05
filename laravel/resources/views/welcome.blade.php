@@ -17,8 +17,7 @@
     <!-- Hero Section -->
     <section class="firstPicture" style="background-image: url('{{ asset('assets/photos/dog2.jpeg') }}'); color: white;">
         <div class="hero-container">
-            <h1 class="white">ANIMALS NEED</h1>
-            <h2>YOUR HELP!</h2>
+            <h2 class="white">ANIMALS NEED<br>YOUR HELP!</h2>
             <p>Make a difference with funds or action! Adopt any pet that speaks to your heart!</p>
             <a class="button" href="/">DONATE NOW!</a>
         </div>

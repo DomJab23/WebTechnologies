@@ -28,7 +28,7 @@ input[type=text], input[type=password] {
     border: 1px solid #ccc;
     box-sizing: border-box;
 }
-button {
+.loginButton {
     background-color: #04AA6D;
     color: white;
     padding: 14px 20px;
