@@ -15,9 +15,9 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->integer('age');
-            $table->enum();
+            $table->string('species');
             $table->string('breed');
-            $table->bool('sterilized');
+            $table->boolean('sterilized');
             $table->string('health');
             $table->string('descriptions');
             $table->timestamps();

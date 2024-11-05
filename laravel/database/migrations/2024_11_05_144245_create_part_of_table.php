@@ -12,8 +12,10 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('part_of', function (Blueprint $table) {
-            $table->foreign('volunteer_id')->references('id')->on('volunteers');
-            $table->foreign('opportunity_id')->references('id')->on('vol_opportunitys');
+            $table->bigInteger('volunteer_id')->unsigned()->index();
+            $table->bigInteger('opportunity_id')->unsigned()->index();
+            $table->foreign('volunteer_id')->references('id')->on('volunteers')->onDelete('cascade');
+            $table->foreign('opportunity_id')->references('id')->on('vol_opportunitys')->onDelete('cascade');
             $table->primary(['volunteer_id', 'opportunity_id']);
             $table->timestamps();
         });
