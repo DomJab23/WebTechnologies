@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('part_of', function (Blueprint $table) {
             $table->foreign('volunteer_id')->references('id')->on('volunteers');
-            $table->foreign('opportunity_id')->references('id')->on('vol_opportunity');
+            $table->foreign('opportunity_id')->references('id')->on('vol_opportunitys');
             $table->primary(['volunteer_id', 'opportunity_id']);
             $table->timestamps();
         });
