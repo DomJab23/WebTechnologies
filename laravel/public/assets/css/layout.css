@@ -2,3 +2,25 @@
     position: fixed;
     width: 100%;
 }
+
+.logo-container {
+    display: flex;
+    justify-content: center; /* Center logo horizontally */
+    align-items: center; /* Center logo vertically */
+    margin: 10px; /* Optional: Add margin for spacing */
+}
+
+.logo {
+    max-width: 250px; /* Set a max width for the logo */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.loginButton {
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 18px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}

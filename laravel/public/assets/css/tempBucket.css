@@ -1,16 +1,4 @@
 /* Example responsive styles */
-.logo-container {
-    display: flex;
-    justify-content: center; /* Center logo horizontally */
-    align-items: center; /* Center logo vertically */
-    margin: 10px; /* Optional: Add margin for spacing */
-}
-
-.logo {
-    max-width: 250px; /* Set a max width for the logo */
-    height: auto; /* Maintain aspect ratio */
-}
-
 .firstPicture, .aboutUsPicture, .map, .photo {
     background-size: cover;
     background-position: center;
@@ -28,15 +16,7 @@ input[type=text], input[type=password] {
     border: 1px solid #ccc;
     box-sizing: border-box;
 }
-.loginButton {
-    background-color: #04AA6D;
-    color: white;
-    padding: 14px 20px;
-    margin: 18px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-}
+
 button:hover { opacity: 0.8; }
 .modal {
     display: none;
