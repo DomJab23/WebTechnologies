@@ -26,5 +26,7 @@ Route::get('/register', function () {
     return view('registration');
 });
 
+Route::post('/register', [RegistrationController::class, 'register'])->name('registerPush');
+
 Route::post('/login', [AuthController::class, 'login'])->name('login');
    
