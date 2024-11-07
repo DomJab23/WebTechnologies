@@ -9,46 +9,6 @@ html, body {
     box-sizing: border-box;
 }
 
-nav {
-    height: 80px;
-    background: whitesmoke;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0rem calc((100vw - 1300px) / 2);
-}
-
-.navbar_menu {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    text-align: center;
-}
-
-.navbar_menu_item {
-    height: 80px;
-}
-
-.navbar_menu_link {
-    color: black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    padding: 0 1rem;
-    height: 100%;
-}
-
-.logo {
-    display: flex;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: left;
-    width: 300px;
-    height: 300px;
-}
-
 .firstPicture {
     background-repeat: no-repeat;
     background-size: cover;
@@ -93,7 +53,6 @@ h2 {
 }
 h1 {
     font-size: 20px;
-    color: orange;
     font-weight: bolder;
 }
 h4{
@@ -135,7 +94,6 @@ h4{
     background-size: cover;
     display: flex;
     flex:1;
-    height: 300px;
 }
 
 .prizes {
@@ -150,7 +108,7 @@ h4{
     height: auto;
 }
 
-.photo1, .photo2, .photo3, .photo4, .photo5, .photo6, .map {
+.photo, .map {
     flex: 1;
     background-repeat: no-repeat;
     background-size: cover;
@@ -165,39 +123,6 @@ h4{
     background-color: white;
 }
 
-@media (max-width: 768px) {
-    .navbar_menu {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .navbar_menu_item {
-        height: auto;
-    }
-
-    .navbar_menu_link {
-        padding: 10px 0;
-    }
-
-    .logo {
-        width: 100%;
-        height: auto;
-    }
-
-    .firstPicture, .aboutUsPicture, .map, .photo1, .photo2, .photo3, .photo4, .photo5, .photo6 {
-        height: auto;
-        min-height: 200px;
-    }
-
-    .hero-container {
-        padding-top: 5%;
-        padding-left: 5%;
-    }
-
-    h2 {
-        font-size: 30px;
-    }
-}
 .footer {
     display: flex;
     justify-content: space-between; /* Ensures sections are spaced evenly */
@@ -213,20 +138,7 @@ h4{
     max-width: 300px; /* Optional: limit the max width of each section for balance */
     margin-left: 30px;
     margin-right: 20px;
-  }
-  
-  .logo-section {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  
-  .logo {
-    width: 50%;
-    max-width: 150px; /* Optional: set max width for logo */
-    height: auto;
-    
-  }
+  } 
   
   .footer-text {
     font-size: 14px;
@@ -346,21 +258,6 @@ input[type=text], input[type=password] {
     box-sizing: border-box;
 }
 
-/* Set a style for all buttons */
-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-}
-
-button:hover {
-    opacity: 0.8;
-}
-
 /* Extra styles for the cancel button */
 .cancelbtn {
     width: auto;
@@ -376,4 +273,10 @@ button:hover {
 /* Add padding to the checkbox */
 label input[type=checkbox] {
     margin-top: 16px;
+}
+
+.backDog_1 {
+    background-image: url('../photos/dog_1.jpg');
+    background-position-x: 170px;
+    background-color: #f0ae02;
 }
