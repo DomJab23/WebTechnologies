@@ -4,29 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PETAPP - Helping Animals</title>
-<<<<<<< HEAD
-    <link rel="stylesheet" href="{{ asset('assets/css/app.css') }}">
-    <link rel="icon" href="{{ asset('assets/photos/PetApp-favicon.png') }}" type="image/x-icon">
-  
-=======
     <link rel="stylesheet" href="../../assets/css/app.css">
     <link rel="stylesheet" href="../../assets/css/textColors.css">
     <link rel="stylesheet" href="../../assets/css/tempBucket.css">
 
->>>>>>> 4ee8d1ab1c6c250ad1e69f98c23a054c949dee12
 </head>
 <body>
 
-<<<<<<< HEAD
-    <!-- Hero Section -->
-    <section class="firstPicture" style="background-image: url('{{ asset('assets/photos/dog_banner.png') }}'); color: white;">
-=======
     @extends('layout')
 
     @section('content')
     <!-- Donate Section -->
     <section class="firstPicture" style="background-image: url('{{ asset('assets/photos/dog2.jpeg') }}'); color: white;">
->>>>>>> 4ee8d1ab1c6c250ad1e69f98c23a054c949dee12
         <div class="hero-container">
             <h2 class="white">ANIMALS NEED<br>YOUR HELP!</h2>
             <p>Make a difference with funds or action! Adopt any pet that speaks to your heart!</p>
@@ -57,16 +46,6 @@
             <div class="aboutUsPicture" style="background-image: url('{{ asset('assets/photos/hamster.jpg') }}');"></div>
         </div>
     </section>
-<<<<<<< HEAD
-    <section class="newsletter" style="background-image: url('{{ asset('assets/photos/newsletter-photo.jpg') }}');">
-        <div class="newsletterText">
-            <h1>JOIN THE NEWSLETTER</h1>
-            <h2>Stay Up To Date With All The Latest News!</h2>
-            <form class="main-newsletter">
-                <input type="text" id="name" name="name">
-            </form>
-            <a class="button" href="/">JOIN NOW!</a>
-=======
     <section class="newsletter backDog_1">
         <div>
             <h1 class="white">JOIN OUR NEWSLETTER</h1>
@@ -76,7 +55,6 @@
                 <input type="text" id="name" name="name" placeholder="Enter e-mail">
                 <button class="newsletterButton" href="/">JOIN NOW!</button>
             </form>
->>>>>>> 4ee8d1ab1c6c250ad1e69f98c23a054c949dee12
         </div>
         <div class="newsletterspace">
             <h1>aaa</h1>
