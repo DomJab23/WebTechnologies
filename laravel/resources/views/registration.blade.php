@@ -9,8 +9,9 @@
         <form action="{{ route('registerPush') }}" method="post">
             @csrf
             <input type="text" name="uname" placeholder="Username">
-            <input type="text" name="password" placeholder="Password">
+            <input type="password" name="password" placeholder="Password">
             <input type="text" name="code" placeholder="Code">
+            <button>Submit</button>
         </form>
     </body>
 </html>
