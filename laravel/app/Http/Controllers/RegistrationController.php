@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class RegistrationController extends Controller
 {
@@ -14,7 +15,7 @@ class RegistrationController extends Controller
             $user=new User();
         
             $user->uname = $request->uname;
-            $user->password = $request->password;
+            $user->password = Hash::make($request->password);
 
             if ($user->save())
             {

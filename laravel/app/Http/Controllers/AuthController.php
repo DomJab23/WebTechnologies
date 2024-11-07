@@ -18,16 +18,13 @@ class AuthController extends Controller
         $credentials["uname"] = $request->uname;
         $credentials["password"] =$request->psw;
 
-        if($credentials['uname']=="this")
-        {return redirect('/welcome');}
-
         if(Auth::attempt($credentials))
         {
             return redirect()->intended("/management");
         }
         else
         {
-            return redirect('/welcome');
+            return redirect('/');
         }
 
 
