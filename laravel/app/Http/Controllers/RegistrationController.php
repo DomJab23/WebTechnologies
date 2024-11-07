@@ -18,17 +18,17 @@ class RegistrationController extends Controller
 
             if ($user->save())
             {
-                return redirect()->intended("/welcome");
+                return redirect('/');
             }
             else
             {
-                return redirect()->intended("/register");
+                return redirect('/register');
             }
 
         }
         else
         {
-            return redirect()->intended("/register");
+            return redirect('/register');
         }
     }
 }
