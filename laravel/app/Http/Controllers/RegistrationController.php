@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class RegistrationController extends Controller
@@ -13,22 +13,22 @@ class RegistrationController extends Controller
         {
             $user=new User();
         
-            $user->uname=$request->uname;
-            $user->password=$request->password;
+            $user->uname = $request->uname;
+            $user->password = $request->password;
 
             if ($user->save())
             {
-                return redirect()->intended("/gallery");
+                return redirect()->intended("/welcome");
             }
             else
             {
-                return redirect()->intended("/registration");
+                return redirect()->intended("/register");
             }
 
         }
         else
         {
-            return redirect()->intended("/registration");
+            return redirect()->intended("/register");
         }
     }
 }
