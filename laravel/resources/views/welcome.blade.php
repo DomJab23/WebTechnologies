@@ -4,32 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PETAPP - Helping Animals</title>
+<<<<<<< HEAD
     <link rel="stylesheet" href="{{ asset('assets/css/app.css') }}">
     <link rel="icon" href="{{ asset('assets/photos/PetApp-favicon.png') }}" type="image/x-icon">
   
+=======
+    <link rel="stylesheet" href="../../assets/css/app.css">
+    <link rel="stylesheet" href="../../assets/css/textColors.css">
+    <link rel="stylesheet" href="../../assets/css/tempBucket.css">
+
+>>>>>>> 4ee8d1ab1c6c250ad1e69f98c23a054c949dee12
 </head>
 <body>
-    <!-- Navbar Section -->
-    <nav>
-        <div class="logo-container">
-            <a href="/">
-                <img src="{{ asset('assets/photos/PETAPP.png') }}" alt="PETAPP Logo" class="logo">
-            </a>
-        </div>
-        <ul class="navbar_menu">
-            <li class="navbar_menu_item"><a href="/about" class="navbar_menu_link">About</a></li>
-            <li class="navbar_menu_item"><a href="/gallery" class="navbar_menu_link">Gallery</a></li>
-            <li class="navbar_menu_item"><a href="/contacts" class="navbar_menu_link">Contacts</a></li>
-            <li class="navbar_menu_item"><a href="/more" class="navbar_menu_link">More</a></li>
-            <li class="navbar_menu_item"><button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button></li>
-        </ul>
-    </nav>
 
+<<<<<<< HEAD
     <!-- Hero Section -->
     <section class="firstPicture" style="background-image: url('{{ asset('assets/photos/dog_banner.png') }}'); color: white;">
+=======
+    @extends('layout')
+
+    @section('content')
+    <!-- Donate Section -->
+    <section class="firstPicture" style="background-image: url('{{ asset('assets/photos/dog2.jpeg') }}'); color: white;">
+>>>>>>> 4ee8d1ab1c6c250ad1e69f98c23a054c949dee12
         <div class="hero-container">
-            <h1>ANIMALS NEED</h1>
-            <h2>YOUR HELP!</h2>
+            <h2 class="white">ANIMALS NEED<br>YOUR HELP!</h2>
             <p>Make a difference with funds or action! Adopt any pet that speaks to your heart!</p>
             <a class="button" href="/">DONATE NOW!</a>
         </div>
@@ -37,19 +36,19 @@
 
     <!-- Other Sections (Adopt Pet, Awards, About Us, etc.) -->
     <section class="petAdoption">
-        <h1>ADOPT PET</h1>
+        <h1 class="orange">ADOPT PET</h1>
         <h2>cos</h2>
         <p>asas</p>
     </section>
      <!--
     <section class="awards" style="background-color: orange;">
-        <h1>Awards</h1>
+        <h1 class="white">Awards</h1>
     </section>
     -->
     <section class="aboutUs">
         <div class="flexContainer">
             <div class="aboutUsText">
-                <h1>ABOUT US</h1>
+                <h1 class="orange">ABOUT US</h1>
                 <h2>WHY DO WE LOVE PETS?</h2>
                 <p>We are a group of animal-loving students who saw a growing need to help shelter pets find homes more easily. 
                     With our shared passion for both technology and animal welfare, 
@@ -58,6 +57,7 @@
             <div class="aboutUsPicture" style="background-image: url('{{ asset('assets/photos/hamster.jpg') }}');"></div>
         </div>
     </section>
+<<<<<<< HEAD
     <section class="newsletter" style="background-image: url('{{ asset('assets/photos/newsletter-photo.jpg') }}');">
         <div class="newsletterText">
             <h1>JOIN THE NEWSLETTER</h1>
@@ -66,6 +66,17 @@
                 <input type="text" id="name" name="name">
             </form>
             <a class="button" href="/">JOIN NOW!</a>
+=======
+    <section class="newsletter backDog_1">
+        <div>
+            <h1 class="white">JOIN OUR NEWSLETTER</h1>
+            <h2>Stay Up To Date With All The Latest News!</h2>
+            <form>
+                <p>Enter e-mail:</p>
+                <input type="text" id="name" name="name" placeholder="Enter e-mail">
+                <button class="newsletterButton" href="/">JOIN NOW!</button>
+            </form>
+>>>>>>> 4ee8d1ab1c6c250ad1e69f98c23a054c949dee12
         </div>
         <div class="newsletterspace">
             <h1>aaa</h1>
@@ -73,22 +84,22 @@
         
     </section>
     <section class="ourTeam">
-        <h1>OUR STAFF</h1>
+        <h1 class="orange">OUR STAFF</h1>
         <h2>Team of Professionals</h2>
     </section>
     <section class="photos">
-        <div class="photo1" style="background-image: url('{{ asset('assets/photos/catt.jpg') }}');"></div>
-        <div class="photo2" style="background-image: url('{{ asset('assets/photos/catt.jpg') }}');"></div>
-        <div class="photo3" style="background-image: url('{{ asset('assets/photos/catt.jpg') }}');"></div>
+        <div class="photo" style="background-image: url('{{ asset('assets/photos/catt.jpg') }}');"></div>
+        <div class="photo" style="background-image: url('{{ asset('assets/photos/catt.jpg') }}');"></div>
+        <div class="photo" style="background-image: url('{{ asset('assets/photos/catt.jpg') }}');"></div>
     </section>
     <section class="morePhotos">
-        <div class="photo4" style="background-image: url('{{ asset('assets/photos/catt.jpg') }}');"></div>
-        <div class="photo5" style="background-image: url('{{ asset('assets/photos/catt.jpg') }}');"></div>
-        <div class="photo6" style="background-image: url('{{ asset('assets/photos/catt.jpg') }}');"></div>
+        <div class="photo" style="background-image: url('{{ asset('assets/photos/catt.jpg') }}');"></div>
+        <div class="photo" style="background-image: url('{{ asset('assets/photos/catt.jpg') }}');"></div>
+        <div class="photo" style="background-image: url('{{ asset('assets/photos/catt.jpg') }}');"></div>
     </section>
     <section class="GetInTouch">
         <div class="title">
-            <h1>CONTACTS</h1>
+            <h1 class="orange">CONTACTS</h1>
             <h2>LET'S GET IN TOUCH</h2>
         </div>
         <div class="contactFormAndMap">
@@ -136,9 +147,6 @@
             @csrf
             <div class="imgcontainer">
                 <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-                
-                <!--img src="{{ asset('assets/photos/img_avatar2.png') }}" alt="Avatar" class="avatar"-->
-                
             </div>
             <div class="container">
                 <h2>Sign in to your account.</h2>
@@ -157,6 +165,8 @@
             </div>
         </form>
     </div>
+
+    @endsection
 
     <script>
         // Get the modal
