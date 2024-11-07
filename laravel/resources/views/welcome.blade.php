@@ -139,8 +139,6 @@
         </form>
     </div>
 
-    @endsection
-
     <script>
         // Get the modal
         var modal = document.getElementById('id01');
