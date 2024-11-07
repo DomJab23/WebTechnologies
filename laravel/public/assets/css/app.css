@@ -53,14 +53,14 @@ nav {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 500px;
+    height: 600px;
     width: 100%;
     padding: 20px;
     color: white;
 }
 
 .button {
-    background-color: lightgrey;
+    background-color: orange;
     color: black;
     display: flex;
     text-align: center;
@@ -76,7 +76,7 @@ nav {
 }
 
 .button:hover {
-    background-color: gray;
+    background-color: darkorange;
     transition: all 0.1s ease;
 }
 
@@ -90,10 +90,11 @@ nav {
 h2 {
     font-size: 50px;
     font-weight: bold;
+    color:black;
 }
 h1 {
     font-size: 20px;
-    color: orange;
+    color: darkorange;
     font-weight: bolder;
 }
 h4{
@@ -102,7 +103,7 @@ h4{
     font-family: 'Courier New', Courier, monospace;
 }
 .p1{
-    color: white;
+    color: black;
 }
 
 .awards {
@@ -133,9 +134,25 @@ h4{
 .newsletter {
     background-repeat: no-repeat;
     background-size: cover;
+    justify-content: right;  /* Horizontally center the content */
+    align-items: center; 
     display: flex;
     flex:1;
-    height: 300px;
+    height: 500px;
+}
+.main-newsletter{
+    flex:1;
+    width:35%;
+}
+.newsletterText{
+    flex:1;
+    justify-content: right;  /* Horizontally center the content */
+    align-items: center;
+}
+.newsletterspace{
+    flex:1;
+    justify-content:left;
+    align-items:left;
 }
 
 .prizes {
@@ -249,6 +266,7 @@ h4{
   .newsletter-form {
     display: flex;
     flex-direction: column;
+
   }
   
   .newsletter-form input[type="email"] {
@@ -261,6 +279,8 @@ h4{
   
   .newsletter-form button {
     padding: 10px;
+    align-items: right;
+    justify-content: right;
     background-color: #ff6600;
     border: none;
     color: #fff;
@@ -377,3 +397,95 @@ button:hover {
 label input[type=checkbox] {
     margin-top: 16px;
 }
+
+
+        /* Example responsive styles */
+        .logo-container {
+            display: flex;
+            justify-content: center; /* Center logo horizontally */
+            align-items: center; /* Center logo vertically */
+            margin: 10px; /* Optional: Add margin for spacing */
+        }
+
+        .logo {
+            max-width: 250px; /* Set a max width for the logo */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        .firstPicture, .aboutUsPicture, .map, .photo1, .photo2, .photo3, .photo4, .photo5, .photo6 {
+            background-size: cover;
+            background-position: center;
+            height: auto;
+            min-height: 300px;
+        }
+
+        @media (max-width: 768px) {
+            .navbar_menu {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .navbar_menu_item {
+                margin: 10px 0;
+            }
+
+            .firstPicture, .aboutUsPicture, .map, .photo1, .photo2, .photo3, .photo4, .photo5, .photo6 {
+                min-height: 200px;
+            }
+        }
+
+        /* Modal styles */
+        body {font-family: Arial, Helvetica, sans-serif;}
+        input[type=text], input[type=password] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #04AA6D\;
+            color: white;
+            padding: 14px 20px;
+            margin: 18px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover { opacity: 0.8; }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+            padding-top: 60px;
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto 15% auto;
+            border: 1px solid #888;
+            width: 80%;
+        }
+        .close {
+            position: absolute;
+            right: 25px;
+            top: 0;
+            color: #000;
+            font-size: 35px;
+            font-weight: bold;
+        }
+        .animate {
+            animation: animatezoom 0.6s;
+        }
+        @keyframes animatezoom {
+            from {transform: scale(0)} 
+            to {transform: scale(1)}
+        }
+ 
