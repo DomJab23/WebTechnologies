@@ -9,7 +9,8 @@
   
 </head>
 <body>
-
+    @extends('layout')
+    @section('content')
     <!-- Hero Section -->
     <section class="firstPicture" style="background-image: url('{{ asset('assets/photos/dog_banner.png') }}'); color: white;">
         <div class="hero-container">
@@ -138,7 +139,7 @@
             </div>
         </form>
     </div>
-
+    @endsection
     <script>
         // Get the modal
         var modal = document.getElementById('id01');
