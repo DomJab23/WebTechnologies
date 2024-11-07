@@ -6,7 +6,8 @@
     </head>
 
     <body>
-        <form action="{{ route('register') }}" method="post">
+        <form action="{{ route('registerPush') }}" method="post">
+            @csrf
             <input type="text" name="uname" placeholder="Username">
             <input type="text" name="password" placeholder="Password">
             <input type="text" name="code" placeholder="Code">
