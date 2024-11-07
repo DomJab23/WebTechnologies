@@ -54,10 +54,7 @@ h2 {
 }
 h1 {
     font-size: 20px;
-<<<<<<< HEAD
     color: darkorange;
-=======
->>>>>>> 4ee8d1ab1c6c250ad1e69f98c23a054c949dee12
     font-weight: bolder;
 }
 h4{
@@ -101,7 +98,6 @@ h4{
     align-items: center; 
     display: flex;
     flex:1;
-<<<<<<< HEAD
     height: 500px;
 }
 .main-newsletter{
@@ -117,8 +113,6 @@ h4{
     flex:1;
     justify-content:left;
     align-items:left;
-=======
->>>>>>> 4ee8d1ab1c6c250ad1e69f98c23a054c949dee12
 }
 
 .prizes {
@@ -303,7 +297,6 @@ label input[type=checkbox] {
     margin-top: 16px;
 }
 
-<<<<<<< HEAD
 
         /* Example responsive styles */
         .logo-container {
@@ -352,7 +345,7 @@ label input[type=checkbox] {
             box-sizing: border-box;
         }
         button {
-            background-color: #04AA6D\;
+            background-color: #04AA6D;
             color: white;
             padding: 14px 20px;
             margin: 18px 0;
@@ -395,10 +388,3 @@ label input[type=checkbox] {
             to {transform: scale(1)}
         }
  
-=======
-.backDog_1 {
-    background-image: url('../photos/dog_1.jpg');
-    background-position-x: 170px;
-    background-color: #f0ae02;
-}
->>>>>>> 4ee8d1ab1c6c250ad1e69f98c23a054c949dee12
