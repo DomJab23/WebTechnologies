@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title') - PETAPP</title>
-    <link rel="stylesheet" href="{{ asset('assets/css/app.css') }}">
-    <link rel="icon" href="{{ asset('assets/photos/PetApp-favicon.png') }}" type="image/x-icon">
-    <link rel="stylesheet" href="{{ asset('assets/css/layout.css') }}">
+    <!--<link rel="stylesheet" href="../../assets/css/app.css">-->
+    <link rel="icon" href="../../assets/photos/PetApp-favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../assets/css/layout.css">
+    <script src="../js/layout.js"></script>
 </head>
 <body>
     <!-- Navbar Section -->

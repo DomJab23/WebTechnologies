@@ -14,7 +14,7 @@
     @extends('layout')
 
     @section('content')
-    <!-- Hero Section -->
+    <!-- Donate Section -->
     <section class="firstPicture" style="background-image: url('{{ asset('assets/photos/dog2.jpeg') }}'); color: white;">
         <div class="hero-container">
             <h2 class="white">ANIMALS NEED<br>YOUR HELP!</h2>
