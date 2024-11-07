@@ -15,10 +15,11 @@ class AuthController extends Controller
                 "psw" => "required",
             ]);
 
-        $credentials = $request->only("uname", "psw");
+        $credentials["uname"] = $request->uname;
+        $credentials["password"] =$request->psw;
 
         if($credentials['uname']=="this")
-        {return redirect()->intended("/about");}
+        {return redirect('/welcome');}
 
         if(Auth::attempt($credentials))
         {
@@ -26,7 +27,7 @@ class AuthController extends Controller
         }
         else
         {
-            return redirect()->intended("/gallery");
+            return redirect('/welcome');
         }
 
 
