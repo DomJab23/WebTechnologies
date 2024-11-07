@@ -6,8 +6,10 @@
     </head>
 
     <body>
-        <input type="text" name="uname" placeholder="Username">
-        <input type="text" name="password" placeholder="Password">
-        <input type="text" name="code" placeholder="Code">
+        <form action="{{ route('register') }}" method="post">
+            <input type="text" name="uname" placeholder="Username">
+            <input type="text" name="password" placeholder="Password">
+            <input type="text" name="code" placeholder="Code">
+        </form>
     </body>
 </html>
