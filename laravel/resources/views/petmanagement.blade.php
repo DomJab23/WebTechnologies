@@ -24,14 +24,14 @@
             <form action="{{route('petUpdate')}}" method="POST">
                 @csrf
                 <input type="number" placeholder="Id of the pet to update" name="id"/><br>
-                <input type="text" placeholder="Name of the pet" name="name"/><br>
-                <input type="number" placeholder="Age of the pet" name="age"/><br>
-                <input type="text" placeholder="Species of the pet" name="species"/><br>
-                <input type="text" placeholder="Breed of the pet" name="breed"/><br>
+                <input type="text" placeholder="Updated name of the pet" name="name"/><br>
+                <input type="number" placeholder="Updated age of the pet" name="age"/><br>
+                <input type="text" placeholder="Updated species of the pet" name="species"/><br>
+                <input type="text" placeholder="Updated breed of the pet" name="breed"/><br>
                 <label for="sterilized">Sterilized:</label>
-                <input type="checkbox" placeholder="Is the pet sterilized?" name="sterilized"/><br>
-                <input type="text" placeholder="Information about the health of the pet" name="health"/><br>
-                <input type="text" placeholder="Description of the pet" name="descriptions"/><br>
+                <input type="checkbox" placeholder="Was the pet sterilized?" name="sterilized"/><br>
+                <input type="text" placeholder="Updated information about the health of the pet" name="health"/><br>
+                <input type="text" placeholder="Updated description of the pet" name="descriptions"/><br>
                 <button>Update Pet</button>
             </form><br><br>
 

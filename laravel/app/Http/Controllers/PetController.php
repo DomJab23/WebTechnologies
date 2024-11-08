@@ -32,24 +32,17 @@ class PetController extends Controller
     {
         $request->validate([
             "id"=>"required",
-            "name" => "required",
-            "age" => "required",
-            "species" => "required",
-            "breed" => "required",
-            "sterilized" => "required",
-            "health" => "required",
-            "descriptions" => "required",
         ]);
 
         $pet = Pet::find($request->id);
 
-        $pet->name=$request->name;
-        $pet->age=$request->age;
-        $pet->species=$request->species;
-        $pet->breed=$request->breed;
-        $pet->sterilized=$request->sterilized;
-        $pet->health=$request->health;
-        $pet->descriptions=$request->descriptions;
+        if($request->name!=null) $pet->name=$request->name;
+        if($request->age!=null)$pet->age=$request->age;
+        if($request->species!=null)$pet->species=$request->species;
+        if($request->breed!=null)$pet->breed=$request->breed;
+        if($request->has('sterilized'))$pet->sterilized=true;
+        if($request->health!=null)$pet->health=$request->health;
+        if($request->descriptions!=null)$pet->descriptions=$request->descriptions;
 
         $pet->save();
         return(redirect("/management"));
@@ -62,7 +55,6 @@ class PetController extends Controller
             "age" => "required",
             "species" => "required",
             "breed" => "required",
-            "sterilized" => "required",
             "health" => "required",
             "descriptions" => "required",
         ]);
