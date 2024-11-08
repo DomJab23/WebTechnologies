@@ -5,58 +5,77 @@
         <link rel="stylesheet" href="../../assets/css/petmanagement.css">
     </head>
     <body>
-        <d class="split left">
-            <p>Add pet:</p>
-            <form action="{{route('petAdd')}}" method="POST">
-                @csrf
-                <label for="name">Name of pet:</label>
-                <input type="text" placeholder="Name of the pet" name="name"/><br>
+        <div class="split left flexBox">
+            <div class="sideBox">
+                <p>Add pet:</p>
+                <form action="{{route('petAdd')}}" method="POST">
+                    @csrf
+                    <label for="name">Name of pet:</label><br>
+                    <input type="text" placeholder="Name of the pet" name="name" class="infoInput"/><br>
 
-                <p class="inputLabel">Age of pet:</p>
-                <input type="number" placeholder="Age of the pet" name="age"/><br>
+                    <label for="age">Age of pet:</label><br>
+                    <input type="number" placeholder="Age of the pet" name="age" class="infoInput"/><br>
 
-                <p class="inputLabel">Species of pet:</p>
-                <input type="text" placeholder="Species of the pet" name="species"/><br>
+                    <label for="species">Species of pet:</label><br>
+                    <input type="text" placeholder="Species of the pet" name="species" class="infoInput"/><br>
 
-                <p class="inputLabel">Breed of pet:</p>
-                <input type="text" placeholder="Breed of the pet" name="breed"/><br>
+                    <label for="breed">Breed of pet:</label><br>
+                    <input type="text" placeholder="Breed of the pet" name="breed" class="infoInput"/><br>
 
-                <label for="sterilized">Sterilized:</label>
-                <input type="checkbox" placeholder="Is the pet sterilized?" name="sterilized"/><br>
+                    <label for="sterilized">Sterilized:</label>
+                    <input type="checkbox" placeholder="Is the pet sterilized?" name="sterilized" class="infoInput"/><br>
 
-                <p class="inputLabel">Information about health of pet:</p>
-                <input type="text" placeholder="Information about the health of the pet" name="health"/><br>
+                    <label for="health">Information about health of pet:</label><br>
+                    <textarea type="text" placeholder="Information about the health of the pet" name="health" class="infoInput healthInput"></textarea><br>
 
-                <p class="inputLabel">Description:</p>
-                <input type="text" placeholder="Description of the pet" name="descriptions"/><br>
+                    <label for="descriptions">Description:</label><br>
+                    <textarea type="text" placeholder="Description of the pet" name="descriptions" class="infoInput descriptionInput"></textarea><br>
 
-                <button>Add Pet</button>
-            </form> <br><br>
+                    <button>Add Pet</button>
+                </form> <br><br>
 
-            <p>Update pet:</p>
-            <form action="{{route('petUpdate')}}" method="POST">
-                @csrf
-                <input type="number" placeholder="Id of the pet to update" name="id"/><br>
-                <input type="text" placeholder="Updated name of the pet" name="name"/><br>
-                <input type="number" placeholder="Updated age of the pet" name="age"/><br>
-                <input type="text" placeholder="Updated species of the pet" name="species"/><br>
-                <input type="text" placeholder="Updated breed of the pet" name="breed"/><br>
-                <label for="sterilized">Sterilized:</label>
-                <input type="checkbox" placeholder="Was the pet sterilized?" name="sterilized"/><br>
-                <input type="text" placeholder="Updated information about the health of the pet" name="health"/><br>
-                <input type="text" placeholder="Updated description of the pet" name="descriptions"/><br>
-                <button>Update Pet</button>
-            </form><br><br>
+                <p>Delete pet:</p>
+                <form action="{{route('petDelete')}}" method="POST">
+                    @csrf
+                    <input type="number" placeholder="Id of the pet to delete" name="id" class="infoInput"/><br>
+                    <button>Delete Pet</button>
+                </form><br><br>
+            </div>
 
-            <p>Delete pet:</p>
-            <form action="{{route('petDelete')}}" method="POST">
-                @csrf
-                <input type="number" placeholder="Id of the pet to delete" name="id"/><br>
-                <button>Delete Pet</button>
-            </form><br><br>
-        </d>
+            <div class="sideBox">
+                <p>Update pet:</p>
+                <form action="{{route('petUpdate')}}" method="POST">
+                    @csrf
+                    <label for="id">Pet ID:</label><br>
+                    <input type="number" placeholder="Id of the pet to update" name="id" class="infoInput"/><br>
 
-        <d class="split right">
+                    <label for="name">Name of pet:</label><br>
+                    <input type="text" placeholder="Updated name of the pet" name="name" class="infoInput"/><br>
+
+                    <label for="age">Age of pet:</label><br>
+                    <input type="number" placeholder="Updated age of the pet" name="age" class="infoInput"/><br>
+
+                    <label for="species">Species of pet:</label><br>
+                    <input type="text" placeholder="Updated species of the pet" name="species" class="infoInput"/><br>
+
+                    <label for="breed">Breed of pet:</label><br>
+                    <input type="text" placeholder="Updated breed of the pet" name="breed" class="infoInput"/><br>
+                    
+                    <label for="sterilized">Sterilized:</label>
+                    <input type="checkbox" placeholder="Was the pet sterilized?" name="sterilized" class="infoInput"/><br>
+
+                    <label for="health">Health of pet:</label><br>
+                    <textarea type="text" placeholder="Updated information about the health of the pet" name="health" class="infoInput healthInput"></textarea><br>
+
+                    <label for="descriptions">Description:</label><br>
+                    <textarea type="text" placeholder="Updated description of the pet" name="descriptions" class="infoInput descriptionInput"></textarea><br>
+
+                    <button>Update Pet</button>
+                </form><br><br>
+            </div>
+        </div>
+
+        <div class="split right">
             <p>Pets in the shelter:</p>
             <table>
                 <thead style="font-size:20px">
@@ -95,7 +114,7 @@
                 @csrf
                 <button>Logout</button>
             </form>
-        </d>
+        </div>
         
     </body>
 </html>
