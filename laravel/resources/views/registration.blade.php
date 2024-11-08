@@ -9,6 +9,11 @@
     </head>
 
     <body>
+
+        @extends('layout')
+
+        @section('content')
+
         <div class="centerBox">
             <form action="{{ route('registerPush') }}" method="post">
                 @csrf
@@ -24,5 +29,7 @@
                 <button>Submit</button>
             </form>
         </div>
+        @endsection
     </body>
+
 </html>
