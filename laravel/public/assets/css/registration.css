@@ -22,3 +22,14 @@ input[type=text], input[type=password] {
     font-size: 40px;
     margin: 0;
 }
+
+.backDrop{
+    background-color: aliceblue;
+    padding: 20px;
+    border-radius: 30px;
+}
+
+.backImage{
+    background-image: url('../photos/registrationBackground.jpg');
+    background-position-y: -100px;
+}
