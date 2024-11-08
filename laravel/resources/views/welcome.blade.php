@@ -6,7 +6,7 @@
     <title>PETAPP - Helping Animals</title>
     <link rel="stylesheet" href="../../assets/css/app.css">
     <link rel="stylesheet" href="../../assets/css/textColors.css">
-    <link rel="stylesheet" href="../../assets/css/tempBucket.css">
+    <link rel="stylesheet" href="../../assets/css/welcome.css">
 
 </head>
 <body>
@@ -24,10 +24,10 @@
     </section>
 
     <!-- Other Sections (Adopt Pet, Awards, About Us, etc.) -->
-    <section class="petAdoption">
+    <!--<section class="petAdoption">
         <h1 class="orange">ADOPT PET</h1>
         <h2>cos</h2>
-        <p>asas</p>
+        <p>asas</p>-->
     </section>
      <!--
     <section class="awards" style="background-color: orange;">
@@ -39,7 +39,7 @@
             <div class="aboutUsText">
                 <h1 class="orange">ABOUT US</h1>
                 <h2>WHY DO WE LOVE PETS?</h2>
-                <p>We are a group of animal-loving students who saw a growing need to help shelter pets find homes more easily. 
+                <p class="aboutUs">We are a group of animal-loving students who saw a growing need to help shelter pets find homes more easily. 
                     With our shared passion for both technology and animal welfare, 
                     we decided to create an online platform dedicated to connecting rescue pets with caring families.</p>
             </div>
@@ -57,7 +57,7 @@
             </form>
         </div>
         <div class="newsletterspace">
-            <h1>aaa</h1>
+            <!--<h1>aaa</h1>-->
         </div>
         
     </section>
@@ -82,10 +82,10 @@
         </div>
         <div class="contactFormAndMap">
             <div class="contactForm">
-                <form><input type="text" id="name" name="name"></form>
-                <form><input type="text" id="email" name="email"></form>
-                <form><input type="tel" id="phone" name="phone"></form>
-                <form><input type="text" id="message" name="message"></form>
+                <form><input type="text" id="name" name="name" placeholder="Name"></form>
+                <form><input type="text" id="email" name="email" placeholder="E-mail"></form>
+                <form><input type="text" id="phone" name="phone" placeholder="Phone number"></form>
+                <form><input type="text" id="message" name="message" placeholder="Message"></form>
                 <a class="button" href="/">SEND!</a>
             </div>
             <div class="map" style="background-image: url('{{ asset('assets/photos/hamster.jpg') }}');"></div>

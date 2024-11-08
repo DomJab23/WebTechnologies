@@ -93,7 +93,7 @@ h4{
 .newsletter {
     background-repeat: no-repeat;
     background-size: cover;
-    justify-content: right;  /* Horizontally center the content */
+    justify-content: left;  /* Horizontally center the content */
     align-items: center; 
     display: flex;
     flex:1;

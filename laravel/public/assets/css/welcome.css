@@ -29,12 +29,14 @@ input[type=text], input[type=password] {
     background-color: rgba(0,0,0,0.4);
     padding-top: 60px;
 }
+
 .modal-content {
     background-color: #fefefe;
     margin: 5% auto 15% auto;
     border: 1px solid #888;
     width: 80%;
 }
+
 .close {
     position: absolute;
     right: 25px;
@@ -43,9 +45,17 @@ input[type=text], input[type=password] {
     font-size: 35px;
     font-weight: bold;
 }
+
 .animate {
     animation: animatezoom 0.6s;
 }
+
+.aboutUs {
+    font-size: 20px;
+    line-height: 35px;
+    text-align: justify;
+}
+
 @keyframes animatezoom {
     from {transform: scale(0)} 
     to {transform: scale(1)}
