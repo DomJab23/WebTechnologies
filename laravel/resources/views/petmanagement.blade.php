@@ -2,21 +2,34 @@
 <html lang="en">
     <head>
         <title>Pet Manager</title>
-        <link rel="stylesheet" href="../../assets/css/petLayout.css">
+        <link rel="stylesheet" href="../../assets/css/petmanagement.css">
     </head>
     <body>
         <d class="split left">
             <p>Add pet:</p>
             <form action="{{route('petAdd')}}" method="POST">
                 @csrf
+                <p class="inputLabel">Name of pet:</p>
                 <input type="text" placeholder="Name of the pet" name="name"/><br>
+
+                <p class="inputLabel">Age of pet:</p>
                 <input type="number" placeholder="Age of the pet" name="age"/><br>
+
+                <p class="inputLabel">Species of pet:</p>
                 <input type="text" placeholder="Species of the pet" name="species"/><br>
+
+                <p class="inputLabel">Breed of pet:</p>
                 <input type="text" placeholder="Breed of the pet" name="breed"/><br>
+
                 <label for="sterilized">Sterilized:</label>
                 <input type="checkbox" placeholder="Is the pet sterilized?" name="sterilized"/><br>
+
+                <p class="inputLabel">Information about health of pet:</p>
                 <input type="text" placeholder="Information about the health of the pet" name="health"/><br>
+
+                <p class="inputLabel">Description:</p>
                 <input type="text" placeholder="Description of the pet" name="descriptions"/><br>
+
                 <button>Add Pet</button>
             </form> <br><br>
 
