@@ -9,7 +9,7 @@
             <p>Add pet:</p>
             <form action="{{route('petAdd')}}" method="POST">
                 @csrf
-                <p class="inputLabel">Name of pet:</p>
+                <label for="name">Name of pet:</label>
                 <input type="text" placeholder="Name of the pet" name="name"/><br>
 
                 <p class="inputLabel">Age of pet:</p>
