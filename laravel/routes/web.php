@@ -1,8 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\RegistrationController;
+use App\Http\Controllers\PetController;
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -35,4 +38,14 @@ Route::get('/register', function () {
 Route::post('/register', [RegistrationController::class, 'register'])->name('registerPush');
 
 Route::post('/login', [AuthController::class, 'login'])->name('login');
+
+Route::post('/pet', [PetController::class, 'get_pet'])->name('onePet');
+
+Route::middleware(['logged'])->group(function() {
+    Route::get('/management', [PetController::class, 'get_pets']);
+    Route::post('/managementadd', [PetController::class, 'add_pet'])->name('petAdd');
+    Route::post('/managementupdate', [PetController::class, 'update_pet'])->name('petUpdate');
+    Route::post('/managementdelete', [PetController::class, 'delete_pet'])->name('petDelete');
+});
+
    

@@ -9,9 +9,15 @@ class RegistrationController extends Controller
 {
     public function register(Request $request)
     {
+        $request->validate([
+            "uname" => "required",
+            "password" => "required",
+            "code"=>"required",
+        ]);
 
         if($request->code==123456789)
         {
+
             $user=new User();
         
             $user->uname = $request->uname;
@@ -20,10 +26,6 @@ class RegistrationController extends Controller
             if ($user->save())
             {
                 return redirect('/');
-            }
-            else
-            {
-                return redirect('/register');
             }
 
         }
