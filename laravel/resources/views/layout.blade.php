@@ -22,7 +22,13 @@
             <li class="navbar_menu_item"><a href="/gallery" class="navbar_menu_link">Gallery</a></li>
             <li class="navbar_menu_item"><a href="/contacts" class="navbar_menu_link">Contacts</a></li>
             <li class="navbar_menu_item"><a href="/more" class="navbar_menu_link">More</a></li>
-            <li class="navbar_menu_item"><button class="loginButton" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button></li>
+            @auth
+                <li class="navbar_menu_item"><a href="/management" class="navbar_menu_link">Management</a></li>
+                <li class="navbar_menu_item"><a href="logout"><button class="loginButton" style="width:auto;">Logout</button></a></li>
+            @else
+                <li class="navbar_menu_item"><button class="loginButton" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button></li>
+            @endauth
+            
         </ul>
     </nav>
 

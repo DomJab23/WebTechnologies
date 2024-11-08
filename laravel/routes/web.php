@@ -46,7 +46,7 @@ Route::middleware(['logged'])->group(function() {
     Route::post('/managementadd', [PetController::class, 'add_pet'])->name('petAdd');
     Route::post('/managementupdate', [PetController::class, 'update_pet'])->name('petUpdate');
     Route::post('/managementdelete', [PetController::class, 'delete_pet'])->name('petDelete');
-    Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+    Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 });
 
    
