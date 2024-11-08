@@ -11,7 +11,7 @@
 </head>
 <body>
     <!-- Navbar Section -->
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
         <div class="logo-container">
             <a href="/">
                 <img src="{{ asset('assets/photos/PETAPP.png') }}" alt="PETAPP Logo" class="logo">
@@ -26,6 +26,8 @@
             <li class="navbar_menu_item"><button class="loginButton" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button></li>
         </ul>
     </nav>
+
+    <div class="barspace"></div>
 
     <!-- Page Content -->
     <div class="content">

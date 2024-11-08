@@ -5,6 +5,11 @@ html, body {
     width: 100%;
 }
 
+.barspace {
+    height: 70px;
+    width: 100%;
+}
+
 .navbar{
     position: fixed;
     width: 100%;
