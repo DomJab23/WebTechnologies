@@ -9,6 +9,11 @@
     </head>
 
     <body class="backImage">
+
+        @extends('layout')
+
+        @section('content')
+
         <div class="centerBox">
             <div class="backDrop">
                 <form action="{{ route('registerPush') }}" method="post">
@@ -26,5 +31,7 @@
                 </form>
             </div>
         </div>
+        @endsection
     </body>
+
 </html>

@@ -5,6 +5,8 @@
         <title>Register</title>
     </head>
 
+
+
     <body>
         <a href="/management"><button>Back</button></a>
 
@@ -17,4 +19,5 @@
         <p>Health details: {{$pet->health}}</p>
         <p>Description: {{$pet->descriptions}}</p>
     </body>
+
 </html>

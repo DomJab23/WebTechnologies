@@ -20,7 +20,7 @@ html, body {
 }
 
 .button {
-    background-color: orange;
+    background-color: aliceblue;
     color: black;
     display: flex;
     text-align: center;
@@ -36,7 +36,7 @@ html, body {
 }
 
 .button:hover {
-    background-color: darkorange;
+    background-color: lightgray;
     transition: all 0.1s ease;
 }
 

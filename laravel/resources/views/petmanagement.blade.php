@@ -4,6 +4,9 @@
         <title>Pet Manager</title>
         <link rel="stylesheet" href="../../assets/css/petmanagement.css">
     </head>
+
+
+
     <body>
         <div class="split left flexBox">
             <div class="sideBox">
@@ -117,4 +120,6 @@
         </div>
         
     </body>
+
+
 </html>

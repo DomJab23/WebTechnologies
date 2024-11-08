@@ -7,11 +7,10 @@
     <!--<link rel="stylesheet" href="../../assets/css/app.css">-->
     <link rel="icon" href="../../assets/photos/PetApp-favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="../../assets/css/layout.css">
-    <script src="../js/layout.js"></script>
 </head>
 <body>
     <!-- Navbar Section -->
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
         <div class="logo-container">
             <a href="/">
                 <img src="{{ asset('assets/photos/PETAPP.png') }}" alt="PETAPP Logo" class="logo">
@@ -27,16 +26,12 @@
         </ul>
     </nav>
 
+    <div class="barspace"></div>
+
     <!-- Page Content -->
     <div class="content">
         @yield('content')
     </div>
-
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2024 PETAPP. All rights reserved.</p>
-        <p>Follow us on social media for updates!</p>
-    </footer>
 
     <script src="script.js"></script>
 </body>
