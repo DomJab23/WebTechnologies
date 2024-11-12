@@ -5,9 +5,14 @@
         <link rel="stylesheet" href="../../assets/css/petmanagement.css">
     </head>
 
+    @extends('layout')
 
+    @section('title', 'Pet Manager')
+
+    @section('content')
 
     <body>
+        
         <div class="split left flexBox">
             <div class="sideBox">
                 <p>Add pet:</p>
@@ -112,14 +117,10 @@
                     @endforeach
                 </tbody>
             </table>
-
-            <form action="{{route('logout')}}" method="POST">
-                @csrf
-                <button>Logout</button>
-            </form>
         </div>
         
     </body>
 
+    @endsection
 
 </html>
