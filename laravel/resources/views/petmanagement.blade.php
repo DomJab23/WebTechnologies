@@ -85,6 +85,9 @@
 
         <div class="split right">
             <p>Pets in the shelter:</p>
+
+
+            <!-- Table of pets-->
             <table>
                 <thead style="font-size:20px">
                     <th>Id</th>
@@ -92,6 +95,7 @@
                     <th>Age</th>
                     <th>Species</th>
                     <th>Sterilized</th>
+                    <th></th>
                     <th></th>
                 </thead>
                 <tbody>
@@ -106,6 +110,9 @@
                             @else
                                 <td>Not sterilized</td>
                             @endif
+                            <td>
+                                <button>Update</button>
+                            </td>
                             <td>
                                 <form action="{{route('onePet')}}" method="POST">
                                     @csrf
