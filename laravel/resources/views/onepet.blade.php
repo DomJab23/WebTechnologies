@@ -18,6 +18,21 @@
         @endif
         <p>Health details: {{$pet->health}}</p>
         <p>Description: {{$pet->descriptions}}</p>
+        <br>
+
+        <p>Pictures of this animal: {{$images->count()}}</p>
+        @foreach($images as $image)
+            <img src="{{$image->path}}" alt="">
+        @endforeach
+        
+        <form action="{{route('imageAdd')}}" method="POST" enctype="multipart/form-data">
+            @csrf
+            <input type="hidden" name="pet_id" value="{{$pet->id}}">
+            <label for="image">Input new image for animal:</label>
+            <input type="file" name="image">
+            <br>
+            <button>Submit</button>
+        </form>
     </body>
 
 </html>

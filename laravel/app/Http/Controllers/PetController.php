@@ -16,7 +16,8 @@ class PetController extends Controller
     public function get_pet(Request $request)
     {
         $pet = Pet::find($request->id);
-        return(view("onepet",['pet'=>$pet]));
+        $images =$pet->images()->get();
+        return(view("onepet",['pet'=>$pet, 'images'=>$images]));
     }
 
     public function delete_pet(Request $request)

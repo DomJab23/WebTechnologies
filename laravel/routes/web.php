@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\RegistrationController;
 use App\Http\Controllers\PetController;
+use App\Http\Controllers\ImageController;
 
 
 Route::get('/', function () {
@@ -39,7 +40,7 @@ Route::post('/register', [RegistrationController::class, 'register'])->name('reg
 
 Route::post('/login', [AuthController::class, 'login'])->name('login');
 
-Route::post('/pet', [PetController::class, 'get_pet'])->name('onePet');
+Route::get('/pet', [PetController::class, 'get_pet'])->name('onePet');
 
 Route::middleware(['logged'])->group(function() {
     Route::get('/management', [PetController::class, 'get_pets']);
@@ -47,6 +48,7 @@ Route::middleware(['logged'])->group(function() {
     Route::post('/managementupdate', [PetController::class, 'update_pet'])->name('petUpdate');
     Route::post('/managementdelete', [PetController::class, 'delete_pet'])->name('petDelete');
     Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+    Route::post('/addimage', [ImageController::class, 'store_image'])->name('imageAdd');
 });
 
    

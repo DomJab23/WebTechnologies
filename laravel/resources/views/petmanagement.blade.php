@@ -102,7 +102,7 @@
                                 <td>Not sterilized</td>
                             @endif
                             <td>
-                                <form action="{{route('onePet')}}" method="POST">
+                                <form action="{{route('onePet')}}" method="GET">
                                     @csrf
                                     <input type="hidden" name="id" value="{{$pet->id}}">
                                     <button>More</button>
