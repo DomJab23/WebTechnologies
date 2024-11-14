@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\UploadedFile;
+use Illuminate\Support\Facades\Storage;
 
 use App\Models\Image;
 
@@ -29,6 +30,22 @@ class ImageController extends Controller
 
         $image->save();
 
-        return redirect('/management');
+        return back();
+    }
+
+    public function delete_image(Request $request)
+    {
+        $request->validate([
+            "id"=>"required",
+            "path"=>"required",
+        ]);
+
+        if(file_exists(public_path($request->path))&& Image::where('id', $request->id)->exists())
+        {
+            unlink(public_path($request->path));
+            Image::destroy($request->id);
+        }
+
+        return back();
     }
 }

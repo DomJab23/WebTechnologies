@@ -23,6 +23,12 @@
         <p>Pictures of this animal: {{$images->count()}}</p>
         @foreach($images as $image)
             <img src="{{$image->path}}" alt="">
+            <form action="{{route('imageDelete')}}" method="POST">
+                @csrf
+                <input type="hidden" name="id" value="{{$image->id}}">
+                <input type="hidden" name="path" value="{{$image->path}}">
+                <button>Delete this picture</button>
+            </form>
         @endforeach
         
         <form action="{{route('imageAdd')}}" method="POST" enctype="multipart/form-data">
@@ -31,7 +37,7 @@
             <label for="image">Input new image for animal:</label>
             <input type="file" name="image">
             <br>
-            <button>Submit</button>
+            <button>Upload</button>
         </form>
     </body>
 
