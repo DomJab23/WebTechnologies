@@ -11,7 +11,7 @@ html, body {
 
 /*Sort all this bullshit out*/
 
-input[type=text], input[type=password] {
+.loginInput {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
