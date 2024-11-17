@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use App\Models\Volunteer;
 
 class RegistrationController extends Controller
 {
@@ -29,9 +30,21 @@ class RegistrationController extends Controller
             }
 
         }
+        elseif($request->code== 1234)
+        {
+            $volunteer = new Volunteer();
+            $volunteer->email = $request->email;
+            $volunteer->phone_number = $request->phone_number;
+            $volunteer->name = $request->uname;
+            $volunteer->more_about = $request->more_about;
+
+            if ($volunteer->save()) {
+                return redirect('/volunteer/dashboard');
+            }
+        }
         else
         {
-            return redirect('/register');
+            return redirect('/register')->with('error', 'Invalid code provided.');
         }
     }
 }

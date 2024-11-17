@@ -6,6 +6,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\RegistrationController;
 use App\Http\Controllers\PetController;
 use App\Http\Controllers\ImageController;
+use App\Http\Controllers\VolunteerController;
 
 
 Route::get('/', function () {
@@ -52,6 +53,10 @@ Route::middleware(['logged'])->group(function() {
 
     Route::post('/addimage', [ImageController::class, 'store_image'])->name('imageAdd');
     Route::post('/deleteimage', [ImageController::class, 'delete_image'])->name('imageDelete');
+});
+Route::middleware(['auth:volunteer'])->group(function () {
+    Route::get('/volunteer/dashboard', [VolunteerController::class, 'dashboard'])->name('volunteer.dashboard');
+    Route::post('/volunteer/book', [VolunteerController::class, 'bookSlot'])->name('volunteer.book');
 });
 
    
