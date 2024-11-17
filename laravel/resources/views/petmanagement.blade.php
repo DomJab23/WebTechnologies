@@ -111,7 +111,7 @@
                                 <td>Not sterilized</td>
                             @endif
                             <td>
-                                <button>Update</button>
+                                <button onclick="document.getElementById('updateForm').style.display='block'" style="width:auto;">Update</button>
                             </td>
                             <td>
                                 <form action="{{route('onePet')}}" method="POST">
@@ -125,9 +125,53 @@
                 </tbody>
             </table>
         </div>
+    
         
-    </body>
+    <!--Modal Update Form-->
+        <div id="updateForm" class="modal">
+            <form class="modal-content animate" action="{{route('petUpdate')}}" method="post">
+            @csrf
+                <label for="id">Pet ID:</label><br>
+                <input type="number" placeholder="Id of the pet to update" name="id" class="infoInput"/><br>
 
+                <label for="name">Name of pet:</label><br>
+                <input type="text" placeholder="Updated name of the pet" name="name" class="infoInput"/><br>
+
+                <label for="age">Age of pet:</label><br>
+                <input type="number" placeholder="Updated age of the pet" name="age" class="infoInput"/><br>
+
+                <label for="species">Species of pet:</label><br>
+                <input type="text" placeholder="Updated species of the pet" name="species" class="infoInput"/><br>
+
+                <label for="breed">Breed of pet:</label><br>
+                <input type="text" placeholder="Updated breed of the pet" name="breed" class="infoInput"/><br>
+                
+                <label for="sterilized">Sterilized:</label>
+                <input type="checkbox" placeholder="Was the pet sterilized?" name="sterilized" class="infoInput"/><br>
+
+                <label for="health">Health of pet:</label><br>
+                <textarea type="text" placeholder="Updated information about the health of the pet" name="health" class="infoInput healthInput"></textarea><br>
+
+                <label for="descriptions">Description:</label><br>
+                <textarea type="text" placeholder="Updated description of the pet" name="descriptions" class="infoInput descriptionInput"></textarea><br>
+
+                <button>Update Pet</button>
+            </form>
+        </div>
+        <script>
+            // Get the modal
+            var modal = document.getElementById('updateForm');
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+
+
+    </body>
     @endsection
 
 </html>

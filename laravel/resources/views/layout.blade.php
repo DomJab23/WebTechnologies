@@ -26,7 +26,7 @@
                     <li class="navbar_menu_item"><a href="/management" class="navbar_menu_link">Management</a></li>
                     <li class="navbar_menu_item"><a href="logout"><button class="loginButton" style="width:auto;">Logout</button></a></li>
                 @else
-                    <li class="navbar_menu_item"><button class="loginButton" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button></li>
+                    <li class="navbar_menu_item"><button class="loginButton" onclick="document.getElementById('loginForm').style.display='block'" style="width:auto;">Login</button></li>
                 @endauth
                 
             </ul>
@@ -42,7 +42,7 @@
     </body>
 
     <!-- Modal Login Form -->
-    <div id="id01" class="modal">
+    <div id="loginForm" class="modal">
         <form class="modal-content animate" action="{{ route('login') }}" method="post">
             @csrf
             <div class="imgcontainer">
@@ -67,7 +67,7 @@
     </div>
     <script>
         // Get the modal
-        var modal = document.getElementById('id01');
+        var modal = document.getElementById('loginForm');
 
         // When the user clicks anywhere outside of the modal, close it
         window.onclick = function(event) {
