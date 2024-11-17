@@ -20,7 +20,7 @@ html, body {
 }
 
 .button {
-    background-color: aliceblue;
+    background-color: orange;
     color: black;
     display: flex;
     text-align: center;
@@ -36,7 +36,7 @@ html, body {
 }
 
 .button:hover {
-    background-color: lightgray;
+    background-color:#e55b00;
     transition: all 0.1s ease;
 }
 
@@ -90,14 +90,36 @@ h4{
     background-size: cover;
 }
 
-.newsletter {
+.newsletter_section{
     background-repeat: no-repeat;
     background-size: cover;
-    justify-content: left;  /* Horizontally center the content */
+    justify-content: right;  /* Horizontally center the content */
     align-items: center; 
     display: flex;
-    flex:1;
+    width: 100%;
+    
 }
+.newsletter_text {
+    flex:1;
+    text-align: left;
+    justify-content: flex-end; /* Align items to the right */
+    align-items: center; /* Center items vertically */
+    padding: 20px; /* Add padding */
+    /* Remove float and flex properties */
+}
+.newsletterspace{
+    flex: 1;
+    justify-content: flex-start;
+    align-items: left;
+}
+.newsletter_input[type="text"] {
+    justify-content: center;  /* Horizontally center the content */
+    align-items: center; 
+    width: 40%;
+    
+   
+}
+
 
 .prizes {
     background-color: orange;

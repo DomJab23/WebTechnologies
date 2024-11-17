@@ -15,7 +15,7 @@
 
     @section('content')
     <!-- Donate Section -->
-    <section class="firstPicture" style="background-image: url('{{ asset('assets/photos/dog2.jpeg') }}'); color: white;">
+    <section class="firstPicture" style="background-image: url('{{ asset('assets/photos/dog_banner.png') }}'); color: white;">
         <div class="hero-container">
             <h2 class="white">ANIMALS NEED<br>YOUR HELP!</h2>
             <p>Make a difference with funds or action! Adopt any pet that speaks to your heart!</p>
@@ -46,18 +46,17 @@
             <div class="aboutUsPicture" style="background-image: url('{{ asset('assets/photos/hamster.jpg') }}');"></div>
         </div>
     </section>
-    <section class="newsletter backDog_1">
-        <div>
+    <section class="newsletter_section" style="background-image: url('{{ asset('assets/photos/catnewsletter.jpg') }}');">
+        <div class="newsletter_text">
             <h1 class="white">JOIN OUR NEWSLETTER</h1>
             <h2>Stay Up To Date With All The Latest News!</h2>
             <form>
-                <p>Enter e-mail:</p>
-                <input type="text" id="name" name="name" placeholder="Enter e-mail">
-                <button class="newsletterButton" href="/">JOIN NOW!</button>
+                <input class="newsletter_input" type="text" id="name" name="name" placeholder="Enter your e-mail here">
+                <button class="button" href="/">JOIN NOW!</button>
             </form>
         </div>
         <div class="newsletterspace">
-            <!--<h1>aaa</h1>-->
+            <h1>     </h1>
         </div>
         
     </section>
@@ -132,7 +131,7 @@
                 <input type="text" placeholder="Enter Username" name="uname" required>
                 <label for="psw"><b>Password</b></label>
                 <input type="password" placeholder="Enter Password" name="psw" required>
-                <button type="submit">Login</button>
+                <button class="button" type="submit">Login</button>
                 <label>
                     <input type="checkbox" checked="checked" name="remember"> Remember me</input>
                 </label>
