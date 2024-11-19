@@ -115,12 +115,15 @@
                                 <button 
                                     onclick="
                                     document.getElementById('updateForm').style.display='block'
+
+                                    /* Set each of the inputs in the Update Form to the values of the pet you're updating */
                                     document.getElementById('petId').value='{{$pet->id}}'
                                     document.getElementById('petName').value='{{$pet->name}}'
                                     document.getElementById('petAge').value='{{$pet->age}}'
                                     document.getElementById('petSpecies').value='{{$pet->species}}'
                                     document.getElementById('petBreed').value='{{$pet->breed}}'
 
+                                    /* Only check the sterilized box if the pet being updated is sterilized */
                                     @if($pet->sterilized)
                                     document.getElementById('petSterilized').checked=true
                                     @else
@@ -129,6 +132,7 @@
 
                                     document.getElementById('petHealth').value='{{$pet->health}}'
                                     document.getElementById('petDescriptions').value='{{$pet->descriptions}}'
+                                    /* Done setting Update inputs */
                                     " 
                                     style="width:auto;">Update</button>
                             </td>
