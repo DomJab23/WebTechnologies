@@ -48,7 +48,7 @@ Route::middleware(['logged'])->group(function() {
     Route::post('/managementupdate', [PetController::class, 'update_pet'])->name('petUpdate');
     Route::post('/managementdelete', [PetController::class, 'delete_pet'])->name('petDelete');
 
-    Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+    Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
     Route::post('/addimage', [ImageController::class, 'store_image'])->name('imageAdd');
     Route::post('/deleteimage', [ImageController::class, 'delete_image'])->name('imageDelete');

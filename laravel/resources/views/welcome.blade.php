@@ -93,67 +93,33 @@
     </section>
     <!--Footer-->
     <footer class="footer">
-    <!-- Logo and Text -->
-    <div class="footer-section logo-section">
-      
-      <p class="footer-text">Check our socials !</p>
-      <p class="social-media-icons">social media here</p>
-    </div>
+        <!-- Logo and Text -->
+        <div class="footer-section logo-section">
+        
+        <p class="footer-text">Check our socials !</p>
+        <p class="social-media-icons">social media here</p>
+        </div>
 
-    <!-- Contact Information -->
-    <div class="footer-section contact-section">
-      <h4>Contact Information</h4>
-      <p>Email: contact@example.com</p>
-      <p>Phone: +123 456 7890</p>
-      <p>Address: 123 Example Street, City, Country</p>
-    </div>
+        <!-- Contact Information -->
+        <div class="footer-section contact-section">
+        <h4>Contact Information</h4>
+        <p>Email: contact@example.com</p>
+        <p>Phone: +123 456 7890</p>
+        <p>Address: 123 Example Street, City, Country</p>
+        </div>
 
-    <!-- Newsletter Signup -->
-    <div class="footer-section newsletter-section">
-      <h4>Newsletter</h4>
-      <p>Subscribe to our newsletter for updates.</p>
-      <form class="newsletter-form">
-        <input type="email" placeholder="Enter your email" required>
-        <button type="submit">Subscribe</button>
-      </form>
-    </div>
-  </footer>
-
-    <!-- Modal Login Form -->
-    <div id="id01" class="modal">
-        <form class="modal-content animate" action="{{ route('login') }}" method="post">
-            @csrf
-            <div class="imgcontainer">
-                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-            </div>
-            <div class="container">
-                <h2>Sign in to your account.</h2>
-                <label for="uname"><b>Username</b></label>
-                <input type="text" placeholder="Enter Username" name="uname" required>
-                <label for="psw"><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="psw" required>
-                <button type="submit">Login</button>
-                <label>
-                    <input type="checkbox" checked="checked" name="remember"> Remember me</input>
-                </label>
-            </div>
-            <div class="container" >
-                
-                <span class="psw">Forgot <a href="#">password?</a></span>
-            </div>
+        <!-- Newsletter Signup -->
+        <div class="footer-section newsletter-section">
+        <h4>Newsletter</h4>
+        <p>Subscribe to our newsletter for updates.</p>
+        <form class="newsletter-form">
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit">Subscribe</button>
         </form>
-    </div>
-    @endsection
-    <script>
-        // Get the modal
-        var modal = document.getElementById('id01');
+        </div>
+    </footer>
 
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-    </script>
+    @endsection
+
 </body>
 </html>
