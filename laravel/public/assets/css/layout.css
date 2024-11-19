@@ -26,7 +26,7 @@ h2 {
     color:black;
 }
 
-/* Add padding to the checkbox */
+    /* Add padding to the checkbox */
 label input[type=checkbox] {
     margin-top: 16px;
 }
@@ -131,6 +131,28 @@ label input[type=checkbox] {
     animation: animatezoom 0.6s; /* Zoom animation */
 }
 
+.modalButton {
+    background-color: lightgray;
+    color: black;
+    display: flex;
+    font-size: 18px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    height: 50px;
+    width: 130px;
+}
+
+.modalButton:hover {
+    background-color: gray;
+    transition: all 0.1s ease;
+}
+
 /* Add Zoom Animation */
 @keyframes animatezoom {
     from {transform: scale(0)} 
@@ -155,8 +177,7 @@ label input[type=checkbox] {
 
 /* Avatar image */
 .imgcontainer {
-    text-align: center;
-    margin: 24px 0 12px 0;
+    margin: 24px 0 12px 14px;
     position: relative;
 }
 

@@ -111,7 +111,13 @@
                                 <td>Not sterilized</td>
                             @endif
                             <td>
-                                <button onclick="document.getElementById('updateForm').style.display='block'" style="width:auto;">Update</button>
+                                <input type="hidden" name="id" value="{{$pet->id}}">
+                                <button 
+                                    onclick="
+                                    document.getElementById('updateForm').style.display='block'
+                                    document.getElementById('petId').value='{{$pet->id}}'
+                                    " 
+                                    style="width:auto;">Update</button>
                             </td>
                             <td>
                                 <form action="{{route('onePet')}}" method="POST">
@@ -131,8 +137,12 @@
         <div id="updateForm" class="modal">
             <form class="modal-content animate" action="{{route('petUpdate')}}" method="post">
             @csrf
+                <div class="imgcontainer">
+                    <span onclick="document.getElementById('updateForm').style.display='none'" class="close" title="Close Window">&times;</span>
+                </div>
+
                 <label for="id">Pet ID:</label><br>
-                <input type="number" placeholder="Id of the pet to update" name="id" class="infoInput"/><br>
+                <input type="number" placeholder="Id of the pet to update" name="id" id="petId" class="infoInput"/><br>
 
                 <label for="name">Name of pet:</label><br>
                 <input type="text" placeholder="Updated name of the pet" name="name" class="infoInput"/><br>
@@ -155,17 +165,17 @@
                 <label for="descriptions">Description:</label><br>
                 <textarea type="text" placeholder="Updated description of the pet" name="descriptions" class="infoInput descriptionInput"></textarea><br>
 
-                <button>Update Pet</button>
+                <button class="modalButton">Update Pet</button>
             </form>
         </div>
-        <script>
+        <script> //Doesn't currently work here
             // Get the modal
-            var modal = document.getElementById('updateForm');
+            var modalUpdate = document.getElementById('updateForm');
 
             // When the user clicks anywhere outside of the modal, close it
             window.onclick = function(event) {
-                if (event.target == modal) {
-                    modal.style.display = "none";
+                if (event.target == modalUpdate) {
+                    modalUpdate.style.display = "none";
                 }
             }
         </script>

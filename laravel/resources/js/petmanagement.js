@@ -1,0 +1,1 @@
+document.getElementById('petId').value = document.getElementById('id').value;
