@@ -116,6 +116,19 @@
                                     onclick="
                                     document.getElementById('updateForm').style.display='block'
                                     document.getElementById('petId').value='{{$pet->id}}'
+                                    document.getElementById('petName').value='{{$pet->name}}'
+                                    document.getElementById('petAge').value='{{$pet->age}}'
+                                    document.getElementById('petSpecies').value='{{$pet->species}}'
+                                    document.getElementById('petBreed').value='{{$pet->breed}}'
+
+                                    @if($pet->sterilized)
+                                    document.getElementById('petSterilized').checked=true
+                                    @else
+                                    document.getElementById('petSterilized').checked=false
+                                    @endif
+
+                                    document.getElementById('petHealth').value='{{$pet->health}}'
+                                    document.getElementById('petDescriptions').value='{{$pet->descriptions}}'
                                     " 
                                     style="width:auto;">Update</button>
                             </td>
@@ -141,29 +154,29 @@
                     <span onclick="document.getElementById('updateForm').style.display='none'" class="close" title="Close Window">&times;</span>
                 </div>
 
-                <label for="id">Pet ID:</label><br>
-                <input type="number" placeholder="Id of the pet to update" name="id" id="petId" class="infoInput"/><br>
+                <!-- Id of animal being updated -->
+                <input type="hidden" placeholder="Id of the pet to update" name="id" id="petId" class="infoInput"/>
 
                 <label for="name">Name of pet:</label><br>
-                <input type="text" placeholder="Updated name of the pet" name="name" class="infoInput"/><br>
+                <input type="text" placeholder="Updated name of the pet" name="name" id="petName" class="infoInput"/><br>
 
                 <label for="age">Age of pet:</label><br>
-                <input type="number" placeholder="Updated age of the pet" name="age" class="infoInput"/><br>
+                <input type="number" placeholder="Updated age of the pet" name="age" id="petAge" class="infoInput"/><br>
 
                 <label for="species">Species of pet:</label><br>
-                <input type="text" placeholder="Updated species of the pet" name="species" class="infoInput"/><br>
+                <input type="text" placeholder="Updated species of the pet" name="species" id="petSpecies" class="infoInput"/><br>
 
                 <label for="breed">Breed of pet:</label><br>
-                <input type="text" placeholder="Updated breed of the pet" name="breed" class="infoInput"/><br>
+                <input type="text" placeholder="Updated breed of the pet" name="breed" id="petBreed" class="infoInput"/><br>
                 
                 <label for="sterilized">Sterilized:</label>
-                <input type="checkbox" placeholder="Was the pet sterilized?" name="sterilized" class="infoInput"/><br>
+                <input type="checkbox" placeholder="Was the pet sterilized?" name="sterilized" id="petSterilized" class="infoInput"/><br>
 
                 <label for="health">Health of pet:</label><br>
-                <textarea type="text" placeholder="Updated information about the health of the pet" name="health" class="infoInput healthInput"></textarea><br>
+                <textarea type="text" placeholder="Updated information about the health of the pet" name="health" id="petHealth" class="infoInput healthInput"></textarea><br>
 
                 <label for="descriptions">Description:</label><br>
-                <textarea type="text" placeholder="Updated description of the pet" name="descriptions" class="infoInput descriptionInput"></textarea><br>
+                <textarea type="text" placeholder="Updated description of the pet" name="descriptions" id="petDescriptions" class="infoInput descriptionInput"></textarea><br>
 
                 <button class="modalButton">Update Pet</button>
             </form>
