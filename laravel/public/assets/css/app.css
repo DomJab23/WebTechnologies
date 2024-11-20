@@ -66,9 +66,15 @@ html, body {
     justify-content: center;
     text-align: center;
     gap:20px;
+    background-color: #ff9604;
+    border-radius:5px;
+    border: none;
+    width: 10%;
+    padding:1%;
+    
 }
 .animal-size:hover{
-    color: #e55b00;
+    background-color: orangered;
 }
 h2 {
     font-size: 50px;
@@ -127,9 +133,9 @@ h4{
 .newsletter_text {
     flex:1;
     text-align: left;
-    justify-content: flex-end; /* Align items to the right */
-    align-items: center; /* Center items vertically */
-    padding: 20px; /* Add padding */
+    justify-content: left; /* Align items to the right */
+    align-items: left; /* Center items vertically */
+    padding-left: 30%; /* Add padding */
     /* Remove float and flex properties */
 }
 .newsletterspace{
@@ -140,7 +146,7 @@ h4{
 .newsletter_input[type="text"] {
     justify-content: center;  /* Horizontally center the content */
     align-items: center; 
-    width: 40%;
+    width: 70%;
     
    
 }

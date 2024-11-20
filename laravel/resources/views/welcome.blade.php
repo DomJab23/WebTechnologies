@@ -86,7 +86,10 @@
         </div>
     </section>
     <section class="newsletter_section" style="background-image: url('{{ asset('assets/photos/catnewsletter.jpg') }}');">
-        <div class="newsletter_text">
+    <div class="newsletterspace">
+            <h1>     </h1>
+        </div>
+    <div class="newsletter_text">
             <h1 class="white">JOIN OUR NEWSLETTER</h1>
             <h2>Stay Up To Date With All The Latest News!</h2>
             <form>
