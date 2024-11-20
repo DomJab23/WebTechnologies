@@ -8,7 +8,7 @@ html, body {
 * {
     box-sizing: border-box;
 }
-
+/*The header picture at the top of the website*/
 .firstPicture {
     background-repeat: no-repeat;
     background-size: cover;
@@ -18,7 +18,7 @@ html, body {
     padding: 20px;
     color: white;
 }
-
+/*All button on the website*/
 .button {
     background-color: orange;
     color: black;
@@ -46,15 +46,40 @@ html, body {
     padding-top: 10%;
     padding-left: 2%;
 }
-
+.takepethome{
+    text-align: center;
+    justify-content: center;
+    padding-left: 25%;
+    padding-right: 25%;
+    padding-bottom:1%;
+}
+.animal-selection-bar{
+    display: flex; /* Allows flex properties within each card */
+    flex-direction: row; /* Stack content vertically (image, name, position, story) */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    text-align: center; /* Center text content */
+    gap:3%;
+    padding-bottom: 1%;
+}
+.animal-size{
+    justify-content: center;
+    text-align: center;
+    gap:20px;
+}
+.animal-size:hover{
+    color: #e55b00;
+}
 h2 {
     font-size: 50px;
     font-weight: bold;
+    text-align: center;
     color:black;
 }
 h1 {
     font-size: 20px;
     font-weight: bolder;
+    text-align: center;
 }
 h4{
     font-size: 20px;
@@ -64,14 +89,14 @@ h4{
 .p1{
     color: black;
 }
-
+/*
 .awards {
     background-color: orange;
     display: flex;
     border: none;
     height: 400px;
 }
-
+*/
 .flexContainer {
     display: flex;
     flex-wrap: wrap;
@@ -120,12 +145,13 @@ h4{
    
 }
 
-
+/*
 .prizes {
     background-color: orange;
     display: flex;
     height: 100px;
 }
+*/
 
 .photos, .morePhotos, .contactFormAndMap {
     display: flex;
@@ -133,21 +159,101 @@ h4{
     height: auto;
 }
 
-.photo, .map {
-    flex: 1;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border: none;
-    min-height: 200px;
+.ourteam {
+    display: flex;
+    flex-direction: row; /* Stack each person vertically */
+    justify-content: center; /* Center the entire section horizontally */
+    align-items: center; /* Center content horizontally within each card */
+    gap: 20px; /* Space between each person */
+    padding: 20px; /* Add padding around the section */
+    background-color: #f9f9f9; /* Light background for the section */
 }
 
-.contactForm {
-    flex: 1;
-}
-.contactInfo{
-    background-color: white;
+.firstPerson, .secondPerson, .thirdPerson {
+    display: flex; /* Allows flex properties within each card */
+    flex-direction: column; /* Stack content vertically (image, name, position, story) */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    text-align: center; /* Center text content */
+    background-color: #ffffff; /* White background for each card */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for separation */
+    padding: 20px; /* Space inside each card */
+    width: 80%; /* Adjust width of each card */
+    max-width: 600px; /* Limit maximum width */
 }
 
+/* Styling for image */
+.firstPerson img, .secondPerson img, .thirdPerson img {
+    width: 100%;
+    height: 90%;
+    border-radius: 5%; /* Circular image */
+    object-fit: cover; /* Ensure proper scaling of image */
+    margin-bottom: 15px; /* Space below the image */
+    
+}
+
+/* Styling for name, position, and story */
+.name {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin: 10px 0; /* Space above and below */
+}
+
+.position {
+    font-size: 18px;
+    color: #666;
+    margin: 5px 0;
+}
+
+.shortStory {
+    font-size: 16px;
+    color: #555;
+    margin: 10px 0 0;
+    line-height: 1.5; /* Better readability for paragraphs */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .ourteam {
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+
+    .firstPerson, .secondPerson, .thirdPerson {
+        width: 100%; /* Make cards full width */
+    }
+}
+
+
+.contactForm, .google-map {
+    flex: 1;
+    padding:3%;
+    padding-top: 1%;
+}
+.contactForm input {
+    background-color: #f0f0f0; /* Light grey background */
+    border: 1px solid #ffffff; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px; /* Space inside the input fields */
+    margin: 5px 0; /* Space between the inputs */
+    width: calc(100% - 22px); /* Adjust width to fit the container */
+    box-sizing: border-box; /* Include padding and border in total width */
+    font-size: 16px; /* Adjust text size */
+}
+
+.google-map iframe {
+    height: 500px;
+    width: 800px;
+    left: 0;
+    top: 0;
+    border-radius: 5px; /* Rounded corners */
+    
+}
+.contactForm .message-input {
+    height: 230px; /* Increase height for the message box */
+    resize: none; /* Prevent resizing */
+}
 .footer {
     display: flex;
     justify-content: space-between; /* Ensures sections are spaced evenly */
@@ -170,6 +276,31 @@ h4{
     line-height: 1.6;
     margin-top: 10px;
   }
+  .social-media-icons {
+    display: flex;
+    justify-content: left;
+    gap:20px;
+    
+}
+.footer-logo{
+    height: 70px;
+    padding:5px;
+
+}
+
+.social-media-icons a {
+    text-decoration: none; /* Remove underline from links */
+}
+
+.social-media-icons img {
+    width: 20px; /* Adjust size of icons */
+    height: 20px;
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.social-media-icons img:hover {
+    transform: scale(1.2); /* Enlarge on hover */
+}
   
   .contact-section h4,
   .newsletter-section h4 {

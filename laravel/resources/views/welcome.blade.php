@@ -22,6 +22,45 @@
             <a class="button" href="/">DONATE NOW!</a>
         </div>
     </section>
+    <section class="ourTeam">
+        <h1 class="orange">ADOPT PETS</h1>
+        <h2>Bring a new pet home !</h2>
+        <p class="takepethome">Ready to find your new best friend?  By adopting, you are giving a 
+            rescue animal a second chance at life, and in return, 
+            you'll gain a loyal companion who will fill your home with love.<p>
+        <div class="animal-selection-bar">
+            <button class="animal-size">All</button>
+            <button class="animal-size">Small</button>
+            <button class="animal-size">Medium</button>
+            <button class="animal-size">Large</button>
+        </div>
+    </section>
+    <section class="ourteam">
+    <div class="firstPerson">
+        <img src="{{ asset('assets/photos/PETAPP.png') }}" alt="PETAPP Logo" class="footer-logo">
+        <h1 class="name">Alex</h1>
+        <h2 class="position">Position</h2>
+        <p class="shortStory">This is a short story about Alex.</p>
+    </div>
+    <div class="secondPerson">
+        <img src="{{ asset('assets/photos/PETAPP.png') }}" alt="PETAPP Logo" class="footer-logo">
+        <h1 class="name">Taylor</h1>
+        <h2 class="position">Position</h2>
+        <p class="shortStory">This is a short story about Taylor.</p>
+    </div>
+    <div class="thirdPerson">
+        <img src="{{ asset('assets/photos/PETAPP.png') }}" alt="PETAPP Logo" class="footer-logo">
+        <h1 class="name">Jordan</h1>
+        <h2 class="position">Position</h2>
+        <p class="shortStory">This is a short story about Jordan.</p>
+    </div>
+    <div class="thirdPerson">
+        <img src="{{ asset('assets/photos/PETAPP.png') }}" alt="PETAPP Logo" class="footer-logo">
+        <h1 class="name">Jordan</h1>
+        <h2 class="position">Position</h2>
+        <p class="shortStory">This is a short story about Jordan.</p>
+    </div>
+</section>
 
     <!-- Other Sections (Adopt Pet, Awards, About Us, etc.) -->
     <!--<section class="petAdoption">
@@ -64,16 +103,28 @@
         <h1 class="orange">OUR STAFF</h1>
         <h2>Team of Professionals</h2>
     </section>
-    <section class="photos">
-        <div class="photo" style="background-image: url('{{ asset('assets/photos/catt.jpg') }}');"></div>
-        <div class="photo" style="background-image: url('{{ asset('assets/photos/catt.jpg') }}');"></div>
-        <div class="photo" style="background-image: url('{{ asset('assets/photos/catt.jpg') }}');"></div>
-    </section>
-    <section class="morePhotos">
-        <div class="photo" style="background-image: url('{{ asset('assets/photos/catt.jpg') }}');"></div>
-        <div class="photo" style="background-image: url('{{ asset('assets/photos/catt.jpg') }}');"></div>
-        <div class="photo" style="background-image: url('{{ asset('assets/photos/catt.jpg') }}');"></div>
-    </section>
+    <section class="ourteam">
+    <div class="firstPerson">
+        <img src="{{ asset('assets/photos/PETAPP.png') }}" alt="PETAPP Logo" class="footer-logo">
+        <h1 class="name">Alex</h1>
+        <h2 class="position">Position</h2>
+        <p class="shortStory">This is a short story about Alex.</p>
+    </div>
+    <div class="secondPerson">
+        <img src="{{ asset('assets/photos/PETAPP.png') }}" alt="PETAPP Logo" class="footer-logo">
+        <h1 class="name">Taylor</h1>
+        <h2 class="position">Position</h2>
+        <p class="shortStory">This is a short story about Taylor.</p>
+    </div>
+    <div class="thirdPerson">
+        <img src="{{ asset('assets/photos/PETAPP.png') }}" alt="PETAPP Logo" class="footer-logo">
+        <h1 class="name">Jordan</h1>
+        <h2 class="position">Position</h2>
+        <p class="shortStory">This is a short story about Jordan.</p>
+    </div>
+</section>
+
+
     <section class="GetInTouch">
         <div class="title">
             <h1 class="orange">CONTACTS</h1>
@@ -84,20 +135,39 @@
                 <form><input type="text" id="name" name="name" placeholder="Name"></form>
                 <form><input type="text" id="email" name="email" placeholder="E-mail"></form>
                 <form><input type="text" id="phone" name="phone" placeholder="Phone number"></form>
-                <form><input type="text" id="message" name="message" placeholder="Message"></form>
+                <form><input class="message-input" type="text" id="message" name="message" placeholder="Message" overflow-wrap: break-word;></form>
                 <a class="button" href="/">SEND!</a>
             </div>
-            <div class="map" style="background-image: url('{{ asset('assets/photos/hamster.jpg') }}');"></div>
+            <div class="google-map" >
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2770.678243602756!2d9.780705292390556!3d54.912785895198326!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b339da64bc7277%3A0x23acdc244b60c345!2sUniversity%20of%20Southern%20Denmark!5e0!3m2!1spl!2sdk!4v1732099354236!5m2!1spl!2sdk" 
+                width="600" height="600" style="border:10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
         </div>
     </section>
     <!--Footer-->
     <footer class="footer">
     <!-- Logo and Text -->
     <div class="footer-section logo-section">
-      
-      <p class="footer-text">Check our socials !</p>
-      <p class="social-media-icons">social media here</p>
+        <a >
+                <img src="{{ asset('assets/photos/PETAPP.png') }}" alt="PETAPP Logo" class="footer-logo">
+        </a>
+    <p class="footer-text">Check our socials!</p>
+    <div class="social-media-icons">
+        
+        <a href="https://www.facebook.com" target="_blank" class="social-icon">
+            <img src="{{ asset('assets/photos/facebook-app-round-white-icon.png') }}" alt="FB" />
+        </a>
+        <a href="https://www.tiktok.com" target="_blank" class="social-icon">
+            <img src="{{ asset('assets/photos/tiktok-white-icon.png') }}" alt="TT" />
+        </a>
+        <a href="https://www.instagram.com" target="_blank" class="social-icon">
+            <img src="{{ asset('assets/photos/instagram-white-icon.png') }}" alt="IG" />
+        </a>
+        <a href="https://www.tiktok.com" target="_blank" class="social-icon">
+            <img src="{{ asset('assets/photos/linkedin-app-white-icon.png') }}" alt="LI" />
+        </a>
     </div>
+</div>
 
     <!-- Contact Information -->
     <div class="footer-section contact-section">
