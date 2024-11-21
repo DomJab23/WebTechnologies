@@ -165,7 +165,7 @@ h4{
     height: auto;
 }
 
-.ourteam {
+.ourteam, .petsReadyForAdoption {
     display: flex;
     flex-direction: row; /* Stack each person vertically */
     justify-content: center; /* Center the entire section horizontally */
@@ -174,8 +174,12 @@ h4{
     padding: 20px; /* Add padding around the section */
     background-color: #f9f9f9; /* Light background for the section */
 }
-
-.firstPerson, .secondPerson, .thirdPerson {
+.pet-photo{
+    justify-content: center;
+    height:200px;
+    width:300px;
+}
+.firstPerson, .secondPerson, .thirdPerson, .firstPet,.secondPet, .thirdPet, .forthPet{
     display: flex; /* Allows flex properties within each card */
     flex-direction: column; /* Stack content vertically (image, name, position, story) */
     justify-content: center; /* Center vertically */
