@@ -55,9 +55,9 @@
         <!-- Third Pet  -->
         <div class="thirdPet">
             <img src="{{ asset('assets/photos/petPhoto.jpg') }}" alt="PETAPP Logo" class="pet-photo">
-            <h1 class="name">Jordan</h1>
+            <h1 class="name">Rowan</h1>
             <h2 class="position">Position</h2>
-            <p class="shortStory">This is a short story about Jordan.</p>
+            <p class="shortStory">This is a short story about Rowan.</p>
         </div>
         <!-- Forth Pet  -->
         <div class="forthPet">
