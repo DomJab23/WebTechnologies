@@ -90,6 +90,7 @@ label input[type=checkbox] {
     color: white;
     padding: 14px 20px;
     margin: 18px 0;
+    margin-right: 10px;
     border: none;
     cursor: pointer;
     width: 100%;
