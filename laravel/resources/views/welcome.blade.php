@@ -175,14 +175,10 @@
                 <label for="psw"><b>Password</b></label>
                 <input type="password" placeholder="Enter Password" name="psw" required>
                 <button class="button" type="submit">Login</button>
-                <label>
-                    <input type="checkbox" checked="checked" name="remember"> Remember me
-                </label>
+            
             </div>
             <div class="container">
                 <button type="button" class="cancelbtn" onclick="document.getElementById('id01').style.display='none'">Cancel</button>
-                <span class="psw">Forgot <a href="#">password?</a></span>
-            </div>
         </form>
     </div>
 

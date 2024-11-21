@@ -55,14 +55,11 @@
                 <input class="loginInput" type="text" placeholder="Enter Username" name="uname" required>
                 <label for="psw"><b>Password</b></label>
                 <input class="loginInput" type="password" placeholder="Enter Password" name="psw" required>
+                <br>
+                <br>
                 <button type="submit" class="modalButton">Login</button>
-                <label>
-                    <input type="checkbox" checked="checked" name="remember"> Remember me</input>
-                </label>
-            </div>
-            <div class="container" >
-                
-                <span class="psw"><a href="#">Forgot password?</a></span>
+                <br>
+                <button type="submit" class="modalButton" onclick="window.location.href='/register';">Sign Up</button>
             </div>
         </form>
     </div>
