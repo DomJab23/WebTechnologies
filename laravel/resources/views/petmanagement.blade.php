@@ -53,67 +53,68 @@
         <div class="split right">
             <p>Pets in the shelter:</p>
 
-
-            <!-- Table of pets-->
-            <table>
-                <thead style="font-size:20px">
-                    <th>Id</th>
-                    <th>Name</th>
-                    <th>Age</th>
-                    <th>Species</th>
-                    <th>Sterilized</th>
-                    <th></th>
-                    <th></th>
-                </thead>
-                <tbody>
-                    @foreach($pets as $pet)
-                        <tr>
-                            <td>{{$pet->id}}</td>
-                            <td>{{$pet->name}}</td>
-                            <td>{{$pet->age}}</td>
-                            <td>{{$pet->species}}</td>
-                            @if($pet->sterilized)
-                                <td>Sterilized</td>
-                            @else
-                                <td>Not sterilized</td>
-                            @endif
-                            <td>
-                                <input type="hidden" name="id" value="{{$pet->id}}">
-                                <button 
-                                    onclick="
-                                    document.getElementById('updateForm').style.display='block'
-
-                                    /* Set each of the inputs in the Update Form to the values of the pet you're updating */
-                                    document.getElementById('petId').value='{{$pet->id}}'
-                                    document.getElementById('petName').value='{{$pet->name}}'
-                                    document.getElementById('petAge').value='{{$pet->age}}'
-                                    document.getElementById('petSpecies').value='{{$pet->species}}'
-                                    document.getElementById('petBreed').value='{{$pet->breed}}'
-
-                                    /* Only check the sterilized box if the pet being updated is sterilized */
-                                    @if($pet->sterilized)
-                                    document.getElementById('petSterilized').checked=true
-                                    @else
-                                    document.getElementById('petSterilized').checked=false
-                                    @endif
-
-                                    document.getElementById('petHealth').value='{{$pet->health}}'
-                                    document.getElementById('petDescriptions').value='{{$pet->descriptions}}'
-                                    /* Done setting Update inputs */
-                                    " 
-                                    style="width:auto;">Update</button>
-                            </td>
-                            <td>
-                                <form action="{{route('onePet')}}" method="POST">
-                                    @csrf
+            <div class="scroll">
+                <!-- Table of pets-->
+                <table>
+                    <thead style="font-size:20px" class="fixedTHead">
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Species</th>
+                        <th>Sterilized</th>
+                        <th></th>
+                        <th></th>
+                    </thead>
+                    <tbody>
+                        @foreach($pets as $pet)
+                            <tr>
+                                <td>{{$pet->id}}</td>
+                                <td>{{$pet->name}}</td>
+                                <td>{{$pet->age}}</td>
+                                <td>{{$pet->species}}</td>
+                                @if($pet->sterilized)
+                                    <td>Sterilized</td>
+                                @else
+                                    <td>Not sterilized</td>
+                                @endif
+                                <td>
                                     <input type="hidden" name="id" value="{{$pet->id}}">
-                                    <button>More</button>
-                                </form>
-                            </td>
-                        </tr>
-                    @endforeach
-                </tbody>
-            </table>
+                                    <button 
+                                        onclick="
+                                        document.getElementById('updateForm').style.display='block'
+
+                                        /* Set each of the inputs in the Update Form to the values of the pet you're updating */
+                                        document.getElementById('petId').value='{{$pet->id}}'
+                                        document.getElementById('petName').value='{{$pet->name}}'
+                                        document.getElementById('petAge').value='{{$pet->age}}'
+                                        document.getElementById('petSpecies').value='{{$pet->species}}'
+                                        document.getElementById('petBreed').value='{{$pet->breed}}'
+
+                                        /* Only check the sterilized box if the pet being updated is sterilized */
+                                        @if($pet->sterilized)
+                                        document.getElementById('petSterilized').checked=true
+                                        @else
+                                        document.getElementById('petSterilized').checked=false
+                                        @endif
+
+                                        document.getElementById('petHealth').value='{{$pet->health}}'
+                                        document.getElementById('petDescriptions').value='{{$pet->descriptions}}'
+                                        /* Done setting Update inputs */
+                                        " 
+                                        style="width:auto;">Update</button>
+                                </td>
+                                <td>
+                                    <form action="{{route('onePet')}}" method="POST">
+                                        @csrf
+                                        <input type="hidden" name="id" value="{{$pet->id}}">
+                                        <button>More</button>
+                                    </form>
+                                </td>
+                            </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+            </div>
         </div>
     
         

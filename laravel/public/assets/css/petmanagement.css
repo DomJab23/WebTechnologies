@@ -1,15 +1,32 @@
 /* Split the screen in half */
 
 th{
-    padding: 0 15px;
+    padding: 7px 15px;
 }
 
 td{
-    padding: 0 15px;
+    padding: 7px 15px;
 }
 
 p{
     font-size:22px
+}
+
+.fixedTHead {
+  top: 0;
+  z-index: 2;
+  position: sticky;
+  background-color: white;
+}
+
+.scroll {
+  overflow-y: scroll;
+  max-height: 600px;
+  width: 75%;
+  border: solid;
+  border-color: gray;
+  border-width: 2px;
+  border-radius: 7px;
 }
 
 .split {
