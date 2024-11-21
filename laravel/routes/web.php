@@ -6,6 +6,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\RegistrationController;
 use App\Http\Controllers\PetController;
 use App\Http\Controllers\ImageController;
+use App\Http\Controllers\DonationController;
 
 
 Route::get('/', function () {
@@ -53,5 +54,6 @@ Route::middleware(['logged'])->group(function() {
     Route::post('/addimage', [ImageController::class, 'store_image'])->name('imageAdd');
     Route::post('/deleteimage', [ImageController::class, 'delete_image'])->name('imageDelete');
 });
+Route::post('/donate', [DonationController::class, 'processDonation'])->name('donate');
 
    
