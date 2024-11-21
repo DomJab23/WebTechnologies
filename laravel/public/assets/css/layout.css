@@ -82,6 +82,7 @@ label input[type=checkbox] {
 .logo {
     max-width: 250px; /* Set a max width for the logo */
     height: auto; /* Maintain aspect ratio */
+    padding: 10%;
 }
 
 .loginButton {

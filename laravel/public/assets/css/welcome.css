@@ -1,5 +1,5 @@
 /* Example responsive styles */
-.firstPicture, .aboutUsPicture, .map, .photo {
+.firstPicture, .aboutUsPicture, .map, .photo  {
     background-size: cover;
     background-position: center;
     height: auto;
@@ -25,4 +25,12 @@ input[type=text], input[type=password] {
     font-size: 20px;
     line-height: 35px;
     text-align: justify;
+}
+
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+.newsletter_section{
+    min-height: 600px;
 }
