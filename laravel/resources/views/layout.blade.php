@@ -38,6 +38,48 @@
         <div class="content">
             @yield('content')
         </div>
+        <!--Footer-->
+<footer class="footer">
+    <!-- Logo and Text -->
+        <div class="footer-section logo-section">
+            <a >
+                <img src="{{ asset('assets/photos/petapp-logo-white.png') }}" alt="PETAPP Logo" class="footer-logo">
+            </a>
+            <p class="footer-text">Check our socials!</p>
+            <!-- Social media icons with links to each social media platform -->
+            <div class="social-media-icons">
+                <a href="https://www.facebook.com" target="_blank" class="social-icon">
+                    <img src="{{ asset('assets/photos/facebook-app-round-white-icon.png') }}" alt="FB" />
+                </a>
+                <a href="https://www.tiktok.com" target="_blank" class="social-icon">
+                    <img src="{{ asset('assets/photos/tiktok-white-icon.png') }}" alt="TT" />
+                </a>
+                <a href="https://www.instagram.com" target="_blank" class="social-icon">
+                    <img src="{{ asset('assets/photos/instagram-white-icon.png') }}" alt="IG" />
+                </a>
+                <a href="https://www.tiktok.com" target="_blank" class="social-icon">
+                    <img src="{{ asset('assets/photos/linkedin-app-white-icon.png') }}" alt="LI" />
+                </a>
+            </div>
+        </div>
+    <!-- Contact Information -->
+    <div class="footer-section contact-section">
+        <h4>Contact Information</h4>
+        <p>Email: contact@petapp.com</p>
+        <p>Phone: +45 123 123 123</p>
+        <p>Address: Alsion 2, 6400 Sønderborg</p>
+    </div>
+    <!-- Newsletter Signup in Footer -->
+    <div class="footer-section newsletter-section">
+      <h4>Newsletter</h4>
+      <p>Subscribe to our newsletter for updates.</p>
+      <form class="newsletter-form">
+        <input type="email" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </footer>
+
 
     </body>
 
