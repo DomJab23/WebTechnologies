@@ -33,6 +33,7 @@
         <div class="title">
             <h1 class="orange">CONTACTS</h1>
             <h2>LET'S GET IN TOUCH</h2>
+            <p class="takepethome">We'd love to hear from you! Whether you have a question, feedback, or just want to say hello, feel free to reach out to us.</p>
         </div>
         <!-- Section below the heading divided into two parts: contact form and map -->
         <div class="contactFormAndMap">
