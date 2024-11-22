@@ -40,12 +40,10 @@
             </div>
         </div>
         <div class="flexContainer-text-photo">
-            <div class="photo">
-                <img src="{{ asset('assets/photos/petPhoto.jpg') }}" alt="PETAPP Logo" class="pet-photo">
-            </div>
-            <div class="">
-                <h2>Who We Are</h2>
-                <p>
+                <img src="{{ asset('assets/photos/pet-shelter-team.jpg') }}" alt="PETAPP Logo" class="photo-pet-shelter-team">
+            <div class="text-team">
+                <h2 class="text-team">Who are we ?</h2>
+                <p class="text-team">
                     We are a dedicated team of animal lovers, volunteers, and professionals 
                     committed to the cause of animal rescue. 
                     Our diverse backgrounds and experiences come together to create 
@@ -54,7 +52,7 @@
             </div>
         </div>
         <div class="flexContainer-text-photo">
-            <div class="aboutUsText">
+            <div class="text-adoption-event">
                 <h2>What We Do</h2>
                 <p>Through various initiatives including adoption events, fundraising campaigns, 
                     and educational outreach, we strive to raise awareness about the importance 
@@ -62,7 +60,7 @@
                 </p>
             </div>
             <div class="photo">
-                <img src="{{ asset('assets/photos/petPhoto.jpg') }}" alt="PETAPP Logo" class="pet-photo">
+                <img src="{{ asset('assets/photos/pet-adoption-event.jpg') }}" alt="PETAPP Logo" class="pet-adoption-event-photo">
             </div>
         </div>
 </div>
