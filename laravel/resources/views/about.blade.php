@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../../assets/css/textColors.css">
     <link rel="stylesheet" href="../../assets/css/welcome.css">
     <link rel="stylesheet" href="../../assets/css/headings.css">
+    <link rel="stylesheet" href="../../assets/css/aboutUsPage.css">
     <!--Link to favicon-->
     <link rel="icon" href="{{ asset('assets/photos/PetApp-favicon.png') }}" type="image/x-icon">
 
@@ -15,28 +16,57 @@
 @extends('layout')
 
 @section('content')
-    <!-- About Us Section -->
-    <section class="aboutUs">
-        <div class="flexContainer">
-            <div class="aboutUsText">
-                <h1>ABOUT PETAPP</h1>
-                <h2>Our Mission</h2>
-                <p>At PETAPP, we are passionate about making a difference in the lives of animals in need. Our mission is to connect shelter pets with loving homes and to promote the welfare of animals everywhere.</p>
-
-                <h2>Who We Are</h2>
-                <p>We are a dedicated team of animal lovers, volunteers, and professionals committed to the cause of animal rescue. Our diverse backgrounds and experiences come together to create a supportive community focused on helping pets find their forever homes.</p>
-
-                <h2>What We Do</h2>
-                <p>Through various initiatives including adoption events, fundraising campaigns, and educational outreach, we strive to raise awareness about the importance of animal adoption and responsible pet ownership.</p>
-            </div>
-            <div class="aboutUsPicture" style="background-image: url('{{ asset('assets/photos/our_team.jpg') }}');"></div>
+<!-- Call to Action Section -->
+<section class="callToActionPhoto" style="background-image: url('{{ asset('assets/photos/get-involved-photo.jpg') }}');">
+        <div class="get-involed-heading">
+            <h2 class="heading-get-involved">Join Us in Making a Difference!</h2>
+            <p class="get-involved-text">  
+                Whether you choose to adopt, volunteer, or donate, every action counts!
+            </p>
+            <a class="button-get-involved" href="/">GET INVOLVED</a>
         </div>
     </section>
+    <!-- About Us Section--> 
+    <section class="aboutUs">
+    <div class="flexContainer-about-us">
+        <div class="flexContainer-text">
+            <div class="text">
+                <h1>ABOUT PETAPP</h1>
+                <h2>Our Mission</h2>
+                <p>
+                    At PETAPP, we are passionate about making a difference in the lives of animals in need. 
+                    Our mission is to connect shelter pets with loving homes and to promote the welfare of animals everywhere.
+                </p>
+            </div>
+        </div>
+        <div class="flexContainer-text-photo">
+            <div class="photo">
+                <img src="{{ asset('assets/photos/petPhoto.jpg') }}" alt="PETAPP Logo" class="pet-photo">
+            </div>
+            <div class="">
+                <h2>Who We Are</h2>
+                <p>
+                    We are a dedicated team of animal lovers, volunteers, and professionals 
+                    committed to the cause of animal rescue. 
+                    Our diverse backgrounds and experiences come together to create 
+                    a supportive community focused on helping pets find their forever homes.
+                </p>
+            </div>
+        </div>
+        <div class="flexContainer-text-photo">
+            <div class="aboutUsText">
+                <h2>What We Do</h2>
+                <p>Through various initiatives including adoption events, fundraising campaigns, 
+                    and educational outreach, we strive to raise awareness about the importance 
+                    of animal adoption and responsible pet ownership.
+                </p>
+            </div>
+            <div class="photo">
+                <img src="{{ asset('assets/photos/petPhoto.jpg') }}" alt="PETAPP Logo" class="pet-photo">
+            </div>
+        </div>
+</div>
 
-    <!-- Call to Action Section -->
-    <section class="callToAction">
-        <h2>Join Us in Making a Difference!</h2>
-        <p>Your support can help us save more lives. Whether you choose to adopt, volunteer, or donate, every action counts!</p>
-        <a class="button" href="/">GET INVOLVED</a>
-    </section>
+   
+    
 @endsection
