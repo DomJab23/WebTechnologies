@@ -1,0 +1,49 @@
+/*dotations hedings*/
+.dotation-heading{
+    font-size:50px;
+    font-weight: bold;
+    text-align: left;
+    color: black;
+}
+.dotation-text{
+    font-size:20px;
+    text-align: left;
+    color: black;
+}
+/*newsletter hedings*/
+.newsletter-main-heading{
+    color: white;
+    text-align: left;
+}
+.newsletter-heading{
+    color: white;
+    text-align: left;
+    font-size:50px;
+    font-weight: bold; 
+}
+/**/
+h2 {
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    color:black;
+}
+h1 {
+    padding-top: 1%;
+    font-size: 20px;
+    font-weight: bolder;
+    text-align: center;
+    color: orange;
+}
+h4{
+    font-size: 20px;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+.p1{
+    color: black;
+}
+.aboutUs{
+    padding-left: 1%;
+    padding-right: 1%;
+}

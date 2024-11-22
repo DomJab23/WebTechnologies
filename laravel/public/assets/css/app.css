@@ -76,25 +76,6 @@ html, body {
 .animal-size:hover{
     background-color: orangered;
 }
-h2 {
-    font-size: 50px;
-    font-weight: bold;
-    text-align: center;
-    color:black;
-}
-h1 {
-    font-size: 20px;
-    font-weight: bolder;
-    text-align: center;
-}
-h4{
-    font-size: 20px;
-    color: white;
-    font-family: 'Courier New', Courier, monospace;
-}
-.p1{
-    color: black;
-}
 /*
 .awards {
     background-color: orange;
@@ -184,13 +165,13 @@ h4{
     flex-direction: column; /* Stack content vertically (image, name, position, story) */
     justify-content: center; /* Center vertically */
     align-items: center; /* Center horizontally */
-    text-align: center; /* Center text content */
+    text-align:justify; /* Center text content */
     background-color: #ffffff; /* White background for each card */
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for separation */
     padding: 20px; /* Space inside each card */
     width: 80%; /* Adjust width of each card */
-    max-width: 600px; /* Limit maximum width */
+    max-width:600px; /* Limit maximum width */
 }
 
 /* Styling for image */
