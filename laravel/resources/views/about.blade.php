@@ -2,6 +2,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PETAPP - Helping Animals</title>
+    <!--Links to CSS styles-->
+    <link rel="stylesheet" href="../../assets/css/app.css">
+    <link rel="stylesheet" href="../../assets/css/textColors.css">
+    <link rel="stylesheet" href="../../assets/css/welcome.css">
+    <link rel="stylesheet" href="../../assets/css/headings.css">
+    <!--Link to favicon-->
+    <link rel="icon" href="{{ asset('assets/photos/PetApp-favicon.png') }}" type="image/x-icon">
+
 </head>
 
 @extends('layout')

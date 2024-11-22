@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="../../assets/css/textColors.css">
     <link rel="stylesheet" href="../../assets/css/welcome.css">
     <link rel="stylesheet" href="../../assets/css/headings.css">
-
     <link rel="icon" href="{{ asset('assets/photos/PetApp-favicon.png') }}" type="image/x-icon">
 
     <style>
