@@ -16,9 +16,16 @@ class LoggedinAuth
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if(auth()->check())
-        {
-            return $next($request);
+        if (auth()->check()) {
+            $user = Auth::user();
+
+            if ($user->usertype == 'admin') {
+                return redirect('/management'); 
+            } elseif ($user->usertype == 'volunteer') {
+                return redirect('/volunteer');
+            }
+
+            return $next($request); 
         }
 
         return(redirect("/"));

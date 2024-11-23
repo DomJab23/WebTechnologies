@@ -54,4 +54,9 @@ Route::middleware(['logged'])->group(function() {
     Route::post('/deleteimage', [ImageController::class, 'delete_image'])->name('imageDelete');
 });
 
-   
+Route::middleware(['logged'])->group(function() {
+    Route::get('/management', [PetController::class, 'get_pets']);
+    Route::get('/volunteer', function () {
+        return view('volunteer');
+    });
+});
