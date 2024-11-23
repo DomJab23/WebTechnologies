@@ -215,8 +215,6 @@ html, body {
         width: 100%; /* Make cards full width */
     }
 }
-
-
 .contactForm, .google-map {
     flex: 1;
     padding:3%;

@@ -23,7 +23,7 @@
             <p class="get-involved-text">  
                 Whether you choose to adopt, volunteer, or donate, every action counts!
             </p>
-            <a class="button-get-involved" href="/">GET INVOLVED</a>
+            <button class="button-get-involved" onclick="window.location.href='/register';">GET INVOLVED</button>
         </div>
     </section>
     <!-- About Us Section--> 
@@ -84,8 +84,5 @@
                 </p>
             </div>
         </div>
-</div>
-
-   
-    
+</div>  
 @endsection
