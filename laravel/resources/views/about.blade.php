@@ -53,7 +53,7 @@
         </div>
         <div class="flexContainer-text-photo">
             <div class="text-adoption-event">
-                <h2>What We Do</h2>
+                <h2>What We Do ?</h2>
                 <p>Through various initiatives including adoption events, fundraising campaigns, 
                     and educational outreach, we strive to raise awareness about the importance 
                     of animal adoption and responsible pet ownership.
@@ -61,6 +61,27 @@
             </div>
             <div class="photo">
                 <img src="{{ asset('assets/photos/pet-adoption-event.jpg') }}" alt="PETAPP Logo" class="pet-adoption-event-photo">
+            </div>
+        </div>
+        <div class="flexContainer-text-photo">
+                <img src="{{ asset('assets/photos/volunteer-photo.jpg') }}" alt="PETAPP Logo" class="volunteer-photo">
+            <div class="text-team">
+                <h2 class="text-team">How you can help ? </h2>
+                <p class="text-team">
+                    You can make a difference by adopting a pet, volunteering your time, 
+                    or donating to help provide essentials for the animals. 
+                    If you can't adopt, consider fostering to give pets a temporary home. Spread the word about our mission
+                    and participate in our events to help raise awareness and funds. 
+                    Together, we can create a better world for animals.
+                </p>
+            </div>
+        </div>
+        <div class="flexContainer-text">
+            <div class="text">
+                <h1>Thank you for your support! </h1>
+                <p>
+                    Feel free to reach out if you have any questions or need more information on how to get involved.
+                </p>
             </div>
         </div>
 </div>
