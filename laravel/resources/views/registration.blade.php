@@ -18,27 +18,23 @@
         @extends('layout')
 
         @section('content')
-
+            <div class="title">
+            <h1 class="orange">REGISTER</h1>
         <div class="registration_page">
             <div class="registration-form">
                 <form action="{{ route('registerPush') }}" method="post">
                     @csrf
-                    <p class="chooseText darkOrange">Choose a username:</p>
-                    <input type="text" name="uname" placeholder="Username">
+                    <p class="">Choose a username:</p>
+                    <input class="input-field" type="text" name="uname" placeholder="Username">
 
-                    <p class="chooseText darkOrange">Choose a password:</p>
-                    <input type="password" name="password" placeholder="Password">
+                    <p class="">Choose a password:</p>
+                    <input class="input-field" type="password" name="password" placeholder="Password">
 
-                    <p class="chooseText darkOrange">Enter your code:</p>
-                    <input type="text" name="code" placeholder="Code">
+                    <p class="">Enter your code:</p>
+                    <input class="input-field" type="text" name="code" placeholder="Code">
                     <br>
                     <button class="button">Register</button>
                 </form> 
-                
-            </div>
-            <div class="registration-photo">
-                <img src="{{ asset('assets/photos/hamster.jpg') }}" >
-            </div>
 
                 
         </div>

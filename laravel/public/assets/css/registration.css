@@ -23,9 +23,10 @@ input[type=text], input[type=password] {
     font-size: 40px;
     margin: 0;
 }
+/*
 .registration_page {
     display: flex;
-    flex-direction: row; /* Change to row for horizontal layout */
+    flex-direction: row; 
     align-items: center;
     width: 100%;
 }
@@ -37,4 +38,17 @@ input[type=text], input[type=password] {
     align-content: center;
     justify-content: center;
     padding: 1%;
+}*/
+.registration_page{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.registration-form{
+    height:100%;
+    width: 100%;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 5%;
 }
