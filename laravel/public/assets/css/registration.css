@@ -23,14 +23,18 @@ input[type=text], input[type=password] {
     font-size: 40px;
     margin: 0;
 }
-
-.backDrop{
-    background-color: aliceblue;
-    padding: 20px;
-    border-radius: 30px;
+.registration_page {
+    display: flex;
+    flex-direction: row; /* Change to row for horizontal layout */
+    align-items: center;
+    width: 100%;
 }
 
-.backImage{
-    background-image: url('../photos/registrationBackground.jpg');
-    background-position-y: -100px;
+.registration-photo, .registration-form {
+    flex:1;
+    height:100%;
+    width: 100%;
+    align-content: center;
+    justify-content: center;
+    padding: 1%;
 }

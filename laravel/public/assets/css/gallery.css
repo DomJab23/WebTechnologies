@@ -1,0 +1,21 @@
+.three-pictures,.four-pictures{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width:100%;
+}
+.gallery-photo{
+    flex:1;
+    height:10%;
+    width: 10%;
+    align-content: center;
+    padding: 1%;
+}
+.text-at-the-end{
+    font-size: 20px;
+    text-align: center;
+    color:black;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 5%;
+}
