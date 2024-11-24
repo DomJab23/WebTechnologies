@@ -39,12 +39,6 @@
 
                 <button>Add Pet</button>
             </form><br><br>
-            <p>Delete pet:</p>
-            <form action="{{ route('petDelete') }}" method="POST">
-                @csrf
-                <input type="number" placeholder="Id of the pet to delete" name="id" class="infoInput"/><br>
-                <button>Delete Pet</button>
-            </form><br><br>
         </div>
         <div class="pet-table">
         <p>Pets in the shelter:</p>
@@ -104,7 +98,12 @@
                 @endforeach
             </tbody>
         </table>
-        
+        <p>Delete pet:</p>
+            <form action="{{ route('petDelete') }}" method="POST">
+                @csrf
+                <input type="number" placeholder="Id of the pet to delete" name="id" class="infoInput"/><br>
+                <button>Delete Pet</button>
+            </form><br><br>
     </div>
 
     </section>
