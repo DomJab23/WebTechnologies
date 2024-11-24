@@ -95,17 +95,4 @@ class PetController extends Controller
         return redirect()->route('volunteer');
     }
 
-    public function unvolunteer_pet(Request $request)
-    {
-        $pet = Pet::findOrFail($request->pet_id);
-
-        if ($pet->volunteer_user_id == auth()->id()) {
-            $pet->volunteer_user_id = null;
-            $pet->status = 'AVAILABLE';
-            $pet->save();
-        }
-
-        return redirect()->route('volunteer');
-    }
-
 }
