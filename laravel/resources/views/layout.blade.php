@@ -23,9 +23,9 @@
                 <label for="psw"><b>Password</b></label>
                 <input class="loginInput" type="password" placeholder="Enter Password" name="psw" required>
                 <br><br>
-                <button type="submit" class="button">Login</button>
+                <button type="submit" class="modalButton">Login</button>
                 <br>
-                <button type="submit" class="button" onclick="window.location.href='/register';">Sign Up</button>
+                <button type="submit" class="modalButton" onclick="window.location.href='/register';">Sign Up</button>
             </div>
         </form>
     </div>
@@ -123,7 +123,5 @@
             </form>
         </div>
     </footer>
-
-    
 </body>
 </html>
