@@ -108,6 +108,23 @@
     </div>
 
     </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+
     <!--Modal Update Form-->
     <div id="updateForm" class="modal">
         <form class="modal-content animate" action="{{ route('petUpdate') }}" method="post">

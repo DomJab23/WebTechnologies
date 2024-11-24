@@ -104,69 +104,52 @@ button:focus {
   background-color: #218838;
 }
 
-/* Modal Update Form */
+/* Update Form Popup */
 #updateForm {
   display: none;
   position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   z-index: 1000;
-  left: 0;
+  width: 400px;
+}
+
+#updateForm input, #updateForm textarea {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#updateForm button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#updateForm button:hover {
+  background-color: #0056b3;
+}
+
+/* Overlay for the popup */
+#updateForm::before {
+  content: '';
+  position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.5); /* Background overlay */
-  padding-top: 60px;
-}
-
-.modal-content {
-  background-color: #fff;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-  border-radius: 8px;
-  width: 50%;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  animation: fadeIn 0.5s;
-}
-
-@keyframes fadeIn {
-  from {
-      opacity: 0;
-  }
-  to {
-      opacity: 1;
-  }
-}
-
-.imgcontainer {
-  text-align: right;
-}
-
-.close {
-  color: #aaa;
-  font-size: 28px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.close:hover, .close:focus {
-  color: #000;
-  text-decoration: none;
-}
-
-.modalButton {
-  width: 100%;
-  padding: 10px;
-  font-size: 16px;
-  background-color: #007BFF;
-  border: none;
-  border-radius: 4px;
-  color: white;
-  cursor: pointer;
-}
-
-.modalButton:hover {
-  background-color: #0056b3;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 999;
 }
 
 /* Responsive Design */
@@ -177,9 +160,5 @@ button:focus {
 
   .pet-add, .pet-table {
       width: 100%;
-  }
-
-  .modal-content {
-      width: 80%;
   }
 }
