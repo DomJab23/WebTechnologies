@@ -55,8 +55,9 @@ Route::middleware(['logged'])->group(function() {
 });
 
 Route::middleware(['logged'])->group(function() {
-    Route::get('/management', [PetController::class, 'get_pets']);
-    Route::get('/volunteer', function () {
-        return view('volunteer');
-    });
+    Route::get('/volunteer', [PetController::class, 'get_volunteer_pets'])->name('volunteer');
+    Route::post('/volunteer', [PetController::class, 'volunteer_for_pet'])->name('volunteerPet');
+    Route::post('/unvolunteer', [PetController::class, 'unvolunteer_pet'])->name('unvolunteerPet');
+    
 });
+Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
