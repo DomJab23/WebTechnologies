@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 class Pet extends Model
 {
     //
+    protected $fillable = ['name', 'age', 'species', 'status', 'volunteer_user_id'];
 
     public function images():HasMany
     {

@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Pet;
+use Illuminate\Support\Facades\Auth;
+
 
 class PetController extends Controller
 {
@@ -73,4 +75,37 @@ class PetController extends Controller
         $pet->save();
         return(redirect("/management"));
     }
+    public function get_volunteer_pets()
+    {
+        $pets = Pet::all();
+        $volunteeringPets = Pet::where('volunteer_user_id', auth()->id())->get();
+        
+        return view('volunteer', compact('pets', 'volunteeringPets'));
+    }
+    public function volunteer_for_pet(Request $request)
+    {
+        $pet = Pet::findOrFail($request->pet_id);
+    
+        if ($pet->status == 'AVAILABLE') {
+            $pet->status = 'PENDING';
+            $pet->volunteer_user_id = auth()->id();
+            $pet->save();
+        }
+
+        return redirect()->route('volunteer');
+    }
+
+    public function unvolunteer_pet(Request $request)
+    {
+        $pet = Pet::findOrFail($request->pet_id);
+
+        if ($pet->volunteer_user_id == auth()->id()) {
+            $pet->volunteer_user_id = null;
+            $pet->status = 'AVAILABLE';
+            $pet->save();
+        }
+
+        return redirect()->route('volunteer');
+    }
+
 }
