@@ -12,8 +12,6 @@
     <link rel="stylesheet" href="../../assets/css/headings.css">
     <!--Link to favicon-->
     <link rel="icon" href="{{ asset('assets/photos/PetApp-favicon.png') }}" type="image/x-icon">
-
-
 </head>
 <body>
     @extends('layout')
