@@ -1,6 +1,7 @@
 .callToActionPhoto {
     background-repeat: no-repeat;
     background-size:cover;
+    height:80%;
 }
 .get-involed-heading,.heading-get-involved{
     color: white;
@@ -20,9 +21,6 @@
 .get-involved-text{
    padding-bottom: 2%;
 }  
-.callToActionPhoto{
-    height:80%;
-}
 .button-get-involved{
     background-color: orange;
     color: black;
@@ -55,6 +53,18 @@
 .photo{
     height:500px;
 }
+.aboutUs{
+    padding-left: 1%;
+    padding-right: 1%;
+}
+.volunteer-photo{
+    flex:1;
+    height: 50%;
+    width: 50%;
+    align-content: center;
+    padding-bottom: 5%;
+    padding-left: 2%;
+}
 .photo-pet-shelter-team{
     flex:1;
     align-content: center;
@@ -68,7 +78,7 @@
     padding-bottom: 5%;
     padding-right: 5%;
 }
-.text-team{
+.text-team,.text-adoption-event{
     flex:1;
     text-align: justify;
     align-items: center;
@@ -78,14 +88,5 @@
     padding-right:2%;
     padding-bottom: 5%;
 }
-.text-adoption-event{
-    flex:1;
-    text-align: justify;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
-    padding-left:2%;
-    padding-right:2%;
-    padding-bottom: 5%;
-}
+
 
