@@ -123,6 +123,8 @@ label input[type=checkbox] {
 
 /* Modal Content/Box */
 .modal-content {
+    align-items: center;
+    justify-content: center;
     background-color: #fefefe;
     margin: 5% auto 15% auto;
     border: 1px solid #888;
@@ -134,7 +136,7 @@ label input[type=checkbox] {
 }
 
 .modalButton {
-    background-color: lightgray;
+    background-color: rgb(255, 140, 0);
     color: black;
     display: flex;
     font-size: 18px;
@@ -146,12 +148,12 @@ label input[type=checkbox] {
     border: none;
     outline: none;
     border-radius: 4px;
-    height: 50px;
-    width: 130px;
+    height: 40px;
+    width: 120px;
 }
 
 .modalButton:hover {
-    background-color: gray;
+    background-color: rgb(166, 83, 0);
     transition: all 0.1s ease;
 }
 
@@ -164,8 +166,8 @@ label input[type=checkbox] {
 /* The Close Button (x) */
 .close {
     position: absolute;
-    right: 25px;
-    top: 0;
+    right: 10px;
+    bottom:120px;
     color: #000;
     font-size: 35px;
     font-weight: bold;

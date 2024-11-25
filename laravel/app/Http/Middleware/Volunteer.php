@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Illuminate\Support\Facades\Auth;
 
-class LoggedinAuth
+class Volunteer
 {
     /**
      * Handle an incoming request.
@@ -17,7 +17,8 @@ class LoggedinAuth
     public function handle(Request $request, Closure $next)
     {
         $user = Auth::user();
-        if (auth()->check()&& $user->usertype=='admin') {
+        if (auth()->check()&& $user->usertype=='volunteer') {
+
 
             $currentPath = $request->path(); 
 
@@ -28,3 +29,4 @@ class LoggedinAuth
         
     }
 }
+

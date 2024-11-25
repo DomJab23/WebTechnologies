@@ -45,15 +45,3 @@ h4{
 .p1{
     color: black;
 }
-.aboutUs{
-    padding-left: 1%;
-    padding-right: 1%;
-}
-.volunteer-photo{
-    flex:1;
-    height: 50%;
-    width: 50%;
-    align-content: center;
-    padding-bottom: 5%;
-    padding-left: 2%;
-}

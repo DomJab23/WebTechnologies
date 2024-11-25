@@ -12,7 +12,8 @@ return Application::configure(basePath: dirname(__DIR__))
     )
     ->withMiddleware(function (Middleware $middleware) {
         $middleware->alias([
-            'logged'=>\App\Http\Middleware\LoggedinAuth::class,
+            'logged'=>\App\Http\Middleware\LoggedinAuth::class, 
+            'volunteer'=>\App\Http\Middleware\Volunteer::class,
         ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {
