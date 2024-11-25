@@ -20,12 +20,6 @@ class LoggedinAuth
             $user = Auth::user();
             $currentPath = $request->path(); 
 
-            if ($user->usertype == 'admin'&& $currentPath !== 'management') {
-                return redirect('/management'); 
-            } elseif ($user->usertype == 'volunteer' && $currentPath !== 'volunteer') {
-                return redirect('/volunteer');
-            }
-
             return $next($request); 
         }
 
