@@ -1,44 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Register</title>
-    </head>
-
-
-
-    <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More about {{$pet->name}}</title>
+    <link rel="icon" href="../../assets/photos/PetApp-favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../assets/css/onePet.css">
+</head>
+<body>
+    <section class="pet-settings">
+    <div class="pet-description">
         <a href="/management"><button>Back</button></a>
-
-        <p style="font-size:30px">{{$pet->name}}</p>
-        @if($pet->sterilized)
-            <p>Species: {{$pet->species}}, Breed: {{$pet->breed}}, Sterilized, Age: {{$pet->age}}</p>
-        @else
-            <p>Species: {{$pet->species}}, Breed: {{$pet->breed}}, Not Sterilized, Age: {{$pet->age}}</p>
-        @endif
-        <p>Health details: {{$pet->health}}</p>
-        <p>Description: {{$pet->descriptions}}</p>
-        <br>
-
-        <p>Pictures of this animal: {{$images->count()}}</p>
-        @foreach($images as $image)
-            <img src="{{$image->path}}" alt="">
-            <form action="{{route('imageDelete')}}" method="POST">
-                @csrf
-                <input type="hidden" name="id" value="{{$image->id}}">
-                <input type="hidden" name="path" value="{{$image->path}}">
-                <button>Delete this picture</button>
-            </form>
-        @endforeach
-        
-        <form action="{{route('imageAdd')}}" method="POST" enctype="multipart/form-data">
-            @csrf
-            <input type="hidden" name="pet_id" value="{{$pet->id}}">
-            <label for="image">Input new image for animal:</label>
-            <input type="file" name="image">
-            <br>
-            <button>Upload</button>
-        </form>
-    </body>
-
+        <h1>More About {{$pet->name}}</h1>
+        <p><strong>Species:</strong> {{$pet->species}}</p>
+        <p><strong>Breed:</strong> {{$pet->breed}}</p>
+        <p><strong>Sterilized:</strong> {{$pet->sterilized ? 'Yes' : 'No'}}</p>
+        <p><strong>Age:</strong> {{$pet->age}}</p>
+        <p><strong>Health Details:</strong> {{$pet->health}}</p>
+        <p><strong>Description:</strong> {{$pet->descriptions}}</p>
+        <div class="form-section">
+                <h3>Upload a New Picture</h3>
+                    <form action="{{route('imageAdd')}}" method="POST" enctype="multipart/form-data">
+                        @csrf
+                        <input type="hidden" name="pet_id" value="{{$pet->id}}">
+                        <label for="image">Select Image:</label>
+                        <input type="file" name="image" id="image" required>
+                        <button>Upload</button>
+                    </form>
+                </div>
+    </div>
+    <div class="picture-section">
+        <h2>Pictures of {{$pet->name}}: {{$images->count()}}</h2>
+            @foreach($images as $image)
+                <div class="image-container">
+                    <img src="{{$image->path}}" alt="Picture of {{$pet->name}}">
+                    <form action="{{route('imageDelete')}}" method="POST">
+                        @csrf
+                        <input type="hidden" name="id" value="{{$image->id}}">
+                        <input type="hidden" name="path" value="{{$image->path}}">
+                        <button class="delete-button">Delete Picture</button>
+                    </form>
+                </div>
+            @endforeach
+                
+    </div>
+</section>
+</body>
 </html>
