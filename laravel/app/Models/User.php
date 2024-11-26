@@ -6,6 +6,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use ApiPlatform\Metadata\ApiResource;
+
+#[ApiResource(extraProperties: ['rfc_7807_compliant_errors' => false])
+]
 
 class User extends Authenticatable
 {

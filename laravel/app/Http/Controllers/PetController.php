@@ -12,24 +12,34 @@ class PetController extends Controller
     public function get_pets()
     {
         $pets = Pet::all();
-        return(view("petmanagement", ['pets'=>$pets]));
+        return response()->json($pets);
     }
 
-    public function get_pet(Request $request)
-    {
-        $pet = Pet::find($request->id);
-        $images =$pet->images()->get();
-        return(view("onepet",['pet'=>$pet, 'images'=>$images]));
+ 
+public function get_pet(Request $request)
+{
+    $pet = Pet::find($request->id);
+
+    if (!$pet) {
+        return response()->json(['error' => 'Pet not found'], 404);
     }
 
-    public function delete_pet(Request $request)
-    {
-        $request->validate([
-            "id"=>"required",
-        ]);
-        Pet::destroy($request->id);
-        return(redirect("/management"));
-    }
+    $images = $pet->images()->get();
+    return response()->json(['pet' => $pet, 'images' => $images]);
+}
+
+public function delete_pet(Request $request)
+{
+    $request->validate([
+        "id" => "required|exists:pets,id",
+    ]);
+
+    $pet = Pet::find($request->id);
+    $pet->delete();
+
+    return response()->json(null, 204); // Return 204 No Content status
+}
+
 
     public function update_pet(Request $request)
     {
@@ -38,6 +48,9 @@ class PetController extends Controller
         ]);
 
         $pet = Pet::find($request->id);
+        if (!$pet) {
+            return response()->json(['error' => 'Pet not found'], 404);
+        }
 
         if($request->name!=null) $pet->name=$request->name;
         if($request->age!=null)$pet->age=$request->age;
@@ -48,7 +61,7 @@ class PetController extends Controller
         if($request->descriptions!=null)$pet->descriptions=$request->descriptions;
 
         $pet->save();
-        return(redirect("/management"));
+        return response()->json($pet, 200);
     }
 
     public function add_pet(Request $request)
@@ -73,7 +86,7 @@ class PetController extends Controller
         $pet->descriptions=$request->descriptions;
 
         $pet->save();
-        return(redirect("/management"));
+        return response()->json($pet, 201);
     }
     public function get_volunteer_pets()
     {
