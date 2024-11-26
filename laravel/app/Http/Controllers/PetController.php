@@ -71,18 +71,18 @@ class PetController extends Controller
         $pet->sterilized=$request->has('sterilized');
         $pet->health=$request->health;
         $pet->descriptions=$request->descriptions;
+        $pet->status = 'AVAILABLE';
 
         $pet->save();
         return(redirect("/management"));
     }
     public function get_volunteer_pets()
     {
-        $pets = Pet::all();
+        $pets = Pet::orderBy('id', 'asc')->get();
         $volunteeringPets = Pet::where('volunteer_user_id', auth()->id())->get();
-        
         return view('volunteer', compact('pets', 'volunteeringPets'));
     }
-    public function volunteer_for_pet(Request $request)
+    public function volunteer_pet(Request $request)
     {
         $pet = Pet::findOrFail($request->pet_id);
     
@@ -95,4 +95,16 @@ class PetController extends Controller
         return redirect()->route('volunteer');
     }
 
+    public function unvolunteer_pet(Request $request)
+    {
+        $pet = Pet::findOrFail($request->pet_id);
+
+        if ($pet->status === 'PENDING' && $pet->volunteer_user_id == auth()->id()) {
+            $pet->status = 'AVAILABLE';
+            $pet->volunteer_user_id = null;
+            $pet->save();
+        }
+
+        return redirect()->route('volunteer');
+    }
 }

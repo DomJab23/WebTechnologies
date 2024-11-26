@@ -58,7 +58,7 @@ Route::post('/donate', [DonationController::class, 'processDonation'])->name('do
 
 Route::middleware(['volunteer'])->group(function() {
     Route::get('/volunteer', [PetController::class, 'get_volunteer_pets'])->name('volunteer');
-    Route::post('/volunteer', [PetController::class, 'volunteer_for_pet'])->name('volunteerPet');
+    Route::post('/volunteer', [PetController::class, 'volunteer_pet'])->name('volunteerPet');
     Route::post('/unvolunteer', [PetController::class, 'unvolunteer_pet'])->name('unvolunteerPet');
     
 });
