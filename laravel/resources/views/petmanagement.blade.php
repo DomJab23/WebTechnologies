@@ -37,13 +37,13 @@
                 <label for="descriptions">Description:</label><br>
                 <textarea type="text" placeholder="Description of the pet" name="descriptions" class="infoInput descriptionInput"></textarea><br>
 
-                <button>Add Pet</button>
+                <button class="add-pet-button">Add Pet</button>
             </form><br><br>
             <p>Delete pet:</p>
             <form action="{{ route('petDelete') }}" method="POST">
                 @csrf
                 <input type="number" placeholder="Id of the pet to delete" name="id" class="infoInput"/><br>
-                <button>Delete Pet</button>
+                <button class="delete-pet-button">Delete Pet</button>
             </form><br><br>
         </div>
         <div class="pet-table">
@@ -91,13 +91,13 @@
                                 document.getElementById('petHealth').value='{{ $pet->health }}';
                                 document.getElementById('petDescriptions').value='{{ $pet->descriptions }}';
                                 " 
-                                style="width:auto;">Update</button>
+                                class="update-button">Update</button>
                         </td>
                         <td>
                             <form action="{{ route('onePet') }}" method="GET">
                                 @csrf
                                 <input type="hidden" name="id" value="{{ $pet->id }}">
-                                <button>More</button>
+                                <button class="more-button">More</button>
                             </form>
                         </td>
                     </tr>
@@ -108,23 +108,6 @@
     </div>
 
     </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-    
-
     <!--Modal Update Form-->
     <div id="updateForm" class="modal">
         <form class="modal-content animate" action="{{ route('petUpdate') }}" method="post">
@@ -160,4 +143,28 @@
             <button class="modalButton">Update Pet</button>
         </form>
     </div>
+    <div class="imgcontainer">
+    <span onclick="document.getElementById('updateForm').style.display='none'" class="close" title="Close Window">
+        &times;
+    </span>
+</div>
+    <script>
+    // Get the modal
+    var updateForm = document.getElementById('updateForm');
+
+    // Get the <span> element that closes the modal
+    var closeBtn = document.getElementsByClassName('close')[0];
+
+    // When the user clicks on <span> (x), close the modal
+    closeBtn.onclick = function() {
+        updateForm.style.display = 'none';
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == updateForm) {
+            updateForm.style.display = 'none';
+        }
+    }
+</script>
 @endsection

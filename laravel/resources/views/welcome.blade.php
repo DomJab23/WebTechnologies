@@ -45,7 +45,8 @@
                 
                 <label for="cvv"><b>CVV</b></label>
                 <input type="text" placeholder="Enter CVV" name="cvv" required>
-                
+                <label for="amount"><b>Enter desired amount</b></label>
+                <input type="text" placeholder="Amount" name="amount" required>                
                 <button class="button" type="submit">Donate</button>
             </div>
         </form>
@@ -190,7 +191,7 @@
                 <form><input type="text" id="name" name="name" placeholder="Name"></form>
                 <form><input type="text" id="email" name="email" placeholder="E-mail"></form>
                 <form><input type="text" id="phone" name="phone" placeholder="Phone number"></form>
-                <form><input class="message-input" type="text" id="message" name="message" placeholder="Message" overflow-wrap: break-word;></form>
+                <form><input class="message-input" type="text" id="message" name="message" placeholder="Message" overflow-wrap: break-word;></input>
                 <a class="button" href="/">SEND!</a>
             </div>
              <!-- Google Maps map on right side of the page -->
