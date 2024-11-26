@@ -5,10 +5,6 @@ namespace App\Models;
 use ApiPlatform\Metadata\ApiFilter;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use ApiPlatform\Metadata\ApiResource;
-
-#[ApiResource(extraProperties: ['rfc_7807_compliant_errors' => false])
-]
 
 class Image extends Model
 {
