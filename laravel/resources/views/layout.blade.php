@@ -65,7 +65,7 @@
                 </li>
             @else
                 <li class="navbar_menu_item">
-                    <button class="loginButton" onclick="document.getElementById('loginForm').style.display='block'" style="width:auto;">Login</button>
+                    <button class="modalButton" onclick="document.getElementById('loginForm').style.display='block'" style="width:auto;">Login</button>
                 </li>
             @endauth
         </ul>
@@ -119,7 +119,7 @@
             <p>Subscribe to our newsletter for updates.</p>
             <form class="newsletter-form">
                 <input type="email" placeholder="Enter your email" required>
-                <button class="submit" type="submit">Subscribe</button>
+                <button class="modalButton" type="submit">Subscribe</button>
             </form>
         </div>
     </footer>

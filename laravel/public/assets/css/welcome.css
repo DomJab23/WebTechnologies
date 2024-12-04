@@ -70,7 +70,6 @@ input[type="text"], input[type="password"] {
 /* Buttons inside the modal */
 button {
     width: 100%;
-    background-color: #4CAF50; /* Green background */
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -79,12 +78,6 @@ button {
     border-radius: 4px; /* Optional: rounded corners */
     font-size: 16px;
 }
-
-/* Button Hover Effect */
-button:hover {
-    background-color: #45a049; /* Slightly darker green when hovered */
-}
-
 /* Container styling (inside modal content) */
 .container {
     padding: 20px;
