@@ -52,7 +52,7 @@ label {
 }
 
 .add-pet-button {
-  background-color: #30b600;
+  background-color: #ffa500;
   color: white;
   padding: 10px 15px;
   border: none;
@@ -61,7 +61,7 @@ label {
   cursor: pointer;
 }
 .delete-pet-button{
-  background-color: #ee0000;
+  background-color: #ffa500;
   color: white;
   padding: 10px 15px;
   border: none;
@@ -70,11 +70,11 @@ label {
   cursor: pointer;
 }
 .delete-pet-button:hover{
-  background-color: #d60000;
+  background-color: #ff8c00;
 }
 
 .add-pet-button:hover {
-  background-color: #2a9901;
+  background-color: #ff8c00;
 }
 
 button:focus {
@@ -98,7 +98,7 @@ button:focus {
 }
 
 .pet-table table thead {
-  background-color: #ff9100;
+  background-color: #ffa500;
   color: #fff;
 }
 
@@ -115,13 +115,13 @@ button:focus {
 
 .pet-table table td button {
   margin: 5px 0;
-  background-color: #28a745;
+  background-color: #ffa500;
   font-size: 12px;
   padding: 5px 10px;
 }
 
 .pet-table table td button:hover {
-  background-color: #218838;
+  background-color: #ff8c00;
 }
 
 /* Modal Update Form */
@@ -162,7 +162,7 @@ button:focus {
 
 .close:hover,
 .close:focus {
-  color: #f00; /* Change color on hover/focus for better UX */
+  color: #ff8c00; /* Change color on hover/focus for better UX */
   text-decoration: none; /* Remove any underline effects */
 }
 @keyframes fadeIn {
