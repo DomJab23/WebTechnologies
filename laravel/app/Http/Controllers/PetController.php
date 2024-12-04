@@ -14,6 +14,25 @@ class PetController extends Controller
         $pets = Pet::all();
         return(view("petmanagement", ['pets'=>$pets]));
     }
+    
+    public function get_pets_main()
+    {
+        $pets = Pet::all();
+
+        foreach ($pets as $pet) 
+        {
+            if($pet->images()->exists())
+            {
+                $pet->firstImagePath=$pet->images()->first();
+            }
+            else
+            {
+                $pet->firstImagePath= asset('assets/photos/petPhoto.jpg');
+            }
+        }
+
+        return(view("welcome", ['pets'=>$pets]));
+    }
 
     public function get_pet(Request $request)
     {

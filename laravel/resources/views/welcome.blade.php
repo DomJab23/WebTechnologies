@@ -69,6 +69,15 @@
 
     <!-- Displaying 4 pets of selected category  -->
     <section class="petsReadyForAdoption">
+
+        @foreach ($pets as $pet)
+            <div class="firstPet">
+                <img src="{{ $pet->firstImagePath}}" alt="PETAPP Logo" class="pet-photo">
+                <h1 class="name">{{$pet->name}}</h1>
+                <h2 class="position">Position</h2>
+                <p class="shortStory">{{$pet->descriptions}}</p>
+            </div>
+        @endforeach
         <!-- First Pet  -->
         <div class="firstPet">
             <img src="{{ asset('assets/photos/petPhoto.jpg') }}" alt="PETAPP Logo" class="pet-photo">
