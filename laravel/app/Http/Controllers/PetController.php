@@ -11,7 +11,7 @@ class PetController extends Controller
 {
     public function get_pets()
     {
-        $pets = Pet::all();
+        $pets = Pet::orderBy('id', 'asc')->get();
         return(view("petmanagement", ['pets'=>$pets]));
     }
 

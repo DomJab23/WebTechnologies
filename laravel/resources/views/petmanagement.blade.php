@@ -42,9 +42,15 @@
             <p>Delete pet:</p>
             <form action="{{ route('petDelete') }}" method="POST">
                 @csrf
-                <input type="number" placeholder="Id of the pet to delete" name="id" class="infoInput"/><br>
+                <label for="id">Select the ID of the pet to delete:</label><br>
+                <select name="id" class="infoInput">
+                    @foreach($pets as $pet)
+                        <option value="{{ $pet->id }}">{{ $pet->id }} - {{ $pet->name }}</option>
+                    @endforeach
+                </select><br>
                 <button class="delete-pet-button">Delete Pet</button>
-            </form><br><br>
+            </form>
+            <br><br>
         </div>
         <div class="pet-table">
         <p>Pets in the shelter:</p>
