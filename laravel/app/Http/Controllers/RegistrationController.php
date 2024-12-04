@@ -19,9 +19,11 @@ class RegistrationController extends Controller
         $user->password = Hash::make($request->password);
 
         if ($request->code == 123456789) {
-            $user->usertype = 'admin';  
+            $user->usertype = 'employee';  
         } elseif ($request->code == 9876) {
             $user->usertype = 'volunteer'; 
+        } elseif ($request->code == 4186) {
+            $user->usertype = 'admin';
         } else {
             return redirect('/register'); 
         }
