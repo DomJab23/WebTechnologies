@@ -70,7 +70,7 @@
     <!-- Displaying 4 pets of selected category  -->
     <section class="petsReadyForAdoption">
         @foreach ($pets as $pet)
-            <div class="firstPet">
+            <div class="firstPet fadeout">
                 <img src="{{ $pet->firstImagePath}}" alt="No image avaible" class="pet-photo">
                 <h1 class="name">{{$pet->name}}</h1>
                 <h2 class="position">Position</h2>

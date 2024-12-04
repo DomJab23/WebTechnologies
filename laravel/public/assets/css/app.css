@@ -160,6 +160,11 @@ html, body {
     overflow-y: clip;
 }
 
+.fadeout {
+    --fade-start: 300px;
+    mask-image: linear-gradient(to bottom, white var(--fade-start), transparent);
+} 
+
 /* Styling for image */
 .firstPerson img, .secondPerson img, .thirdPerson img {
     width: 100%;
