@@ -71,7 +71,7 @@
     <section class="petsReadyForAdoption">
         @foreach ($pets as $pet)
             <div class="firstPet">
-                <img src="{{ $pet->firstImagePath}}" alt="PETAPP Logo" class="pet-photo">
+                <img src="{{ $pet->firstImagePath}}" alt="No image avaible" class="pet-photo">
                 <h1 class="name">{{$pet->name}}</h1>
                 <h2 class="position">Position</h2>
                 <p class="shortStory">{{$pet->descriptions}}</p>

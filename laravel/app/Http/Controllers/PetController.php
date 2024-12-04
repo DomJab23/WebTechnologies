@@ -23,7 +23,7 @@ class PetController extends Controller
         {
             if($pet->images()->exists())
             {
-                $pet->firstImagePath=$pet->images()->first();
+                $pet->firstImagePath=$pet->images()->first()->path;
             }
             else
             {
