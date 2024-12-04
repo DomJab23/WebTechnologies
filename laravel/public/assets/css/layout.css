@@ -11,13 +11,23 @@ html, body {
 
 /*Sort all this bullshit out*/
 
-.loginInput {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
+input.loginInput {
+    width: 100%; /* Make sure the input takes the full width of the container */
+    padding: 10px; /* Ensure padding inside inputs */
+    font-size: 16px; /* Ensure font size is appropriate */
+    margin: 8px 0; /* Space out the inputs */
+    border: 1px solid #ccc; /* Border for better visibility */
+    border-radius: 4px; /* Rounded borders for aesthetics */
+}
+input::placeholder {
+    color: #888; /* Set a color for placeholder text */
+    font-style: italic; /* Optional: make placeholder text italic for better visibility */
+    opacity: 1; /* Ensure the placeholder is fully visible */
+}
+
+input:focus {
+    border-color: #4CAF50; /* Change border color when input is focused */
+    outline: none; /* Remove outline on focus */
 }
 
 h2 {

@@ -22,7 +22,8 @@
                 <input class="loginInput" type="text" placeholder="Enter Username" name="uname" required>
                 <label for="psw"><b>Password</b></label>
                 <input class="loginInput" type="password" placeholder="Enter Password" name="psw" required>
-                <br><br>
+                <br>
+                <br>
                 <button type="submit" class="modalButton">Login</button>
                 <br>
                 <button type="submit" class="modalButton" onclick="window.location.href='/register';">Sign Up</button>
