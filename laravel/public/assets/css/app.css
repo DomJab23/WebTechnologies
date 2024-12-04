@@ -21,7 +21,7 @@ html, body {
 /*All button on the website*/
 .button {
     background-color: orange;
-    color: black;
+    color: white;
     display: flex;
     text-align: center;
     align-items: center;

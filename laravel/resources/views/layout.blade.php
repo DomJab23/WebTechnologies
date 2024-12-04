@@ -60,7 +60,7 @@
                     </li>
                     <li class="navbar_menu_item">
                         <a href="logout">
-                            <button class="loginButton" style="width:auto;">Logout</button>
+                            <button class="modalButton" style="width:auto;">Logout</button>
                         </a>
                     </li>
                 @elseif (Auth::user()->usertype=='admin')
