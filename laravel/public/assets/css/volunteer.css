@@ -35,7 +35,7 @@ table {
 }
 
 table thead {
-    background-color: #dd5823;
+    background-color: rgb(255, 165, 0);
     color: #fff;
 }
 
@@ -56,7 +56,7 @@ table tr:hover {
 
 table td button {
     margin: 5px 0;
-    background-color: #dd5823;
+    background-color: rgb(255, 165, 0);
     padding: 5px 10px;
     color: #fff;
     padding: 10px 15px;
@@ -67,7 +67,7 @@ table td button {
 }
 
 table td button:hover {
-    background-color: #aa3f14;
+    background-color: rgb(255, 140, 0);
     color: #fff;
 }
 
@@ -124,7 +124,7 @@ table td button:hover {
     width: 100%;
     padding: 10px;
     font-size: 16px;
-    background-color: #dd5823;
+    background-color: rgb(255, 165, 0);
     border: none;
     border-radius: 4px;
     color: white;
@@ -132,7 +132,7 @@ table td button:hover {
 }
 
 .modalButton:hover {
-    background-color: #dd5823;
+    background-color: rgb(255, 140, 0);
 }
 
 @media (max-width: 768px) {
