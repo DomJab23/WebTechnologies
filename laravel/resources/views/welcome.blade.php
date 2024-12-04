@@ -51,7 +51,7 @@
             <label for="amount"><b>Enter desired amount</b></label>
             <input type="text" placeholder="Amount" name="amount" required>
     
-            <button class="button" type="submit">Donate</button>
+            <button class="modalButton" type="submit">Donate</button>
         </div>
     </div>
 </form>
