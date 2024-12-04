@@ -160,14 +160,19 @@ label input[type=checkbox] {
 }
 
 /* The Close Button (x) */
+.parent {
+    position: relative;
+}
+
 .close {
     position: absolute;
-    right: 10px;
-    bottom:120px;
+    right: 10px; /* adjust to move it to the right */
+    top: -30px; /* move it above the parent container */
     color: #000;
     font-size: 35px;
     font-weight: bold;
 }
+
 
 .close:hover,
 .close:focus {
