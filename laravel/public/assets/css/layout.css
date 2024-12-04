@@ -86,7 +86,7 @@ label input[type=checkbox] {
 }
 
 .loginButton {
-    background-color: #04AA6D;
+    background-color: rgb(255, 140, 0);
     color: white;
     padding: 14px 20px;
     margin: 18px 0;
@@ -98,6 +98,7 @@ label input[type=checkbox] {
 
 .loginButton:hover {
     opacity: 0.8;
+    background-color: rgb(255, 140, 0);
 }
 
 * {
@@ -193,4 +194,12 @@ label input[type=checkbox] {
 @keyframes animatezoom {
     from {transform: scale(0)} 
     to {transform: scale(1)}
+}
+.submit {
+    padding: 16px;
+    background-color: #ff6600;
+}
+.submit:hover{
+    padding: 16px;
+    background-color: #ff6600;
 }
