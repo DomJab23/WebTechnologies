@@ -6,16 +6,97 @@
     min-height: 300px;
 }
 
-/* Modal styles */
-body {font-family: Arial, Helvetica, sans-serif;}
-input[type=text], input[type=password] {
+/* General Body Styles */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4; /* Optional: adds background color */
+}
+
+/* Modal Overlay - Covers the entire screen */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.4); /* Background color with opacity */
+    padding-top: 60px; /* Position the modal content 60px from the top */
+}
+
+/* Modal Content Box */
+.modal-content {
+    position: relative; /* Important for positioning the close button */
+    background-color: white;
+    margin: auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Optional: add shadow for better focus */
+}
+
+/* Close Button Styles */
+.close {
+    position: absolute;
+    top: 10px; /* Adjust the position */
+    right: 10px;
+    font-size: 30px;
+    color: #aaa;
+    cursor: pointer;
+    padding: 0;
+}
+
+/* Close Button Hover Effect */
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Input fields inside the modal */
+input[type="text"], input[type="password"] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
+    border-radius: 4px; /* Optional: add rounded corners */
 }
+
+/* Buttons inside the modal */
+button {
+    width: 100%;
+    background-color: #4CAF50; /* Green background */
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px; /* Optional: rounded corners */
+    font-size: 16px;
+}
+
+/* Button Hover Effect */
+button:hover {
+    background-color: #45a049; /* Slightly darker green when hovered */
+}
+
+/* Container styling (inside modal content) */
+.container {
+    padding: 20px;
+}
+
+/* Responsive Styling */
+@media screen and (max-width: 600px) {
+    .modal-content {
+        width: 90%; /* Reduce modal width for smaller screens */
+    }
+}
+
 
 .animate {
     animation: animatezoom 0.6s;
