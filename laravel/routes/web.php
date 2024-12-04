@@ -9,9 +9,7 @@ use App\Http\Controllers\ImageController;
 use App\Http\Controllers\DonationController;
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [PetController::class, 'get_pets_main']);
 
 
 Route::get('/about', function () {

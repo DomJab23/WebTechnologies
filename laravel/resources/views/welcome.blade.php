@@ -86,34 +86,14 @@
 
     <!-- Displaying 4 pets of selected category  -->
     <section class="petsReadyForAdoption">
-        <!-- First Pet  -->
-        <div class="firstPet">
-            <img src="{{ asset('assets/photos/petPhoto.jpg') }}" alt="PETAPP Logo" class="pet-photo">
-            <h1 class="name">Alex</h1>
-            <h2 class="position">Position</h2>
-            <p class="shortStory">This is a short story about Alex.</p>
-        </div>
-        <!-- Second Pet  -->
-        <div class="secondPet">
-            <img src="{{ asset('assets/photos/petPhoto.jpg') }}" alt="PETAPP Logo" class="pet-photo">
-            <h1 class="name">Taylor</h1>
-            <h2 class="position">Position</h2>
-            <p class="shortStory">This is a short story about Taylor.</p>
-        </div>
-        <!-- Third Pet  -->
-        <div class="thirdPet">
-            <img src="{{ asset('assets/photos/petPhoto.jpg') }}" alt="PETAPP Logo" class="pet-photo">
-            <h1 class="name">Jordan</h1>
-            <h2 class="position">Position</h2>
-            <p class="shortStory">This is a short story about Jordan.</p>
-        </div>
-        <!-- Forth Pet  -->
-        <div class="forthPet">
-            <img src="{{ asset('assets/photos/petPhoto.jpg') }}" alt="PETAPP Logo" class="pet-photo">
-            <h1 class="name">Jordan</h1>
-            <h2 class="position">Position</h2>
-            <p class="shortStory">This is a short story about Jordan.</p>
-        </div>
+        @foreach ($pets as $pet)
+            <div class="firstPet fadeout">
+                <img src="{{ $pet->firstImagePath}}" alt="No image avaible" class="pet-photo">
+                <h1 class="name">{{$pet->name}}</h1>
+                <h2 class="position">Position</h2>
+                <p class="shortStory">{{$pet->descriptions}}</p>
+            </div>
+        @endforeach
     </section>
 
     <!-- About Us Section -->
