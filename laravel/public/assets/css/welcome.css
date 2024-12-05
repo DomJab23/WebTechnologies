@@ -6,6 +6,36 @@
     min-height: 300px;
 }
 
+.firstPet{
+    display: flex; /* Allows flex properties within each card */
+    flex-direction: column; /* Stack content vertically (image, name, position, story) */
+    justify-content: top;
+    align-items: center; /* Center horizontally */
+    text-align:justify; /* Center text content */
+    background-color: #ffffff; /* White background for each card */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for separation */
+    padding: 20px; /* Space inside each card */
+    width: 80%; /* Adjust width of each card */
+    max-width:600px; /* Limit maximum width */
+    height: 400px;
+    overflow-y: clip;
+}
+
+.firstPerson {
+    display: flex; /* Allows flex properties within each card */
+    flex-direction: column; /* Stack content vertically (image, name, position, story) */
+    justify-content: top;
+    align-items: center; /* Center horizontally */
+    text-align:justify; /* Center text content */
+    background-color: #ffffff; /* White background for each card */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for separation */
+    padding: 20px; /* Space inside each card */
+    width: 80%; /* Adjust width of each card */
+    max-width:600px; /* Limit maximum width */
+} 
+
 /* General Body Styles */
 body {
     font-family: Arial, Helvetica, sans-serif;
