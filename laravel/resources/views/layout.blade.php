@@ -7,6 +7,8 @@
     <link rel="icon" href="../../assets/photos/PetApp-favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="../../assets/css/layout.css">
     <link rel="stylesheet" href="../../assets/css/footer.css">
+    <link rel="stylesheet" href="../../assets/css/registration.css">
+    <link rel="stylesheet" href="../../assets/css/aboutUsPage.css">
 </head>
 <body>
     <!-- Modal Login Form -->
