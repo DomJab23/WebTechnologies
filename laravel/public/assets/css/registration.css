@@ -7,9 +7,8 @@ input[type=text], input[type=password] {
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
-    width: 400px;
-    font-size: 20px;
-    border-radius: 15px;
+    width: 100%;
+    font-size: 16px;
 }
 
 .centerBox {
@@ -21,7 +20,8 @@ input[type=text], input[type=password] {
 
 .chooseText {
     font-size: 40px;
-    margin: 0;
+    margin-top: 40px;
+    margin-bottom: -20px;
 }
 /*
 .registration_page {
@@ -40,15 +40,35 @@ input[type=text], input[type=password] {
     padding: 1%;
 }*/
 .registration_page{
+    margin: auto;
     display: flex;
     align-items: center;
-    width: 100%;
+    align-content: center;
+    justify-content: center;
+    width: 50%;
 }
 .registration-form{
     height:100%;
     width: 100%;
-    align-content: center;
     justify-content: center;
-    text-align: center;
     padding-bottom: 5%;
+}
+
+.regLabel {
+    font-size: 20px;
+    text-align: left;
+    font-weight: bold;
+}
+
+.regInput {
+    width: 100%;
+    display: inline-block;
+    border: 1px solid #ccc;
+}
+
+.title {
+    align-content: center;
+    text-align: center;
+    color: white;
+    background-size: 1423px 655px;
 }
