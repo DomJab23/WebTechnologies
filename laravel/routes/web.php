@@ -19,12 +19,7 @@ Route::get('/contacts', function () {
     return view('contacts');
 });
 
-Route::get('/gallery', function () {
-});
-
-Route::get('/gallery', function () {
-    return view('gallery');
-});
+Route::get('/gallery', [PetController::class, 'get_pets_galery']);
 
 
 Route::get('/more', function () {

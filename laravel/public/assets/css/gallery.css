@@ -1,16 +1,39 @@
-.three-pictures,.four-pictures{
+.gallery-photos{
     display: flex;
     flex-direction: row;
-    align-items: center;
-    width:100%;
+    flex-wrap: wrap;
+    align-items:center;
+    gap: 10px;
+    padding: 20px;
 }
-.gallery-photo{
+
+.gallery-item{
     flex:1;
-    height:10%;
-    width: 10%;
+    height: 460px;;
+    width: auto;
     align-content: center;
     padding: 1%;
+    text-decoration: none;
+    align-self: start;
+
+
+    display:flex;
+    flex-direction: column;
+    justify-content: top;
+    text-align:justify;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: rgba(100, 237, 230, 0.2);
 }
+
+.gallery-photo{
+    justify-content: center;
+    height:400px;
+    width:auto;
+    border-radius: 10px;
+}
+
 .text-at-the-end{
     font-size: 20px;
     text-align: center;
