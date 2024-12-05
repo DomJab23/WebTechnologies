@@ -59,6 +59,7 @@ label input[type=checkbox] {
     align-items: center;
     padding: 0rem calc((100vw - 1300px) / 2);
     transition: top 0.3s;
+    z-index: 1000;
 }
 
 .navbar_menu {
