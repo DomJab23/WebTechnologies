@@ -72,9 +72,21 @@ label input[type=checkbox] {
 .navbar_menu_item {
     height: 80px;
 }
+.navbar_menu_item:hover {
+    color: #888;
+}
 
 .navbar_menu_link {
     color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+}
+.navbar_menu_link:hover{
+    color: grey;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -155,8 +167,8 @@ label input[type=checkbox] {
     margin-right: 10px;
     border: none;
     cursor: pointer;
-    width: 100%;
-    
+    width: 100%; 
+    align-items: center;
 }
 
 .modalButton:hover {
