@@ -78,21 +78,22 @@
                 you'll gain a loyal companion who will fill your home with love.</p>
         <div class="animal-selection-bar">
             <button class="animal-size">All</button>
-            <button class="animal-size">Small</button>
-            <button class="animal-size">Medium</button>
-            <button class="animal-size">Large</button>
+            <button class="animal-size">Dog</button>
+            <button class="animal-size">Cat</button>
         </div>
     </section>
 
     <!-- Displaying 4 pets of selected category  -->
     <section class="petsReadyForAdoption">
         @foreach ($pets as $pet)
-            <div class="firstPet fadeout">
-                <img src="{{ $pet->firstImagePath}}" alt="No image avaible" class="pet-photo">
-                <h1 class="name">{{$pet->name}}</h1>
-                <h2 class="position">Position</h2>
-                <p class="shortStory">{{$pet->descriptions}}</p>
-            </div>
+            <a href="{{route("onePet", ["id"=>$pet->id])}}" style="text-decoration: none"> 
+                <div class="firstPet fadeout">
+                    <img src="{{ $pet->firstImagePath}}" alt="No image avaible" class="pet-photo">
+                    <h1 class="name">{{$pet->name}}</h1>
+                    <h2 class="position">Position</h2>
+                    <p class="shortStory">{{$pet->descriptions}}</p>
+                </div>
+            </a>
         @endforeach
     </section>
 
