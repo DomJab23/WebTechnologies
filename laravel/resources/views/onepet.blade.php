@@ -10,7 +10,7 @@
 <body>
     <section class="pet-settings">
     <div class="pet-description">
-        <a href="/management"><button>Back</button></a>
+        <a href="{{url()->previous()}}"><button>Back</button></a>
         <h1>More About {{$pet->name}}</h1>
         <p><strong>Species:</strong> {{$pet->species}}</p>
         <p><strong>Breed:</strong> {{$pet->breed}}</p>
@@ -18,31 +18,36 @@
         <p><strong>Age:</strong> {{$pet->age}}</p>
         <p><strong>Health Details:</strong> {{$pet->health}}</p>
         <p><strong>Description:</strong> {{$pet->descriptions}}</p>
-        <div class="form-section">
+        @auth
+            <div class="form-section">
                 <h3>Upload a New Picture</h3>
-                    <form action="{{route('imageAdd')}}" method="POST" enctype="multipart/form-data">
-                        @csrf
-                        <input type="hidden" name="pet_id" value="{{$pet->id}}">
-                        <label for="image">Select Image:</label>
-                        <input type="file" name="image" id="image" required>
-                        <button>Upload</button>
-                    </form>
-                </div>
+                <form action="{{route('imageAdd')}}" method="POST" enctype="multipart/form-data">
+                    @csrf
+                    <input type="hidden" name="pet_id" value="{{$pet->id}}">
+                    <label for="image">Select Image:</label>
+                    <input type="file" name="image" id="image" required>
+                    <button>Upload</button>
+                </form>
+            </div>
+        @endauth
     </div>
     <div class="picture-section">
         <h2>Pictures of {{$pet->name}}: {{$images->count()}}</h2>
+        <div class="image-section">
             @foreach($images as $image)
                 <div class="image-container">
-                    <img src="{{$image->path}}" alt="Picture of {{$pet->name}}">
-                    <form action="{{route('imageDelete')}}" method="POST">
-                        @csrf
-                        <input type="hidden" name="id" value="{{$image->id}}">
-                        <input type="hidden" name="path" value="{{$image->path}}">
-                        <button class="delete-button">Delete Picture</button>
-                    </form>
+                    <img src="{{$image->path}}" alt="Picture of {{$pet->name}}" class="">
+                    @auth
+                        <form action="{{route('imageDelete')}}" method="POST">
+                            @csrf
+                            <input type="hidden" name="id" value="{{$image->id}}">
+                            <input type="hidden" name="path" value="{{$image->path}}">
+                            <button class="delete-button">Delete Picture</button>
+                        </form>
+                    @endauth
                 </div>
             @endforeach
-                
+        </div>  
     </div>
 </section>
 </body>
