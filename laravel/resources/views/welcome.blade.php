@@ -78,9 +78,8 @@
                 you'll gain a loyal companion who will fill your home with love.</p>
         <div class="animal-selection-bar">
             <button class="animal-size">All</button>
-            <button class="animal-size">Small</button>
-            <button class="animal-size">Medium</button>
-            <button class="animal-size">Large</button>
+            <button class="animal-size">Dog</button>
+            <button class="animal-size">Cat</button>
         </div>
     </section>
 
