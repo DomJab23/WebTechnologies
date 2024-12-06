@@ -132,7 +132,7 @@
             <p>Subscribe to our newsletter for updates.</p>
             <form class="newsletter-form">
                 <input type="email" placeholder="Enter your email" required>
-                <button class="modalButton" type="submit">Subscribe</button>
+                <button class="loginButton" type="submit">Subscribe</button>
             </form>
         </div>
     </footer>
