@@ -74,6 +74,7 @@ label input[type=checkbox] {
 }
 .navbar_menu_item:hover {
     color: #888;
+    transform: scale(1.1);
 }
 
 .navbar_menu_link {
@@ -108,15 +109,20 @@ label input[type=checkbox] {
     padding: 10%;
 }
 
+
 .loginButton {
-    background-color: rgb(255, 140, 0);
-    color: white;
-    padding: 14px 20px;
-    margin: 18px 0;
-    margin-right: 10px;
-    border: none;
-    cursor: pointer;
-    width: 100%;
+        background-color: rgb(255, 140, 0);
+        color: white;
+        padding: 14px 20px;
+        margin: 18px 0;
+        margin-right: 10px;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        border-radius: 3px; /* Increased border-radius for visibility */
+        box-sizing: border-box; /* Ensure padding doesn't affect width */
+        display: inline-block; /* Ensures the element respects the box model */
+        text-align: center; /* Centers text in the button */
 }
 
 .loginButton:hover {
@@ -173,7 +179,7 @@ label input[type=checkbox] {
 
 .modalButton:hover {
     background-color: rgb(166, 83, 0);
-    transition: all 0.1s ease;
+    transform: scale(1.1);
 }
 
 /* Add Zoom Animation */
@@ -225,4 +231,5 @@ label input[type=checkbox] {
 .submit:hover{
     padding: 16px;
     background-color: #ff6600;
+    transform: scale(1.1);
 }

@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('content')
-    <div class="title" style="background-image: url('{{ asset('assets/photos/registrationBg.jpg') }}');">
+    <div class="title"">
         <h1 class="chooseText">REGISTER</h1>
         <div class="centerBox registration_page">
             <div class="centerBox registration-form">
