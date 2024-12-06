@@ -78,7 +78,7 @@
                 @endif
             @else
                 <li class="navbar_menu_item">
-                    <button class="modalButton" onclick="document.getElementById('loginForm').style.display='block'" style="width:auto;">Login</button>
+                    <button class="loginButton" onclick="document.getElementById('loginForm').style.display='block'" style="width:auto;">Login</button>
                 </li>
             @endauth
         </ul>

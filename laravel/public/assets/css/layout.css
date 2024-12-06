@@ -109,15 +109,20 @@ label input[type=checkbox] {
     padding: 10%;
 }
 
+
 .loginButton {
-    background-color: rgb(255, 140, 0);
-    color: white;
-    padding: 14px 20px;
-    margin: 18px 0;
-    margin-right: 10px;
-    border: none;
-    cursor: pointer;
-    width: 100%;
+        background-color: rgb(255, 140, 0);
+        color: white;
+        padding: 14px 20px;
+        margin: 18px 0;
+        margin-right: 10px;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        border-radius: 3px; /* Increased border-radius for visibility */
+        box-sizing: border-box; /* Ensure padding doesn't affect width */
+        display: inline-block; /* Ensures the element respects the box model */
+        text-align: center; /* Centers text in the button */
 }
 
 .loginButton:hover {
