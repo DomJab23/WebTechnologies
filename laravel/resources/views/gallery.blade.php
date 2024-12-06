@@ -14,7 +14,7 @@
 @section('content')
     <section class="gallery">
         <div class="title">
-            <h1 class="orange">CONTACTS</h1>
+            <h1 class="orange">Gallery</h1>
             <h2>Check out our photos!</h2>
             <p class="takepethome">
                 Browse through the images to see the adorable faces and unique personalities of our furry friends.
@@ -22,36 +22,21 @@
         </div>
     </section>
     <section class="gallery-photos">
-        <div class="three-pictures">
-            <img src="{{ asset('assets/photos/volunteer-photo.jpg') }}" class="gallery-photo">
-            <img src="{{ asset('assets/photos/volunteer-photo.jpg') }}" class="gallery-photo">
-            <img src="{{ asset('assets/photos/volunteer-photo.jpg') }}" class="gallery-photo">
-        </div>
-        <div class="four-pictures">
-            <img src="{{ asset('assets/photos/volunteer-photo.jpg') }}" class="gallery-photo">
-            <img src="{{ asset('assets/photos/volunteer-photo.jpg') }}" class="gallery-photo">
-            <img src="{{ asset('assets/photos/volunteer-photo.jpg') }}" class="gallery-photo">
-            <img src="{{ asset('assets/photos/volunteer-photo.jpg') }}" class="gallery-photo">
-        </div>
-        <div class="three-pictures">
-            <img src="{{ asset('assets/photos/volunteer-photo.jpg') }}" class="gallery-photo">
-            <img src="{{ asset('assets/photos/volunteer-photo.jpg') }}" class="gallery-photo">
-            <img src="{{ asset('assets/photos/volunteer-photo.jpg') }}" class="gallery-photo">
-        </div>
-        <div class="four-pictures"> 
-            <img src="{{ asset('assets/photos/volunteer-photo.jpg') }}" class="gallery-photo">
-            <img src="{{ asset('assets/photos/volunteer-photo.jpg') }}" class="gallery-photo">
-            <img src="{{ asset('assets/photos/volunteer-photo.jpg') }}" class="gallery-photo">
-            <img src="{{ asset('assets/photos/volunteer-photo.jpg') }}" class="gallery-photo">
-        </div>
-        <div class="flexContainer-text">
-            <div class="text">
-                <h1></h1>
-                <p class="text-at-the-end">
-                We hope these snapshots inspire you to adopt, volunteer, or support our mission in any way you can. 
-                Thank you for helping us make a difference in the lives of these amazing animals! 
-                </p>
-            </div>
+        @foreach ($pets as $pet)
+            <a href="{{route("onePet", ["id"=>$pet->id])}}" class="gallery-item"> 
+                <div>
+                    <img src="{{ $pet->firstImagePath}}" alt="No image avaible" class="gallery-photo">
+                    <p class="black">{{$pet->name}}</p>
+                </div>
+            </a>
+        @endforeach
+    </section>
+    <section class="flexContainer-text">
+        <div class="text">
+            <p class="text-at-the-end">
+            We hope these snapshots inspire you to adopt, volunteer, or support our mission in any way you can. 
+            Thank you for helping us make a difference in the lives of these amazing animals! 
+            </p>
         </div>
     </section>
 @endsection

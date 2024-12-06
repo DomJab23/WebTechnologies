@@ -143,7 +143,7 @@
             </p>
         </div>
         <!-- Second Person -->
-        <div class="secondPerson">
+        <div class="firstPerson">
             <img src="{{ asset('assets/photos/pet-shelter-vet.png') }}" alt="PETAPP Logo" class="footer-logo">
             <h1 class="name">Taylor Johns</h1>
             <h2 class="position">Vet</h2>
@@ -154,7 +154,7 @@
             </p>
         </div>
         <!-- Third Person -->
-        <div class="thirdPerson">
+        <div class="firstPerson">
             <img src="{{ asset('assets/photos/pet-shelter-worker.png') }}" alt="PETAPP Logo" class="footer-logo">
             <h1 class="name">Jordan Belfort</h1>
             <h2 class="position">Worker</h2>
@@ -164,7 +164,7 @@
                 Jordan ensures pets find loving, forever homes.
             </p>
         </div>
-        <div class="thirdPerson">
+        <div class="firstPerson">
             <img src="{{ asset('assets/photos/pet-shelter-volunteer.png') }}" alt="PETAPP Logo" class="footer-logo">
             <h1 class="name">Mike Wasowski</h1>
             <h2 class="position">Volunteer</h2>

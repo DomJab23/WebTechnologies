@@ -27,11 +27,29 @@ class PetController extends Controller
             }
             else
             {
-                $pet->firstImagePath= asset('assets/photos/petPhoto.jpg');
+                $pet->firstImagePath= asset('assets/photos/notPetPhoto.jpg');
             }
         }
 
         return(view("welcome", ['pets'=>$pets]));
+    }
+    public function get_pets_galery()
+    {
+        $pets = Pet::all();
+
+        foreach ($pets as $pet) 
+        {
+            if($pet->images()->exists())
+            {
+                $pet->firstImagePath=$pet->images()->first()->path;
+            }
+            else
+            {
+                $pet->firstImagePath= asset('assets/photos/notPetPhoto.jpg');
+            }
+        }
+
+        return(view("gallery", ['pets'=>$pets]));
     }
 
     public function get_pet(Request $request)
