@@ -17,7 +17,7 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for separation */
     padding: 20px; /* Space inside each card */
     width: 80%; /* Adjust width of each card */
-    max-width:600px; /* Limit maximum width */
+    width:400px; /* Limit maximum width */
     height: 400px;
     overflow-y: clip;
 }
