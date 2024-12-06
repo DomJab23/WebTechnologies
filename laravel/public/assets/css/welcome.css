@@ -21,6 +21,11 @@
     height: 400px;
     overflow-y: clip;
 }
+.pet-photo{
+    height:200px;
+    width:200px;
+    border-radius: 2%;
+}
 
 .firstPerson {
     display: flex; /* Allows flex properties within each card */

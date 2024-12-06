@@ -86,11 +86,11 @@
     <!-- Displaying 4 pets of selected category  -->
     <section class="petsReadyForAdoption">
         @foreach ($pets as $pet)
-            <a href="{{route("onePet", ["id"=>$pet->id])}}" style="text-decoration: none"> 
+            <a href="{{route('onePet', ['id'=>$pet->id])}}" style="text-decoration: none"> 
                 <div class="firstPet fadeout">
                     <img src="{{ $pet->firstImagePath}}" alt="No image avaible" class="pet-photo">
                     <h1 class="name">{{$pet->name}}</h1>
-                    <h2 class="position">Position</h2>
+                    <h2 class="position">{{$pet->species}}</h2>
                     <p class="shortStory">{{$pet->descriptions}}</p>
                 </div>
             </a>
