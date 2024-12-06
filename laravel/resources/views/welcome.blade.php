@@ -87,7 +87,7 @@
     <section class="petsReadyForAdoption">
         @foreach ($pets as $pet)
             <a href="{{route('onePet', ['id'=>$pet->id])}}" style="text-decoration: none"> 
-                <div class="firstPet fadeout">
+                <div class="firstPet fadeout" data-species="{{ strtolower($pet->species)}}">
                     <img src="{{ $pet->firstImagePath}}" alt="No image avaible" class="pet-photo">
                     <h1 class="name">{{$pet->name}}</h1>
                     <h2 class="position">{{$pet->species}}</h2>
@@ -227,6 +227,30 @@
             thankYouModal.style.display = "none";
         }
     </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const buttons = document.querySelectorAll(".animal-size");
+            const pets = document.querySelectorAll(".firstPet");
+
+            buttons.forEach(button => {
+                button.addEventListener("click", () => {
+                    const filter = button.textContent.toLowerCase(); 
+
+                    pets.forEach(pet => {
+                        const species = pet.dataset.species; 
+
+                        if (filter === "all" || filter === species) {
+                            pet.style.display = "block"; 
+                        } else {
+                            pet.style.display = "none"; 
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+
     
 
     @endsection
