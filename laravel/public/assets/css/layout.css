@@ -74,6 +74,7 @@ label input[type=checkbox] {
 }
 .navbar_menu_item:hover {
     color: #888;
+    transform: scale(1.1);
 }
 
 .navbar_menu_link {
@@ -173,7 +174,7 @@ label input[type=checkbox] {
 
 .modalButton:hover {
     background-color: rgb(166, 83, 0);
-    transition: all 0.1s ease;
+    transform: scale(1.1);
 }
 
 /* Add Zoom Animation */
@@ -225,4 +226,5 @@ label input[type=checkbox] {
 .submit:hover{
     padding: 16px;
     background-color: #ff6600;
+    transform: scale(1.1);
 }

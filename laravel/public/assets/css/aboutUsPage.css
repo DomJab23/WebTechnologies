@@ -39,17 +39,6 @@
 .button-get-involved:hover{
     background-color: rgb(166, 83, 0);
     color: white;
-    text-align: center; /* Align text horizontally */      /* Make it a flex container */
-    align-items: center; /* Center text vertically */
-    justify-content: center; /* Center text horizontally */
-    text-decoration: none;
-    font-weight: bold;
-    border: none;
-    outline: none;
-    border-radius: 4px;
-    height: 60px;
-    padding: 0 20px; /* Remove padding from top and bottom, apply padding on left and right */
-    width: 150px;
 }
 .flexContainer-about-us{
     display: flex;
