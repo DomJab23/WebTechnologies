@@ -9,6 +9,13 @@
     <link rel="stylesheet" href="../../assets/css/footer.css">
     <link rel="stylesheet" href="../../assets/css/registration.css">
     <link rel="stylesheet" href="../../assets/css/aboutUsPage.css">
+    <link rel="stylesheet" href="../../assets/css/app.css">
+    <link rel="stylesheet" href="../../assets/css/textColors.css">
+    <link rel="stylesheet" href="../../assets/css/welcome.css">
+    <link rel="stylesheet" href="../../assets/css/headings.css">
+    <link rel="stylesheet" href="../../assets/css/gallery.css">
+    <link rel="stylesheet" href="../../assets/css/petmanagement.css">
+    
 </head>
 <body>
     <!-- Modal Login Form -->

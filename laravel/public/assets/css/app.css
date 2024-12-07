@@ -8,16 +8,7 @@ html, body {
 * {
     box-sizing: border-box;
 }
-/*The header picture at the top of the website*/
-.firstPicture {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 600px;
-    width: 100%;
-    padding: 20px;
-    color: white;
-}
+
 /*All button on the website*/
 .button {
     background-color: orange;

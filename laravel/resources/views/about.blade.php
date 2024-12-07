@@ -29,20 +29,20 @@
     <!-- About Us Section--> 
     <section class="aboutUs">
     <div class="flexContainer-about-us">
-        <div class="flexContainer-text">
-            <div class="text">
+        <div class="flexContainer-text">  
                 <h1>ABOUT PETAPP</h1>
                 <h2>Our Mission</h2>
-                <p>
+                <p class="heading-text">
                     At PETAPP, we are passionate about making a difference in the lives of animals in need. 
                     Our mission is to connect shelter pets with loving homes and to promote the welfare of animals everywhere.
-                </p>
-            </div>
+                <p>
         </div>
         <div class="flexContainer-text-photo">
-                <img src="{{ asset('assets/photos/pet-shelter-team.jpg') }}" alt="PETAPP Logo" class="photo-pet-shelter-team">
+        <div class="photo">
+                <img src="{{ asset('assets/photos/pet-shelter-1.png') }}" alt="PETAPP Logo" class="photo">
+            </div>
             <div class="text-team">
-                <h2 class="text-team">Who are we ?</h2>
+                <h2>Who are we ?</h2>
                 <p class="text-team">
                     We are a dedicated team of animal lovers, volunteers, and professionals 
                     committed to the cause of animal rescue. 
@@ -52,21 +52,23 @@
             </div>
         </div>
         <div class="flexContainer-text-photo">
-            <div class="text-adoption-event">
-                <h2>What We Do ?</h2>
-                <p>Through various initiatives including adoption events, fundraising campaigns, 
+            <div class="text-team">
+                <h2 >What We Do ?</h2>
+                <p class="text-team">Through various initiatives including adoption events, fundraising campaigns, 
                     and educational outreach, we strive to raise awareness about the importance 
                     of animal adoption and responsible pet ownership.
                 </p>
             </div>
             <div class="photo">
-                <img src="{{ asset('assets/photos/pet-adoption-event.jpg') }}" alt="PETAPP Logo" class="pet-adoption-event-photo">
+                <img src="{{ asset('assets/photos/pet-shelter-2.png') }}" alt="PETAPP Logo" class="photo">
             </div>
         </div>
         <div class="flexContainer-text-photo">
-                <img src="{{ asset('assets/photos/volunteer-photo.jpg') }}" alt="PETAPP Logo" class="volunteer-photo">
+            <div class="photo">
+                <img src="{{ asset('assets/photos/pet-shelter-3.png') }}" alt="PETAPP Logo" class="photo">
+            </div>
             <div class="text-team">
-                <h2 class="text-team">How you can help ? </h2>
+                <h2>How you can help ?</h2>
                 <p class="text-team">
                     You can make a difference by adopting a pet, volunteering your time, 
                     or donating to help provide essentials for the animals. 
@@ -79,7 +81,7 @@
         <div class="flexContainer-text">
             <div class="text">
                 <h1>Thank you for your support! </h1>
-                <p>
+                <p class="heading">
                     Feel free to reach out if you have any questions or need more information on how to get involved.
                 </p>
             </div>
