@@ -23,7 +23,7 @@
     </section>
     <section class="gallery-photos">
         @foreach ($pets as $pet)
-            <a href="{{route("onePet", ["id"=>$pet->id])}}" class="gallery-item"> 
+            <a href="{{route('onePet', ['id'=>$pet->id])}}" class="gallery-item"> 
                 <div>
                     <img src="{{ $pet->firstImagePath}}" alt="No image avaible" class="gallery-photo">
                     <p class="black">{{$pet->name}}</p>

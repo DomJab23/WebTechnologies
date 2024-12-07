@@ -106,12 +106,12 @@
                 <p class="aboutUs">We are a group of animal-loving students who saw a growing need to help shelter pets find homes more easily. 
                     With our shared passion for both technology and animal welfare, we decided to create an online platform dedicated to connecting rescue pets with caring families.</p>
             </div>
-            <div class="aboutUsPicture" style="background-image: url('{{ asset('assets/photos/hamster.jpg') }}');"></div>
+            <div class="aboutUsPicture" style="background-image: url('{{ asset('assets/photos/hamster.png') }}');"></div>
         </div>
     </section>
 
     <!-- Newsletter section -->
-    <section class="newsletter_section" style="background-image: url('{{ asset('assets/photos/catnewsletter.jpg') }}');">
+    <section class="newsletter_section" style="background-image: url('{{ asset('assets/photos/catnewsletter.jpg') }}'); height">
         <div class="newsletterspace"><h1></h1></div>
         <div class="newsletter_text">
                 <h1 class="newsletter-main-heading">JOIN OUR NEWSLETTER</h1>

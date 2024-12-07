@@ -22,6 +22,8 @@
     overflow-y: clip;
 }
 .pet-photo{
+    align-items: center;
+    align-content: center;
     height:200px;
     width:200px;
     border-radius: 2%;
@@ -172,12 +174,6 @@ button {
     font-weight: bold;
 }
 
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
 
 .container input[type="text"] {
     width: 100%;
@@ -186,3 +182,4 @@ button {
     border: 1px solid #ccc;
     border-radius: 5px;
 }
+
