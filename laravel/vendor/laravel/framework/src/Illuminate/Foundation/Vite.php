@@ -539,7 +539,7 @@ class Vite implements Htmlable
 
                                     if (assets.length) {
                                         link.onload = () => loadNext(assets, 1)
-                                        link.error = () => loadNext(assets, 1)
+                                        link.onerror = () => loadNext(assets, 1)
                                     }
                                 }
 
@@ -564,7 +564,7 @@ class Vite implements Htmlable
                                 return link
                             }
 
-                            const fragment = new DocumentFragment
+                            const fragment = new DocumentFragment;
                             {$assets}.forEach((asset) => fragment.append(makeLink(asset)))
                             document.head.append(fragment)
                          }))

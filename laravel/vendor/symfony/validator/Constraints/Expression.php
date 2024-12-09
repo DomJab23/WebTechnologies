@@ -43,7 +43,7 @@ class Expression extends Constraint
      * @param array<string,mixed>|null                         $values     The values of the custom variables used in the expression (defaults to an empty array)
      * @param string[]|null                                    $groups
      * @param array<string,mixed>                              $options
-     * @param bool|null                                        $negate     Whether to fail is the expression evaluates to true (defaults to false)
+     * @param bool|null                                        $negate     Whether to fail if the expression evaluates to true (defaults to false)
      */
     public function __construct(
         string|ExpressionObject|array|null $expression,
@@ -55,7 +55,7 @@ class Expression extends Constraint
         ?bool $negate = null,
     ) {
         if (!class_exists(ExpressionLanguage::class)) {
-            throw new LogicException(sprintf('The "symfony/expression-language" component is required to use the "%s" constraint. Try running "composer require symfony/expression-language".', __CLASS__));
+            throw new LogicException(\sprintf('The "symfony/expression-language" component is required to use the "%s" constraint. Try running "composer require symfony/expression-language".', __CLASS__));
         }
 
         if (\is_array($expression)) {

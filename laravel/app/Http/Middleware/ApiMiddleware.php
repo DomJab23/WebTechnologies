@@ -26,7 +26,7 @@ class ApiMiddleware
             'password'=> 'required|string',
         ]);
         if ($valid->fails()){
-            return response()->json(['error'=>'email not works'], 400);
+            return response()->json(['error'=>'uname and password are required'], 400);
         }
         $credentails = $valid->validated();
         $user = User::where('uname',$credentails['uname'])->first();

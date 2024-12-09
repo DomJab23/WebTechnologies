@@ -28,11 +28,8 @@ use Symfony\Component\Validator\Exception\UnexpectedTypeException;
  */
 abstract class AbstractComparisonValidator extends ConstraintValidator
 {
-    private ?PropertyAccessorInterface $propertyAccessor;
-
-    public function __construct(?PropertyAccessorInterface $propertyAccessor = null)
+    public function __construct(private ?PropertyAccessorInterface $propertyAccessor = null)
     {
-        $this->propertyAccessor = $propertyAccessor;
     }
 
     public function validate(mixed $value, Constraint $constraint): void
@@ -53,7 +50,7 @@ abstract class AbstractComparisonValidator extends ConstraintValidator
             try {
                 $comparedValue = $this->getPropertyAccessor()->getValue($object, $path);
             } catch (NoSuchPropertyException $e) {
-                throw new ConstraintDefinitionException(sprintf('Invalid property path "%s" provided to "%s" constraint: ', $path, get_debug_type($constraint)).$e->getMessage(), 0, $e);
+                throw new ConstraintDefinitionException(\sprintf('Invalid property path "%s" provided to "%s" constraint: ', $path, get_debug_type($constraint)).$e->getMessage(), 0, $e);
             } catch (UninitializedPropertyException) {
                 $comparedValue = null;
             }
@@ -68,7 +65,7 @@ abstract class AbstractComparisonValidator extends ConstraintValidator
             try {
                 $comparedValue = new $value($comparedValue);
             } catch (\Exception) {
-                throw new ConstraintDefinitionException(sprintf('The compared value "%s" could not be converted to a "%s" instance in the "%s" constraint.', $comparedValue, get_debug_type($value), get_debug_type($constraint)));
+                throw new ConstraintDefinitionException(\sprintf('The compared value "%s" could not be converted to a "%s" instance in the "%s" constraint.', $comparedValue, get_debug_type($value), get_debug_type($constraint)));
             }
         }
 

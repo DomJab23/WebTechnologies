@@ -62,9 +62,9 @@ class CssColor extends Constraint
     public array|string $formats;
 
     /**
-     * @param string[]|string|array<string,mixed> $formats The types of CSS colors allowed ({@see https://symfony.com/doc/current/reference/constraints/CssColor.html#formats})
-     * @param string[]|null                       $groups
-     * @param array<string,mixed>|null            $options
+     * @param non-empty-string[]|non-empty-string|array<string,mixed> $formats The types of CSS colors allowed ({@see https://symfony.com/doc/current/reference/constraints/CssColor.html#formats})
+     * @param string[]|null                                           $groups
+     * @param array<string,mixed>|null                                $options
      */
     public function __construct(array|string $formats = [], ?string $message = null, ?array $groups = null, $payload = null, ?array $options = null)
     {
@@ -76,13 +76,13 @@ class CssColor extends Constraint
             $options = array_merge($formats, $options ?? []);
         } elseif (\is_array($formats)) {
             if ([] === array_intersect(self::$validationModes, $formats)) {
-                throw new InvalidArgumentException(sprintf('The "formats" parameter value is not valid. It must contain one or more of the following values: "%s".', $validationModesAsString));
+                throw new InvalidArgumentException(\sprintf('The "formats" parameter value is not valid. It must contain one or more of the following values: "%s".', $validationModesAsString));
             }
 
             $options['value'] = $formats;
         } elseif (\is_string($formats)) {
             if (!\in_array($formats, self::$validationModes, true)) {
-                throw new InvalidArgumentException(sprintf('The "formats" parameter value is not valid. It must contain one or more of the following values: "%s".', $validationModesAsString));
+                throw new InvalidArgumentException(\sprintf('The "formats" parameter value is not valid. It must contain one or more of the following values: "%s".', $validationModesAsString));
             }
 
             $options['value'] = [$formats];

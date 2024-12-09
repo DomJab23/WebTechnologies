@@ -43,12 +43,12 @@ class Count extends Constraint
     public ?int $divisibleBy = null;
 
     /**
-     * @param int|array<string,mixed>|null $exactly     The exact expected number of elements
-     * @param int|null                     $min         Minimum expected number of elements
-     * @param int|null                     $max         Maximum expected number of elements
-     * @param int|null                     $divisibleBy The number the collection count should be divisible by
-     * @param string[]|null                $groups
-     * @param array<mixed,string>          $options
+     * @param int<0, max>|array<string,mixed>|null $exactly     The exact expected number of elements
+     * @param int<0, max>|null                     $min         Minimum expected number of elements
+     * @param positive-int|null                    $max         Maximum expected number of elements
+     * @param positive-int|null                    $divisibleBy The number the collection count should be divisible by
+     * @param string[]|null                        $groups
+     * @param array<mixed,string>                  $options
      */
     public function __construct(
         int|array|null $exactly = null,
@@ -88,7 +88,7 @@ class Count extends Constraint
         $this->divisibleByMessage = $divisibleByMessage ?? $this->divisibleByMessage;
 
         if (null === $this->min && null === $this->max && null === $this->divisibleBy) {
-            throw new MissingOptionsException(sprintf('Either option "min", "max" or "divisibleBy" must be given for constraint "%s".', __CLASS__), ['min', 'max', 'divisibleBy']);
+            throw new MissingOptionsException(\sprintf('Either option "min", "max" or "divisibleBy" must be given for constraint "%s".', __CLASS__), ['min', 'max', 'divisibleBy']);
         }
     }
 }
