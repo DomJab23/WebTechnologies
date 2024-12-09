@@ -15,16 +15,10 @@ class UserController extends Controller
         return(view("usermanagement", ['users'=>$users]));
     }
 
-    public function get_user(Request $request)
-    {
-        $user = User::find($request->id);
-        return(view("oneuser",['user'=>$user]));
-    }
-
     public function delete_user(Request $request)
     {
         $request->validate([
-            "uname"=>"required",
+            "id"=>"required",
         ]);
         User::destroy($request->id);
         return(redirect("/admin"));
