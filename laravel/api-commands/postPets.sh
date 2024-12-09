@@ -3,15 +3,15 @@ curl -X 'POST' \
   -H 'accept: application/ld+json' \
   -H 'Content-Type: application/ld+json' \
   -d '{
-  "name": "string",
-  "age": 0,
-  "species": "string",
-  "breed": "string",
+  "name": "PYZIA",
+  "age": 2,
+  "species": "DOG",
+  "breed": "OWCZAREK",
   "sterilized": true,
-  "health": "string",
-  "descriptions": "string",
-  "createdAt": "2024-12-09T14:28:19.600Z",
-  "updatedAt": "2024-12-09T14:28:19.600Z",
-  "volunteerUserId": "string",
-  "status": "string"
+  "health": "OK",
+  "descriptions": "jak bedzie to bedzie a jak nie to nie ",
+  "createdAt": "2024-12-04T12:22:59.000000Z",
+  "updatedAt": "2024-12-04T12:22:59.000000Z",
+  "volunteerUserId": null,
+  "status": "AVAILABLE"
 }'
