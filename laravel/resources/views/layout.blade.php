@@ -128,15 +128,15 @@
         </div>
         <!-- Contact Information -->
         <div class="footer-section">
-            <h4>Contact Information</h4>
-            <p>Email: contact@petapp.com</p>
-            <p>Phone: +45 123 123 123</p>
-            <p>Address: Alsion 2, 6400 Sønderborg</p>
+            <p class="footer-text">Contact Information</h4>
+            <p class="contact">Email: contact@petapp.com</p>
+            <p class="contact">Phone: +45 123 123 123</p>
+            <p class="contact">Address: Alsion 2, 6400 Sønderborg</p>
         </div>
         <!-- Newsletter Signup in Footer -->
         <div class="footer-section">
-            <h4>Newsletter</h4>
-            <p>Subscribe to our newsletter for updates.</p>
+            <p class="footer-text">Newsletter</p>
+            <p class="contact" >Subscribe to our newsletter for updates.</p>
             <form class="newsletter-form">
                 <input type="email" placeholder="Enter your email" required>
                 <button class="loginButton" type="submit">Subscribe</button>

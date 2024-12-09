@@ -143,11 +143,6 @@
             <button class="modalButton">Update Pet</button>
         </form>
     </div>
-    <div class="imgcontainer">
-    <span onclick="document.getElementById('updateForm').style.display='none'" class="close" title="Close Window">
-        &times;
-    </span>
-</div>
     <script>
     // Get the modal
     var updateForm = document.getElementById('updateForm');
