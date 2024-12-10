@@ -15,7 +15,6 @@
     <link rel="stylesheet" href="../../assets/css/headings.css">
     <link rel="stylesheet" href="../../assets/css/gallery.css">
     <link rel="stylesheet" href="../../assets/css/petmanagement.css">
-    
 </head>
 <body>
     <!-- Modal Login Form -->
@@ -137,9 +136,10 @@
         <div class="footer-section">
             <p class="footer-text">Newsletter</p>
             <p class="contact" >Subscribe to our newsletter for updates.</p>
+            <br>
             <form class="newsletter-form">
                 <input type="email" placeholder="Enter your email" required>
-                <button class="loginButton" type="submit">Subscribe</button>
+                <button type="submit">Subscribe</button>
             </form>
         </div>
     </footer>

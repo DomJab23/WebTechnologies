@@ -79,9 +79,8 @@
             </div>
         </div>
         <div class="flexContainer-text">
-            <div class="text">
                 <h1>Thank you for your support! </h1>
-                <p class="heading">
+                <p class="heading-text">
                     Feel free to reach out if you have any questions or need more information on how to get involved.
                 </p>
             </div>
