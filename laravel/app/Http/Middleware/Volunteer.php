@@ -17,7 +17,7 @@ class Volunteer
     public function handle(Request $request, Closure $next)
     {
         $user = Auth::user();
-        if (auth()->check()&& $user->usertype=='volunteer') {
+        if (auth()->check()&& ($user->usertype=='volunteer' || $user->usertype=='admin')) {
 
 
             $currentPath = $request->path(); 

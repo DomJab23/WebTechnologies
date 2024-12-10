@@ -28,11 +28,12 @@
                 <button>Add User</button>
             </form><br><br>
             <p>Delete User:</p>
-            <form action="{{ route('userDelete') }}" method="POST">
-                @csrf
-                <input type="number" placeholder="Id of the user to delete" name="id" class="infoInput"/><br>
-                <button>Delete User</button>
-            </form><br><br>
+                
+            <input type="number" placeholder="Id of the user to delete" name="id" class="infoInput"/><br>
+            <button onclick="
+                document.getElementById('deleteForm').style.display='block';
+            ">Delete User</button>
+            <br><br>
         </div>
         <div>
         
@@ -100,39 +101,23 @@
 
     
 
-    <!--Modal Update Form-->
-    <div id="updateForm" class="modal">
-        <form class="modal-content animate" action="{{ route('petUpdate') }}" method="post">
+    <!--Modal Delete Form-->
+    <div id="deleteForm" class="modal">
+        <form class="modal-content animate" action="{{ route('userDelete') }}" method="post">
             @csrf
             <div class="imgcontainer">
-                <span onclick="document.getElementById('updateForm').style.display='none'" class="close" title="Close Window">&times;</span>
+                <span onclick="document.getElementById('deleteForm').style.display='none'" class="close" title="Close Window">&times;</span>
             </div>
 
             <!-- Id of animal being updated -->
-            <input type="hidden" placeholder="Id of the pet to update" name="id" id="petId" class="infoInput"/>
+            <input type="text" placeholder="User ID" name="id" id="userId" class="infoInput"/>
 
             <label for="name">Name of pet:</label><br>
-            <input type="text" placeholder="Updated name of the pet" name="name" id="petName" class="infoInput"/><br>
+            <input type="text" placeholder="User name" name="name" id="userName" class="infoInput"/><br>
 
-            <label for="age">Age of pet:</label><br>
-            <input type="number" placeholder="Updated age of the pet" name="age" id="petAge" class="infoInput"/><br>
+            <p>Are you sure you want to delete this user?</p>
 
-            <label for="species">Species of pet:</label><br>
-            <input type="text" placeholder="Updated species of the pet" name="species" id="petSpecies" class="infoInput"/><br>
-
-            <label for="breed">Breed of pet:</label><br>
-            <input type="text" placeholder="Updated breed of the pet" name="breed" id="petBreed" class="infoInput"/><br>
-            
-            <label for="sterilized">Sterilized:</label>
-            <input type="checkbox" placeholder="Was the pet sterilized?" name="sterilized" id="petSterilized" class="infoInput"/><br>
-
-            <label for="health">Health of pet:</label><br>
-            <textarea type="text" placeholder="Updated information about the health of the pet" name="health" id="petHealth" class="infoInput healthInput"></textarea><br>
-
-            <label for="descriptions">Description:</label><br>
-            <textarea type="text" placeholder="Updated description of the pet" name="descriptions" id="petDescriptions" class="infoInput descriptionInput"></textarea><br>
-
-            <button class="modalButton">Update Pet</button>
+            <button class="modalButton">Delete User</button>
         </form>
     </div>
 @endsection
