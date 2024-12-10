@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Illuminate\Support\Facades\Auth;
 
-class Volunteer
+class Employee
 {
     /**
      * Handle an incoming request.
@@ -17,8 +17,7 @@ class Volunteer
     public function handle(Request $request, Closure $next)
     {
         $user = Auth::user();
-        if (auth()->check()&& ($user->usertype=='volunteer' || $user->usertype=='admin')) {
-
+        if (auth()->check()&& ($user->usertype=='employee' || $user->usertype=='admin')) {
 
             $currentPath = $request->path(); 
 
@@ -29,4 +28,3 @@ class Volunteer
         
     }
 }
-
