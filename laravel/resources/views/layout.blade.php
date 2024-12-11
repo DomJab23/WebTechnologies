@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="../../assets/css/headings.css">
     <link rel="stylesheet" href="../../assets/css/gallery.css">
     <link rel="stylesheet" href="../../assets/css/petmanagement.css">
+    <link rel="stylesheet" href="../../assets/css/modals.css">
 </head>
 <body>
     <!-- Modal Login Form -->
@@ -23,7 +24,7 @@
             @csrf
             <div class="imgcontainer">
                 <span onclick="document.getElementById('loginForm').style.display='none'" class="close" title="Close Login">&times;</span>
-                <h2 class="loginHeader">Sign in to your account.</h2>
+                <h1>Sign in to your account.</h1>
             </div>
             <div class="container">
                 <label for="uname"><b>Username</b></label>
@@ -34,6 +35,7 @@
                 <br>
                 <button type="submit" class="modalButton">Login</button>
                 <br>
+                <label for="register"><b>If you don't have an account:</b></label>
                 <button type="submit" class="modalButton" onclick="window.location.href='/register';">Sign Up</button>
             </div>
         </form>

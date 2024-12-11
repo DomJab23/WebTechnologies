@@ -1,0 +1,73 @@
+.modal {
+    margin-top: 3%;
+    display: none; /* Hidden by default */
+    align-items: center;
+    align-content: center;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.4); /* Background color with opacity */
+}
+
+/* Modal Content Box */
+.modal-content {
+    position: relative; /* Important for positioning the close button */
+    background-color: white;
+    margin: auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Optional: add shadow for better focus */
+}
+
+/* Input fields inside the modal */
+input[type="number"], input[type="password"],input[type="text"],input[type="date"],input[type="month"]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 4px; /* Optional: add rounded corners */
+}
+
+/* Buttons inside the modal */
+button {
+    width: 100%;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px; /* Optional: rounded corners */
+    font-size: 16px;
+}
+/* Container styling (inside modal content) */
+.container {
+    padding: 20px;
+}
+/* Responsive Styling */
+@media screen and (max-width: 600px) {
+    .modal-content {
+        width: 90%; /* Reduce modal width for smaller screens */
+    }
+}
+
+.close-x {
+    position: absolute; /* Ensures the button is positioned relative to the modal */
+    top: 1vh; /* Adjusts distance from the top of the modal */
+    right: 2vh;
+    padding: 1vh; /* Adjusts distance from the right of the modal */
+    color: black; /* Black color for the 'x' */
+    font-weight: bold; /* Makes the 'x' bold */
+    cursor: pointer; /* Changes the cursor to a pointer on hover */
+    font-size: 1.5rem; /* Adjust size for better visibility */
+}
+.close-x:hover{
+    color:red;
+    cursor: pointer;
+}
