@@ -245,7 +245,7 @@ body {
     padding:3%;
     padding-top: 1%;
 }
-.contactForm input {
+.contactForm input[type="text"], input[type="email"], input[type="number"]{
     background-color: #f0f0f0; /* Light grey background */
     border: 1px solid #ffffff; /* Light border */
     border-radius: 5px; /* Rounded corners */

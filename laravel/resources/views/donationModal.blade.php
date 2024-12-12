@@ -18,7 +18,7 @@
                 <label for="amount"><b>Enter Desired Amount</b></label>
                 <input type="number" id="amount" placeholder="Amount" name="amount" maxlength="10"required>
 
-                <button class="modalButton" type="submit">Donate</button>
+                <button type="submit">Donate</button>
             </form>
         </div>
     </div>
@@ -27,11 +27,13 @@
 <!-- Thank You Modal -->
 <div id="thankYouModal" class="modal" style="display: none;">
     <div class="modal-content animate">
-        <div class="modal-header">
+        <div class="container">
             <span class="close-x" onclick="closeThankYouModal()" class="close" title="Close Modal">&times;</span>
             <h1>Thank You!</h1>
-            <h2>Your support helps make a difference in the lives of animals. We appreciate your kindness.</h2>
-            <a class="button" href="/">Go Back to Home</a>
+            <br>
+            <p class="thank-text">Your support helps make a difference in the lives of animals. We appreciate your kindness.</p>
+            <br>
+            <button onclick="closeThankYouModal()">Go Back to Home</button>
         </div>
     </div>
 </div>

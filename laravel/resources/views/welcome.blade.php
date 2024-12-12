@@ -1,4 +1,6 @@
 @section('title', 'Welcome')
+
+
 <body>
     @extends('layout')
     @section('content')
@@ -9,7 +11,7 @@
             <p class="dotation-text">Make a difference with funds or action!</p>
             <br>
             <!-- Donation Button that triggers the modal -->
-            <a class="button" href="javascript:void(0)" onclick="openDonationModal()">DONATE NOW!</a>
+            <button class="button" href="javascript:void(0)" onclick="openDonationModal()">DONATE NOW!</button>
         </div>
         @include('DonationModal')
     </section>
@@ -57,15 +59,16 @@
 
     <!-- Newsletter section -->
     <section class="newsletter_section" style="background-image: url('{{ asset('assets/photos/catnewsletter.jpg') }}')">
-        <div class="newsletter_text">
-                <h1 class="newsletter-main-heading">JOIN OUR NEWSLETTER</h1>
-                <h2 class="newsletter-heading">Stay Up To Date With All The Latest News!</h2>
-                <form>
-                    <input class="newsletter_input" type="text" id="name" name="name" placeholder="Enter your e-mail here">
-                    <button class="button" href="/">JOIN NOW!</button>
-                </form>
-        </div>
-    </section>
+    <div class="newsletter_text">
+        <h1 class="newsletter-main-heading">JOIN OUR NEWSLETTER</h1>
+        <h2 class="newsletter-heading">Stay Up To Date With All The Latest News!</h2>
+        <form id="newsletterForm">
+            <input class="newsletter_input" type="email" id="email" name="email" placeholder="Enter your e-mail here" required>
+            <button class="button" type="submit">JOIN NOW!</button>
+        </form>
+    </div>
+    @include('NewsletterModal')
+</section>
     <!-- Headings -->
         <h1>OUR STAFF</h1>
         <h2>Team of Professionals</h2>
@@ -139,6 +142,7 @@
             });
         });
     </script>
+
     @endsection
 </body>
 </html>

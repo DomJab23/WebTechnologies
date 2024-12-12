@@ -1,5 +1,5 @@
 .modal {
-    margin-top: 3%;
+    margin-top: 4%;
     display: none; /* Hidden by default */
     align-items: center;
     align-content: center;
@@ -37,6 +37,7 @@ input[type="number"], input[type="password"],input[type="text"],input[type="date
 
 /* Buttons inside the modal */
 button {
+    background-color: orange;
     width: 100%;
     color: white;
     padding: 14px 20px;
@@ -45,6 +46,10 @@ button {
     cursor: pointer;
     border-radius: 4px; /* Optional: rounded corners */
     font-size: 16px;
+}
+button:hover{
+    background-color:#e55b00;
+    transition: all 0.1s ease;
 }
 /* Container styling (inside modal content) */
 .container {
@@ -70,4 +75,11 @@ button {
 .close-x:hover{
     color:red;
     cursor: pointer;
+}
+.thank-text{
+    color: black;
+    font-size: 2.5vh;
+    padding:4%;
+    text-align: justify;
+    align-items: center;
 }
