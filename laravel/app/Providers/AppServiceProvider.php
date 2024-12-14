@@ -32,7 +32,9 @@ class AppServiceProvider extends ServiceProvider
         });
 
         RateLimiter::for('login', function (Request $request){
-            return Limit::perMinutes(5,5)->response('Too many login attempts, please try again later.');
+            return Limit::perMinutes(5,5)->response(function(Request $request, array $headers){
+                return response('Too many login attempts, please try again later.', 429, $headers);
+            });
         });
 
     }

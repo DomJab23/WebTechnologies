@@ -33,7 +33,7 @@ Route::middleware('throttle:global')->group(function () {
 
     Route::post('/register', [RegistrationController::class, 'register'])->name('registerPush');
 
-    Route::post('/login', [AuthController::class, 'login'])->name('login')->middleware('throttle:5,5');
+    Route::post('/login', [AuthController::class, 'login'])->name('login')->middleware('throttle:login');
 
     Route::get('/pet', [PetController::class, 'get_pet'])->name('onePet');
 
