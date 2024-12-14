@@ -9,16 +9,21 @@
     <link rel="stylesheet" href="../../assets/css/footer.css">
     <link rel="stylesheet" href="../../assets/css/registration.css">
     <link rel="stylesheet" href="../../assets/css/aboutUsPage.css">
+    <link rel="stylesheet" href="../../assets/css/app.css">
+    <link rel="stylesheet" href="../../assets/css/textColors.css">
+    <link rel="stylesheet" href="../../assets/css/welcome.css">
+    <link rel="stylesheet" href="../../assets/css/headings.css">
+    <link rel="stylesheet" href="../../assets/css/gallery.css">
+    <link rel="stylesheet" href="../../assets/css/petmanagement.css">
+    <link rel="stylesheet" href="../../assets/css/modals.css">
 </head>
 <body>
     <!-- Modal Login Form -->
     <div id="loginForm" class="modal">
         <form class="modal-content animate" action="{{ route('login') }}" method="post">
             @csrf
-            <div class="imgcontainer">
-                <span onclick="document.getElementById('loginForm').style.display='none'" class="close" title="Close Login">&times;</span>
-                <h2 class="loginHeader">Sign in to your account.</h2>
-            </div>
+                <span onclick="document.getElementById('loginForm').style.display='none'" class="close-x" title="Close Login">&times;</span>
+                <h1>Sign in to your account.</h1>
             <div class="container">
                 <label for="uname"><b>Username</b></label>
                 <input class="loginInput" type="text" placeholder="Enter Username" name="uname" required>
@@ -28,6 +33,7 @@
                 <br>
                 <button type="submit" class="modalButton">Login</button>
                 <br>
+                <label for="register"><b>If you don't have an account:</b></label>
                 <button type="submit" class="modalButton" onclick="window.location.href='/register';">Sign Up</button>
             </div>
         </form>
@@ -121,18 +127,19 @@
         </div>
         <!-- Contact Information -->
         <div class="footer-section">
-            <h4>Contact Information</h4>
-            <p>Email: contact@petapp.com</p>
-            <p>Phone: +45 123 123 123</p>
-            <p>Address: Alsion 2, 6400 Sønderborg</p>
+            <p class="footer-text">Contact Information</h4>
+            <p class="contact">Email: contact@petapp.com</p>
+            <p class="contact">Phone: +45 123 123 123</p>
+            <p class="contact">Address: Alsion 2, 6400 Sønderborg</p>
         </div>
         <!-- Newsletter Signup in Footer -->
         <div class="footer-section">
-            <h4>Newsletter</h4>
-            <p>Subscribe to our newsletter for updates.</p>
+            <p class="footer-text">Newsletter</p>
+            <p class="contact" >Subscribe to our newsletter for updates.</p>
+            <br>
             <form class="newsletter-form">
                 <input type="email" placeholder="Enter your email" required>
-                <button class="loginButton" type="submit">Subscribe</button>
+                <button type="submit">Subscribe</button>
             </form>
         </div>
     </footer>

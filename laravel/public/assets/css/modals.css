@@ -1,0 +1,85 @@
+.modal {
+    margin-top: 4%;
+    display: none; /* Hidden by default */
+    align-items: center;
+    align-content: center;
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0.4); 
+}
+
+/* Modal Content Box */
+.modal-content {
+    position: relative; 
+    background-color: white;
+    margin: auto;
+    padding: 4%;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 3%;
+    box-shadow: 0vh 1vh 2vh rgba(0, 0, 0, 0.2); /* Optional: add shadow for better focus */
+}
+
+/* Input fields inside the modal */
+input[type="number"], input[type="password"],input[type="text"],input[type="date"],input[type="month"]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 4px; /* Optional: add rounded corners */
+}
+
+/* Buttons inside the modal */
+button {
+    background-color: orange;
+    width: 100%;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px; /* Optional: rounded corners */
+    font-size: 16px;
+}
+button:hover{
+    background-color:#e55b00;
+    transition: all 0.1s ease;
+}
+/* Container styling (inside modal content) */
+.container {
+    padding: 20px;
+}
+/* Responsive Styling */
+@media screen and (max-width: 600px) {
+    .modal-content {
+        width: 90%; /* Reduce modal width for smaller screens */
+    }
+}
+
+.close-x {
+    position: absolute; /* Ensures the button is positioned relative to the modal */
+    top: 1vh; /* Adjusts distance from the top of the modal */
+    right: 2vh;
+    padding: 1vh; /* Adjusts distance from the right of the modal */
+    color: black; /* Black color for the 'x' */
+    font-weight: bold; /* Makes the 'x' bold */
+    cursor: pointer; /* Changes the cursor to a pointer on hover */
+    font-size: 1.5rem; /* Adjust size for better visibility */
+}
+.close-x:hover{
+    color:red;
+    cursor: pointer;
+}
+.thank-text{
+    color: black;
+    font-size: 2.5vh;
+    padding:4%;
+    text-align: justify;
+    align-items: center;
+}

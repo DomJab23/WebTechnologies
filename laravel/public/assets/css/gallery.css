@@ -1,50 +1,57 @@
-.gallery-photos{
+.gallery-photos {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items:center;
-    gap: 10px;
-    padding: 20px;
+    align-items: center;
+    gap: 2vh;
+    padding: 2%;
+    padding-bottom: 5vh;
 }
 
-.gallery-item{
-    flex:1;
-    height: 460px;;
-    width: auto;
+.gallery-item {
+    flex: 1;
+    min-width: 20%;
+    max-width: 25%;
+    height: auto;
     align-content: center;
     padding: 1%;
     text-decoration: none;
-    align-self: start;
-
-
-    display:flex;
+    display: flex;
     flex-direction: column;
-    justify-content: top;
-    text-align:justify;
+    justify-content: flex-start;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    background-color: rgba(100, 237, 230, 0.2);
+    box-shadow: 0 2vh 3vh rgba(0, 0, 0, 0.1);
+    border-radius: 2%;
+    background-color: rgb(235, 235, 235);
 }
 
-.gallery-photo{
+.image-cropper {
+    width: 100%;
+    aspect-ratio: 1/1; /* Ensures a square crop area */
+    overflow: hidden;
+    border-radius: 2%;
+    display: flex;
     justify-content: center;
-    height:400px;
-    width:auto;
-    border-radius: 10px;
+    align-items: center;
 }
 
-.text-at-the-end{
-    font-size: 20px;
+.gallery-photo {
+    height: 100%;
+    width: auto; /* Ensure the image fits within the crop area */
+    object-fit: cover; /* Crops and ensures the image fills the container */
+}
+
+.text-at-the-end, .petName {
+    font-size: 2.5vh;
     text-align: center;
-    color:black;
+    color: black;
     padding-left: 10%;
     padding-right: 10%;
-    padding-bottom: 5%;
+    padding-bottom: 3%;
+    padding-top: 5%;
 }
-.takepethome{
-    color:black;
+
+.takepethome {
+    color: black;
 }
-.gallery-item{
-    background-color: rgb(236, 236, 236);
-}
+

@@ -1,15 +1,9 @@
 @extends('layout')
 
-@section('title', 'Pet Manager')
+@section('title', 'Management')
 
 @section('content')
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title') - PETAPP</title>
-    <link rel="icon" href="../../assets/photos/PetApp-favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="../../assets/css/petmanagement.css">
-</head>
+
     <section class="pet-menagement">
         
     <div class="pet-add">
@@ -151,11 +145,6 @@
             <button class="modalButton">Update Pet</button>
         </form>
     </div>
-    <div class="imgcontainer">
-    <span onclick="document.getElementById('updateForm').style.display='none'" class="close" title="Close Window">
-        &times;
-    </span>
-</div>
     <script>
     // Get the modal
     var updateForm = document.getElementById('updateForm');

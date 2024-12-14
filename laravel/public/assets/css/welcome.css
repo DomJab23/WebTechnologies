@@ -3,29 +3,28 @@
     background-size: cover;
     background-position: center;
     height: auto;
-    min-height: 300px;
+    min-height: 65vh;
 }
-
-.firstPet{
+.petCard{
     display: flex; /* Allows flex properties within each card */
     flex-direction: column; /* Stack content vertically (image, name, position, story) */
     justify-content: top;
     align-items: center; /* Center horizontally */
     text-align:justify; /* Center text content */
     background-color: #ffffff; /* White background for each card */
-    border-radius: 10px; /* Rounded corners */
+    border-radius: 2%; /* Rounded corners */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for separation */
     padding: 20px; /* Space inside each card */
     width: 80%; /* Adjust width of each card */
-    width:400px; /* Limit maximum width */
-    height: 400px;
+    width:50vh; /* Limit maximum width */
+    height: 50vh;
     overflow-y: clip;
 }
 .pet-photo{
     align-items: center;
     align-content: center;
-    height:200px;
-    width:200px;
+    height:70%;
+    width:70%;
     border-radius: 2%;
 }
 
@@ -37,8 +36,8 @@
     text-align:justify; /* Center text content */
     background-color: #ffffff; /* White background for each card */
     border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for separation */
-    padding: 20px; /* Space inside each card */
+    box-shadow: 0 1vh 1.5vh rgba(0, 0, 0, 0.1); /* Subtle shadow for separation */
+    padding: 2%; /* Space inside each card */
     width: 80%; /* Adjust width of each card */
     max-width:600px; /* Limit maximum width */
 } 
@@ -49,131 +48,15 @@ body {
     background-color: #f4f4f4; /* Optional: adds background color */
 }
 
-/* Modal Overlay - Covers the entire screen */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    background-color: rgba(0, 0, 0, 0.4); /* Background color with opacity */
-    padding-top: 60px; /* Position the modal content 60px from the top */
+.ourteam{
+    padding-left: 3%;
+    padding-right: 3%;
+    
 }
 
-/* Modal Content Box */
-.modal-content {
-    position: relative; /* Important for positioning the close button */
-    background-color: white;
-    margin: auto;
-    padding: 20px;
-    width: 80%;
-    max-width: 500px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Optional: add shadow for better focus */
-}
-
-/* Close Button Styles */
-.close {
-    position: absolute;
-    top: 10px; /* Adjust the position */
-    right: 10px;
-    font-size: 30px;
-    color: #aaa;
-    cursor: pointer;
-    padding: 0;
-}
-
-/* Close Button Hover Effect */
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-/* Input fields inside the modal */
-input[type="text"], input[type="password"] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-    border-radius: 4px; /* Optional: add rounded corners */
-}
-
-/* Buttons inside the modal */
-button {
-    width: 100%;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    border-radius: 4px; /* Optional: rounded corners */
-    font-size: 16px;
-}
-/* Container styling (inside modal content) */
-.container {
-    padding: 20px;
-}
-
-/* Responsive Styling */
-@media screen and (max-width: 600px) {
-    .modal-content {
-        width: 90%; /* Reduce modal width for smaller screens */
-    }
-}
-
-
-.animate {
-    animation: animatezoom 0.6s;
-}
-
-.aboutUs {
-    font-size: 20px;
-    line-height: 35px;
-    text-align: justify;
-}
-
-@keyframes animatezoom {
-    from {transform: scale(0)} 
-    to {transform: scale(1)}
-}
 .newsletter_section{
     min-height: 600px;
 }
-/* Modal styles */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.4);
-    padding-top: 60px;
-}
-
-.modal-content {
-    background-color: #fefefe;
-    margin: 5% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-}
-
-.close {
-    color: #aaa;
-    font-size: 28px;
-    font-weight: bold;
-}
-
 
 .container input[type="text"] {
     width: 100%;
@@ -182,4 +65,221 @@ button {
     border: 1px solid #ccc;
     border-radius: 5px;
 }
+* {
+    box-sizing: border-box;
+}
+
+/*All button on the website*/
+.button {
+    background-color: orange;
+    color: white;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    border-radius: 4%;
+    height: 8vh;
+    width: 20vh;
+}
+
+.button:hover {
+    background-color:#e55b00;
+    transition: all 0.1s ease;
+}
+
+.hero-container {
+    align-items: center;
+    align-content: center;
+    padding-top: 10%;
+    padding-left: 2%;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+.takepethome{
+    text-align: center;
+    justify-content: center;
+    padding-left: 25%;
+    padding-right: 25%;
+    padding-bottom:1%;
+}
+.animal-selection-bar{
+    display: flex; /* Allows flex properties within each card */
+    flex-direction: row; /* Stack content vertically (image, name, position, story) */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    text-align: center; /* Center text content */
+    gap:3%;
+    padding-bottom: 1%;
+}
+.animal-size{
+    justify-content: center;
+    text-align: center;
+    gap:20px;
+    background-color: #ff9604;
+    border-radius:5px;
+    border: none;
+    width: 10%;
+    padding:1%;
+    
+}
+.animal-size:hover{
+    background-color: orangered;
+}
+
+.flexContainer {
+    display: flex;
+    height: auto;
+}
+
+.aboutUsText, .aboutUsPicture {
+    flex: 1;
+    justify-content: center;  /* Horizontally center the content */
+    align-items: center; 
+    padding-left: 3%;
+    padding-right: 3%;
+    min-width: 50vh;
+    min-height: 70vh;
+}
+.aboutUsText{
+    align-content: center;
+    gap:10%;
+    text-align: justify;
+    font-size: 3vh;
+}
+
+
+.newsletter_section{
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: right;  /* Horizontally center the content */
+    align-items: center; 
+    display: flex;
+    width: 100%;
+    
+}
+.newsletter_text {
+    flex:1;
+    text-align: left;
+    justify-content: left; /* Align items to the right */
+    align-items: left; /* Center items vertically */
+    padding-left: 30%;
+    padding-right: 5%;
+    margin-left: 20%; /* Add padding */
+    /* Remove float and flex properties */
+}
+
+.newsletter_input[type="text"] {
+    justify-content: center;  /* Horizontally center the content */
+    align-items: center; 
+    width: 70%;
+}
+
+.photos, .morePhotos, .contactFormAndMap {
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+}
+
+.ourteam, .petsReadyForAdoption {
+    display: flex;
+    flex-direction: row; /* Stack each person vertically */
+    align-items: center; /* Center content horizontally within each card */
+    gap: 3vh; /* Space between each person */
+    padding: 3vh; /* Add padding around the section */
+    background-color: #f9f9f9; /* Light background for the section */
+    max-width: 100%;
+    overflow-x: scroll;
+}
+
+.fadeout {
+    --fade-start: 300px;
+    mask-image: linear-gradient(to bottom, white var(--fade-start), transparent);
+} 
+
+/* Styling for image */
+.firstPerson img, .secondPerson img, .thirdPerson img {
+    width: 100%;
+    height: 90%;
+    border-radius: 5%; /* Circular image */
+    object-fit: cover; /* Ensure proper scaling of image */
+    margin-bottom: 15px; /* Space below the image */
+    
+}
+
+/* Styling for name, position, and story */
+.name {
+    font-size: 3vh;
+    font-weight: bold;
+    color: #000000;
+    margin: 1vh 0; /* Space above and below */
+}
+
+.position {
+    font-size: 2vh;
+    color: #ff8c00;
+}
+
+.shortStory {
+    font-size: 2.5vh;
+    color: #000000;
+    margin: 1% 0 0;
+    line-height: 1.5; /* Better readability for paragraphs */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .ourteam {
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+
+    .firstPerson, .secondPerson, .thirdPerson {
+        width: 100%; /* Make cards full width */
+    }
+}
+.contactForm, .google-map {
+    flex: 1;
+    padding:3%;
+    padding-top: 1%;
+}
+.contactForm input[type="text"], input[type="email"], input[type="number"]{
+    background-color: #f0f0f0; /* Light grey background */
+    border: 1px solid #ffffff; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px; /* Space inside the input fields */
+    margin: 5px 0; /* Space between the inputs */
+    width: calc(100% - 22px); /* Adjust width to fit the container */
+    box-sizing: border-box; /* Include padding and border in total width */
+    font-size: 16px; /* Adjust text size */
+}
+
+.google-map iframe {
+    height: 500px;
+    width: 800px;
+    left: 0;
+    top: 0;
+    border-radius: 5px; /* Rounded corners */
+    
+}
+.contactForm .message-input {
+    height: 230px; /* Increase height for the message box */
+    resize: none; /* Prevent resizing */
+}
+
+  .contact-section h4,
+  .newsletter-section h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+  
+  .contact-section p,
+  .newsletter-section p {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+
 

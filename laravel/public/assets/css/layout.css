@@ -9,49 +9,19 @@ html, body {
     width: 100%;
 }
 
-/*Sort all this bullshit out*/
-
-input.loginInput {
-    width: 100%; /* Make sure the input takes the full width of the container */
-    padding: 10px; /* Ensure padding inside inputs */
-    font-size: 16px; /* Ensure font size is appropriate */
-    margin: 8px 0; /* Space out the inputs */
-    border: 1px solid #ccc; /* Border for better visibility */
-    border-radius: 4px; /* Rounded borders for aesthetics */
-}
-input::placeholder {
-    color: #888; /* Set a color for placeholder text */
-    font-style: italic; /* Optional: make placeholder text italic for better visibility */
-    opacity: 1; /* Ensure the placeholder is fully visible */
-}
-
-input:focus {
-    border-color: #4CAF50; /* Change border color when input is focused */
-    outline: none; /* Remove outline on focus */
-}
-
-h2 {
-    font-size: 50px;
-    font-weight: bold;
-    color:black;
-}
-
-    /* Add padding to the checkbox */
 label input[type=checkbox] {
-    margin-top: 16px;
+    margin-top: 5%;
 }
-
-/*End of bullshit*/
 
 .barspace {
-    height: 78px;
+    height: 10vh;
     width: 100%;
 }
 
 .navbar{
     position: fixed;
     width: 100%;
-    height: 80px;
+    height:12%;
     background: whitesmoke;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     display: flex;
@@ -70,7 +40,7 @@ label input[type=checkbox] {
 }
 
 .navbar_menu_item {
-    height: 80px;
+    height: 5%;
 }
 .navbar_menu_item:hover {
     color: #888;
@@ -98,31 +68,30 @@ label input[type=checkbox] {
 
 .logo-container {
     display: flex;
-    justify-content: center; /* Center logo horizontally */
-    align-items: center; /* Center logo vertically */
-    margin: 10px; /* Optional: Add margin for spacing */
+    justify-content: center; 
+    align-items: center; 
 }
 
 .logo {
-    max-width: 250px; /* Set a max width for the logo */
-    height: auto; /* Maintain aspect ratio */
-    padding: 10%;
+    max-width: 40vh; 
+    height: auto; 
+    padding: 15%;
 }
 
 
 .loginButton {
         background-color: rgb(255, 140, 0);
         color: white;
-        padding: 14px 20px;
-        margin: 18px 0;
-        margin-right: 10px;
+        padding: 2vh 3vh;
+        margin: 6vh 0;
+        margin-right: 2vh;
         border: none;
         cursor: pointer;
         width: 100%;
-        border-radius: 3px; /* Increased border-radius for visibility */
-        box-sizing: border-box; /* Ensure padding doesn't affect width */
-        display: inline-block; /* Ensures the element respects the box model */
-        text-align: center; /* Centers text in the button */
+        border-radius: 8%; 
+        box-sizing: border-box; 
+        display:inline-block; 
+        text-align: center; 
 }
 
 .loginButton:hover {
@@ -134,7 +103,7 @@ label input[type=checkbox] {
     box-sizing: border-box;
 }
 
-/* Style the modal (background) */
+
 
 .modal {
     display: none;
@@ -146,31 +115,29 @@ label input[type=checkbox] {
     height: 100%;
     overflow: auto;
     background-color: rgba(0,0,0,0.4);
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    background-color: rgba(0,0,0,0.4); 
     padding: 30%;
-    padding-top: 60px;
+    padding-top: 5%;
 }
 
-/* Modal Content/Box */
+
 .modal-content {
     align-items: center;
     justify-content: center;
     background-color: #fefefe;
     margin: 5% auto 15% auto;
-    border: 1px solid #888;
-    width: 80%;
-    padding: 20px;
-    border: 1px solid hsl(0, 0%, 53%);
-    height: auto; /* Adjusted height */
-    animation: animatezoom 0.6s; /* Zoom animation */
+    border: 0.5% solid #888;
+    width: 5%;
+    padding: 5%;
+    height: auto; 
+    animation: animatezoom 0.6s; 
 }
 
 .modalButton {
     background-color: rgb(255, 140, 0);
     color: white;
-    padding: 14px 20px;
-    margin: 18px 0;
-    margin-right: 10px;
+    padding: 4% 5%;
+    margin: 4% 0%;
     border: none;
     cursor: pointer;
     width: 100%; 
@@ -193,43 +160,12 @@ label input[type=checkbox] {
     position: relative;
 }
 
-.close {
-    position: absolute;
-    right: 10px; /* adjust to move it to the right */
-    top: -30px; /* move it above the parent container */
-    color: #000;
-    font-size: 35px;
-    font-weight: bold;
-}
-
-
-.close:hover,
-.close:focus {
-    color: red;
-    cursor: pointer;
-}
-
-/* Avatar image */
-.imgcontainer {
-    margin: 24px 0 12px 14px;
-    position: relative;
-}
-
-/* Center the container */
 .container {
-    padding: 16px;
+    padding: 5%;
 }
 
 @keyframes animatezoom {
     from {transform: scale(0)} 
     to {transform: scale(1)}
 }
-.submit {
-    padding: 16px;
-    background-color: #ff6600;
-}
-.submit:hover{
-    padding: 16px;
-    background-color: #ff6600;
-    transform: scale(1.1);
-}
+

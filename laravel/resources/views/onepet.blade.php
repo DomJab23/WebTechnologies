@@ -26,7 +26,7 @@
                     <input type="hidden" name="pet_id" value="{{$pet->id}}">
                     <label for="image">Select Image:</label>
                     <input type="file" name="image" id="image" required>
-                    <button>Upload</button>
+                    <button class="add-button">Upload</button>
                 </form>
             </div>
         @endauth
