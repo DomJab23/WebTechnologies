@@ -22,10 +22,8 @@
     <div id="loginForm" class="modal">
         <form class="modal-content animate" action="{{ route('login') }}" method="post">
             @csrf
-            <div class="imgcontainer">
-                <span onclick="document.getElementById('loginForm').style.display='none'" class="close" title="Close Login">&times;</span>
+                <span onclick="document.getElementById('loginForm').style.display='none'" class="close-x" title="Close Login">&times;</span>
                 <h1>Sign in to your account.</h1>
-            </div>
             <div class="container">
                 <label for="uname"><b>Username</b></label>
                 <input class="loginInput" type="text" placeholder="Enter Username" name="uname" required>

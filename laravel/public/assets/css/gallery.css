@@ -10,8 +10,8 @@
 
 .gallery-item {
     flex: 1;
-    min-width: 300px;
-    max-width: 400px;
+    min-width: 20%;
+    max-width: 25%;
     height: auto;
     align-content: center;
     padding: 1%;
@@ -20,9 +20,9 @@
     flex-direction: column;
     justify-content: flex-start;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2vh 3vh rgba(0, 0, 0, 0.1);
     border-radius: 2%;
-    background-color: rgb(236, 236, 236);
+    background-color: rgb(235, 235, 235);
 }
 
 .image-cropper {

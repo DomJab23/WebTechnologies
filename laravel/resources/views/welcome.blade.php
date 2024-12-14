@@ -7,8 +7,8 @@
     <!-- The first photo on the website with title and donation button -->
     <section class="firstPicture" style="background-image: url('{{ asset('assets/photos/dog_banner.png') }}'); color: white;">
         <div class="hero-container">
-            <h2 class="dotation-heading">ANIMALS NEED<br>YOUR HELP!</h2>
-            <p class="dotation-text">Make a difference with funds or action!</p>
+            <h2 class="donation-heading">ANIMALS NEED<br>YOUR HELP!</h2>
+            <p class="donation-text">Make a difference with funds or action!</p>
             <br>
             <!-- Donation Button that triggers the modal -->
             <button class="button" href="javascript:void(0)" onclick="openDonationModal()">DONATE NOW!</button>

@@ -1,24 +1,22 @@
 /*dotations hedings*/
-.dotation-heading{
-    font-size:50px;
+.donation-heading{
+    font-size:8vh;
     font-weight: bold;
     text-align: left;
     color: black;
 }
-.dotation-text{
-    font-size:20px;
+.donation-text{
+    font-size:3vh;
     text-align: left;
     color: black;
 }
 /*newsletter hedings*/
-.newsletter-main-heading{
+.newsletter-main-heading,.newsletter-heading{
     color: white;
     text-align: left;
 }
 .newsletter-heading{
-    color: white;
-    text-align: left;
-    font-size:50px;
+    font-size:8vh;
     font-weight: bold; 
 }
 /**/

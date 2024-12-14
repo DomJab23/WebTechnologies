@@ -28,7 +28,7 @@
 <div id="thankYouModal" class="modal" style="display: none;">
     <div class="modal-content animate">
         <div class="container">
-            <span class="close-x" onclick="closeThankYouModal()" class="close" title="Close Modal">&times;</span>
+            <span class="close-x" onclick="closeThankYouModal()" title="Close Modal">&times;</span>
             <h1>Thank You!</h1>
             <br>
             <p class="thank-text">Your support helps make a difference in the lives of animals. We appreciate your kindness.</p>
