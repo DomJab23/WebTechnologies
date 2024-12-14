@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Validation\Rules\Password; 
 
 class RegistrationController extends Controller
 {
@@ -11,7 +12,13 @@ class RegistrationController extends Controller
     {
         $request->validate([
             "uname" => "required",
-            "password" => "required",
+            "password" => ['required', 'min:8', 
+            Password::min(8)
+            ->letters()
+            ->mixedCase()
+            ->numbers()
+            ->symbols()
+            ->uncompromised()],
             "code"=>"required",
         ]);
         $user = new User();

@@ -16,6 +16,17 @@
                     <p class="regLabel">Enter your code:</p>
                     <input class="regInput" type="text" name="code" placeholder="Code">
                     <br>
+
+                    @if ($errors->any())
+                        <div>
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
+                    
                     <button class="modalButton">Register</button>
                 </form>
             </div>

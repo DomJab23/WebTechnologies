@@ -28,7 +28,7 @@
                 <br>
                 <button type="submit" class="modalButton">Login</button>
                 <br>
-                <button type="submit" class="modalButton" onclick="window.location.href='/register';">Sign Up</button>
+                <button class="modalButton" onclick="window.location.href='/register';">Sign Up</button>
             </div>
         </form>
     </div>
