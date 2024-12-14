@@ -10,11 +10,11 @@ html, body {
 }
 
 label input[type=checkbox] {
-    margin-top: 16px;
+    margin-top: 5%;
 }
 
 .barspace {
-    height: 78px;
+    height: 10vh;
     width: 100%;
 }
 
