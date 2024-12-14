@@ -9,34 +9,38 @@ use App\Http\Controllers\ImageController;
 use App\Http\Controllers\DonationController;
 use App\Http\Controllers\UserController;
 
+Route::middleware('throttle:global')->group(function () {
 
-Route::get('/', [PetController::class, 'get_pets_main']);
+    Route::get('/', [PetController::class, 'get_pets_main']);
+
+    Route::get('/about', function () {
+        return view('about');
+    });
+    Route::get('/contacts', function () {
+        return view('contacts');
+    });
+
+    Route::get('/gallery', [PetController::class, 'get_pets_galery']);
 
 
-Route::get('/about', function () {
-    return view('about');
+    Route::get('/more', function () {
+        return view('more');
+    });
+
+    Route::get('/register', function () {
+        return view('registration');
+    });
+
+    Route::post('/register', [RegistrationController::class, 'register'])->name('registerPush');
+
+    Route::post('/login', [AuthController::class, 'login'])->name('login')->middleware('throttle:5,5');
+
+    Route::get('/pet', [PetController::class, 'get_pet'])->name('onePet');
+
+    Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+
+    Route::post('/donate', [DonationController::class, 'processDonation'])->name('donate');
 });
-Route::get('/contacts', function () {
-    return view('contacts');
-});
-
-Route::get('/gallery', [PetController::class, 'get_pets_galery']);
-
-
-Route::get('/more', function () {
-    return view('more');
-});
-
-Route::get('/register', function () {
-    return view('registration');
-});
-
-Route::post('/register', [RegistrationController::class, 'register'])->name('registerPush');
-
-Route::post('/login', [AuthController::class, 'login'])->name('login')->middleware('throttle:5,5');
-
-Route::get('/pet', [PetController::class, 'get_pet'])->name('onePet');
-
 
 /* Routes for the different user types */
 Route::middleware(['employee'])->group(function() {
@@ -51,7 +55,7 @@ Route::middleware(['employee'])->group(function() {
     Route::post('/deleteimage', [ImageController::class, 'delete_image'])->name('imageDelete');
 });
 
-Route::post('/donate', [DonationController::class, 'processDonation'])->name('donate');
+
 
 Route::middleware(['volunteer'])->group(function() {
     Route::get('/volunteer', [PetController::class, 'get_volunteer_pets'])->name('volunteer');
@@ -59,6 +63,8 @@ Route::middleware(['volunteer'])->group(function() {
     Route::post('/unvolunteer', [PetController::class, 'unvolunteer_pet'])->name('unvolunteerPet');
     
 });
+
+
 Route::middleware(['admin'])->group(function() {
     Route::get('/admin', [UserController::class, 'get_users']);
 
@@ -69,5 +75,3 @@ Route::middleware(['admin'])->group(function() {
     Route::post('/volunteermanageraccept', [PetController::class, 'accept_volunteer'])->name('acceptVolunteer');
 });
 /* Routes for user types ends here */
-
-Route::get('/logout', [AuthController::class, 'logout'])->name('logout');

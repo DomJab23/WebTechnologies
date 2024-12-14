@@ -72,3 +72,9 @@ input[type=text], input[type=password] {
     color: darkorange;
     background-size: 1423px 655px;
 }
+
+.registration-error
+{
+    text-align: left;
+    color: darkred;
+}

@@ -16,9 +16,8 @@
                     <p class="regLabel">Enter your code:</p>
                     <input class="regInput" type="text" name="code" placeholder="Code">
                     <br>
-
                     @if ($errors->any())
-                        <div>
+                        <div class="registration-error">
                             <ul>
                                 @foreach ($errors->all() as $error)
                                     <li>{{ $error }}</li>

@@ -11,16 +11,31 @@ class RegistrationController extends Controller
     public function register(Request $request)
     {
         $request->validate([
-            "uname" => "required",
-            "password" => ['required', 'min:8', 
-            Password::min(8)
-            ->letters()
-            ->mixedCase()
-            ->numbers()
-            ->symbols()
-            ->uncompromised()],
-            "code"=>"required",
-        ]);
+            "uname" => 
+                ["required",
+                "unique:App\Models\User,uname"],
+            "password" => 
+                ['required', 
+                Password::
+                min(8)
+                ->mixedCase()
+                ->numbers()
+                ->symbols()
+                ],
+                "code"=>"required",
+            ],
+    [
+            "uname.required"=> "Please provide a username",
+            "uname.unique"=>"This username is already taken",
+            "password.required"=> "Please provide a password",
+            "password.min"=> "Please use a password that is at least 8 characters long",
+            "password.mixed"=> "Please provide a password that contains at least one uppercase and one lowercase character",
+            "password.numbers"=> "Please provide a password that contains at least one number",
+            "password.symbols"=> "Please provide a password that contains at least one symbol",
+            "code.required"=> "Please provide a code",
+            ]
+        );
+
         $user = new User();
         $user->uname = $request->uname;
         $user->password = Hash::make($request->password);
