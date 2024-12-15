@@ -122,7 +122,7 @@
     <!--Footer-->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            const buttons = document.querySelectorAll(".animal-size");
+            const buttons = document.querySelectorAll(".animal-type");
             const pets = document.querySelectorAll(".petCard");
 
             buttons.forEach(button => {
