@@ -20,10 +20,10 @@
                 <input type="text" placeholder="Username" name="uname" class="infoInput"/><br>
 
                 <label for="age">Code:</label><br>
-                <input type="number" placeholder="Age of the pet" name="age" class="infoInput"/><br>
+                <input type="number" placeholder="Code of the user" name="age" class="infoInput"/><br>
 
                 <label for="species">Password:</label><br>
-                <input type="text" placeholder="Species of the pet" name="species" class="infoInput"/><br>
+                <input type="text" placeholder="Password" name="species" class="infoInput"/><br>
 
                 <button>Add User</button>
             </form><br><br>

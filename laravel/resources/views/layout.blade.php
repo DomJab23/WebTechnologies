@@ -72,13 +72,22 @@
                             <button class="modalButton" style="width:auto;">Logout</button>
                         </a>
                     </li>
-                @elseif (Auth::user()->usertype=='admin')
+                @elseif (Auth::user()->usertype=='employee')
                     <li class="navbar_menu_item">
                         <a href="/management" class="navbar_menu_link">Management</a>
                     </li>
                     <li class="navbar_menu_item">
                         <a href="logout">
-                            <button class="loginButton" style="width:auto;">Logout</button>
+                            <button class="modalButton" style="width:auto;">Logout</button>
+                        </a>
+                    </li>
+                @elseif (Auth::user()->usertype=='admin')
+                    <li class="navbar_menu_item">
+                        <a href="/admin" class="navbar_menu_link">Users</a>
+                    </li>
+                    <li class="navbar_menu_item">
+                        <a href="logout">
+                            <button class="modalButton" style="width:auto;">Logout</button>
                         </a>
                     </li>
                 @endif
