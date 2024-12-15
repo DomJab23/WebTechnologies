@@ -7,7 +7,6 @@ use App\Http\Controllers\RegistrationController;
 use App\Http\Controllers\PetController;
 use App\Http\Controllers\ImageController;
 use App\Http\Controllers\DonationController;
-use App\Http\Controllers\UserController;
 
 
 Route::get('/', [PetController::class, 'get_pets_main']);
@@ -50,6 +49,7 @@ Route::middleware(['employee'])->group(function() {
     Route::post('/addimage', [ImageController::class, 'store_image'])->name('imageAdd');
     Route::post('/deleteimage', [ImageController::class, 'delete_image'])->name('imageDelete');
 });
+/* Routes for user types ends here */
 
 Route::post('/donate', [DonationController::class, 'processDonation'])->name('donate');
 
@@ -61,10 +61,7 @@ Route::middleware(['volunteer'/* Rework so this functions for employee and admin
 });
 Route::middleware(['admin'])->group(function() {
     Route::get('/admin', [UserController::class, 'get_users']);
-
-    Route::post('/adminadd', [UserController::class, 'add_user'])->name('userAdd');
-    Route::post('/admindelete', [UserController::class, 'delete_user'])->name('userDelete');
 });
-/* Routes for user types ends here */
+
 
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');

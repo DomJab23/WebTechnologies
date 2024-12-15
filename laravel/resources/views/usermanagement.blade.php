@@ -13,48 +13,66 @@
     <section class="pet-menagement">
         
     <div class="pet-add">
-            <p>Add user:</p>
-            <form action="{{ route('userAdd') }}" method="POST">
+            <p>Add pet:</p>
+            <form action="{{ route('petAdd') }}" method="POST">
                 @csrf
-                <label for="name">Username:</label><br>
-                <input type="text" placeholder="Username" name="uname" class="infoInput"/><br>
+                <label for="name">Name of pet:</label><br>
+                <input type="text" placeholder="Name of the pet" name="name" class="infoInput"/><br>
 
-                <label for="age">Code:</label><br>
-                <input type="number" placeholder="Code of the user" name="age" class="infoInput"/><br>
+                <label for="age">Age of pet:</label><br>
+                <input type="number" placeholder="Age of the pet" name="age" class="infoInput"/><br>
 
-                <label for="password">Password:</label><br>
-                <input type="text" placeholder="Password" name="password" class="infoInput"/><br>
+                <label for="species">Species of pet:</label><br>
+                <input type="text" placeholder="Species of the pet" name="species" class="infoInput"/><br>
 
-                <button>Add User</button>
+                <label for="breed">Breed of pet:</label><br>
+                <input type="text" placeholder="Breed of the pet" name="breed" class="infoInput"/><br>
+
+                <label for="sterilized">Sterilized:</label>
+                <input type="checkbox" placeholder="Is the pet sterilized?" name="sterilized" class="infoInput"/><br>
+
+                <label for="health">Information about health of pet:</label><br>
+                <textarea type="text" placeholder="Information about the health of the pet" name="health" class="infoInput healthInput"></textarea><br>
+
+                <label for="descriptions">Description:</label><br>
+                <textarea type="text" placeholder="Description of the pet" name="descriptions" class="infoInput descriptionInput"></textarea><br>
+
+                <button>Add Pet</button>
             </form><br><br>
-            <p>Delete User:</p>
-            <form action="{{ route('userDelete') }}" method="POST">
+            <p>Delete pet:</p>
+            <form action="{{ route('petDelete') }}" method="POST">
                 @csrf
-                <input type="number" placeholder="Id of the user to delete" name="id" class="infoInput"/><br>
-                <button>Delete User</button>
+                <input type="number" placeholder="Id of the pet to delete" name="id" class="infoInput"/><br>
+                <button>Delete Pet</button>
             </form><br><br>
         </div>
-        <div>
-        
-
         <div class="pet-table">
-        <p>Users:</p>
+        <p>Pets in the shelter:</p>
 
-        <!-- Table of users-->
+        <!-- Table of pets-->
         <table>
             <thead style="font-size:20px">
                 <th>Id</th>
-                <th>Username</th>
-                <th>Password</th>
-                <!--<th></th>-->
+                <th>Name</th>
+                <th>Age</th>
+                <th>Species</th>
+                <th>Sterilized</th>
+                <th></th>
+                <th></th>
             </thead>
             <tbody>
-                @foreach($users as $user)
+                @foreach($pets as $pet)
                     <tr>
-                        <td>{{ $user->id }}</td>
-                        <td>{{ $user->uname }}</td>
-                        <td>{{ $user->password }}</td>
-                        {{--<!--<td>
+                        <td>{{ $pet->id }}</td>
+                        <td>{{ $pet->name }}</td>
+                        <td>{{ $pet->age }}</td>
+                        <td>{{ $pet->species }}</td>
+                        @if($pet->sterilized)
+                            <td>Sterilized</td>
+                        @else
+                            <td>Not sterilized</td>
+                        @endif
+                        <td>
                             <input type="hidden" name="id" value="{{ $pet->id }}">
                             <button 
                                 onclick="
@@ -74,12 +92,19 @@
                                 document.getElementById('petDescriptions').value='{{ $pet->descriptions }}';
                                 " 
                                 style="width:auto;">Update</button>
-                        </td>-->--}}
+                        </td>
+                        <td>
+                            <form action="{{ route('onePet') }}" method="GET">
+                                @csrf
+                                <input type="hidden" name="id" value="{{ $pet->id }}">
+                                <button>More</button>
+                            </form>
+                        </td>
                     </tr>
                 @endforeach
             </tbody>
         </table>
-        </div>
+        
     </div>
 
     </section>
