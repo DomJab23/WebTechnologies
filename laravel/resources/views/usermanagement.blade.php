@@ -22,8 +22,8 @@
                 <label for="age">Code:</label><br>
                 <input type="number" placeholder="Code of the user" name="age" class="infoInput"/><br>
 
-                <label for="species">Password:</label><br>
-                <input type="text" placeholder="Password" name="species" class="infoInput"/><br>
+                <label for="password">Password:</label><br>
+                <input type="text" placeholder="Password" name="password" class="infoInput"/><br>
 
                 <button>Add User</button>
             </form><br><br>
