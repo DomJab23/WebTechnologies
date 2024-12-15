@@ -53,7 +53,7 @@ Route::middleware(['employee'])->group(function() {
 
 Route::post('/donate', [DonationController::class, 'processDonation'])->name('donate');
 
-Route::middleware(['volunteer'])->group(function() {
+Route::middleware(['volunteer'/* Rework so this functions for employee and admin too maybe */])->group(function() {
     Route::get('/volunteer', [PetController::class, 'get_volunteer_pets'])->name('volunteer');
     Route::post('/volunteer', [PetController::class, 'volunteer_pet'])->name('volunteerPet');
     Route::post('/unvolunteer', [PetController::class, 'unvolunteer_pet'])->name('unvolunteerPet');
@@ -64,9 +64,6 @@ Route::middleware(['admin'])->group(function() {
 
     Route::post('/adminadd', [UserController::class, 'add_user'])->name('userAdd');
     Route::post('/admindelete', [UserController::class, 'delete_user'])->name('userDelete');
-
-    Route::get('/volunteermanager', [UserController::class, 'get_volunteers'])->name('volunteermanager');
-    Route::post('/volunteermanageraccept', [PetController::class, 'accept_volunteer'])->name('acceptVolunteer');
 });
 /* Routes for user types ends here */
 
