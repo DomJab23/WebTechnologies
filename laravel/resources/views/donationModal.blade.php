@@ -18,7 +18,7 @@
                 <label for="amount"><b>Enter Desired Amount</b></label>
                 <input type="number" id="amount" placeholder="Amount" name="amount" maxlength="10"required>
 
-                <button type="submit">Donate</button>
+                <button class="modal-button"type="submit">Donate</button>
             </form>
         </div>
     </div>
@@ -76,13 +76,13 @@
     document.getElementById('cvv').addEventListener('input', function (event) {
         const value = event.target.value;
         if (value.length > 4) {
-            event.target.value = value.slice(0, 4); // Limit to 4 digits
+            event.target.value = value.slice(0, 4); 
         }
     });
     document.getElementById('amount').addEventListener('input', function (event) {
         const value = event.target.value;
         if (value.length > 1000000000) {
-            event.target.value = value.slice(0, 1000000000); // Limit to 4 digits
+            event.target.value = value.slice(0, 1000000000); 
         }
     });
 

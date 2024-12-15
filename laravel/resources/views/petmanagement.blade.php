@@ -115,7 +115,7 @@
         <form class="modal-content animate" action="{{ route('petUpdate') }}" method="post">
             @csrf
             <div class="imgcontainer">
-                <span onclick="document.getElementById('updateForm').style.display='none'" class="close" title="Close Window">&times;</span>
+                <span onclick="document.getElementById('updateForm').style.display='none'" class="close-x" title="Close Window">&times;</span>
             </div>
 
             <!-- Id of animal being updated -->
@@ -137,12 +137,12 @@
             <input type="checkbox" placeholder="Was the pet sterilized?" name="sterilized" id="petSterilized" class="infoInput"/><br>
 
             <label for="health">Health of pet:</label><br>
-            <textarea type="text" placeholder="Updated information about the health of the pet" name="health" id="petHealth" class="infoInput healthInput"></textarea><br>
+            <textarea type="text" placeholder="Updated information about the health of the pet" name="health" id="petHealth" class="healthInput"></textarea><br>
 
             <label for="descriptions">Description:</label><br>
-            <textarea type="text" placeholder="Updated description of the pet" name="descriptions" id="petDescriptions" class="infoInput descriptionInput"></textarea><br>
+            <textarea type="text" placeholder="Updated description of the pet" name="descriptions" id="petDescriptions" class="descriptionInput"></textarea><br>
 
-            <button class="modalButton">Update Pet</button>
+            <button class="modal-button">Update Pet</button>
         </form>
     </div>
     <script>

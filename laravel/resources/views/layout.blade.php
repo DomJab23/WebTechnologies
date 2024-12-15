@@ -31,10 +31,10 @@
                 <input class="loginInput" type="password" placeholder="Enter Password" name="psw" required>
                 <br>
                 <br>
-                <button type="submit" class="modalButton">Login</button>
+                <button type="submit" class="modal-button">Login</button>
                 <br>
                 <label for="register"><b>If you don't have an account:</b></label>
-                <button type="submit" class="modalButton" onclick="window.location.href='/register';">Sign Up</button>
+                <button type="submit" class="modal-button" onclick="window.location.href='/register';">Sign Up</button>
             </div>
         </form>
     </div>
@@ -69,7 +69,7 @@
                     </li>
                     <li class="navbar_menu_item">
                         <a href="logout">
-                            <button class="modalButton" style="width:auto;">Logout</button>
+                            <button class="modal-button" style="width:auto;">Logout</button>
                         </a>
                     </li>
                 @elseif (Auth::user()->usertype=='employee')
@@ -136,7 +136,7 @@
         </div>
         <!-- Contact Information -->
         <div class="footer-section">
-            <p class="footer-text">Contact Information</h4>
+            <p class="footer-text">Contact Information</p>
             <p class="contact">Email: contact@petapp.com</p>
             <p class="contact">Phone: +45 123 123 123</p>
             <p class="contact">Address: Alsion 2, 6400 Sønderborg</p>
@@ -146,9 +146,9 @@
             <p class="footer-text">Newsletter</p>
             <p class="contact" >Subscribe to our newsletter for updates.</p>
             <br>
-            <form class="newsletter-form">
-                <input type="email" placeholder="Enter your email" required>
-                <button type="submit">Subscribe</button>
+            <form class="newsletter-form" id="footerModal">
+                <input class="newsletter_input" type="email" id="email" name="email" placeholder="Enter your e-mail here" required>
+                <button class="button" type="submit">Subscribe</button>
             </form>
         </div>
     </footer>

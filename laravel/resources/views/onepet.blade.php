@@ -20,7 +20,7 @@
         <p><strong>Description:</strong> {{$pet->descriptions}}</p>
         @auth
             <div class="form-section">
-                <h3>Upload a New Picture</h3>
+                <h1>Upload a New Picture</h1>
                 <form action="{{route('imageAdd')}}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <input type="hidden" name="pet_id" value="{{$pet->id}}">
@@ -32,11 +32,11 @@
         @endauth
     </div>
     <div class="picture-section">
-        <h2>Pictures of {{$pet->name}}: {{$images->count()}}</h2>
+        <h1>Pictures of {{$pet->name}}: {{$images->count()}}</h1>
         <div class="image-section">
             @foreach($images as $image)
                 <div class="image-container">
-                    <img src="{{$image->path}}" alt="Picture of {{$pet->name}}" class="">
+                    <img src="{{$image->path}}" alt="Picture of {{$pet->name}}">
                     @auth
                         <form action="{{route('imageDelete')}}" method="POST">
                             @csrf

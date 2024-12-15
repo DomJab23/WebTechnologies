@@ -62,14 +62,14 @@
 }
 
 .newsletter-form button {
-  background-color: #ff6600;
+  background-color: orange;
   cursor: pointer;
   transition: background-color 0.3s;
   color: #ffffff;
 }
 
 .newsletter-form button:hover {
-  background-color: #e55b00;
+  background-color: #ee6000;
 }
 
 .contact{

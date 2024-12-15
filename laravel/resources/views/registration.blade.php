@@ -15,7 +15,7 @@
                     <p class="regLabel">Enter your code:</p>
                     <input class="regInput" type="text" name="code" placeholder="Code">
                     <br>
-                    <button class="modalButton">Register</button>
+                    <button class="reg-button">Register</button>
                 </form>
             </div>
 @endsection

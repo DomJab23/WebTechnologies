@@ -6,7 +6,7 @@
         <br>
         <p class="thank-text">Now you will now receive updates about our latest news and activities</p>
         <br>
-        <button onclick="closeNewsletterModal()">Go Back to Home</button>
+        <button class="modal-button" onclick="closeNewsletterModal()">Go Back to Home</button>
     </div>
 </div>
 
