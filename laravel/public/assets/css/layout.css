@@ -80,7 +80,7 @@ label input[type=checkbox] {
 
 
 .loginButton {
-        background-color: rgb(255, 140, 0);
+        background-color: orange;
         color: white;
         padding: 2vh 3vh;
         margin: 6vh 0;
@@ -95,8 +95,7 @@ label input[type=checkbox] {
 }
 
 .loginButton:hover {
-    opacity: 0.8;
-    background-color: rgb(255, 140, 0);
+    background-color: #ee6000;
 }
 
 * {
@@ -134,7 +133,7 @@ label input[type=checkbox] {
 }
 
 .modalButton {
-    background-color: rgb(255, 140, 0);
+    background-color: orange;
     color: white;
     padding: 4% 5%;
     margin: 4% 0%;
@@ -145,7 +144,7 @@ label input[type=checkbox] {
 }
 
 .modalButton:hover {
-    background-color: rgb(166, 83, 0);
+    background-color: #ee6000;
     transform: scale(1.1);
 }
 
@@ -168,4 +167,34 @@ label input[type=checkbox] {
     from {transform: scale(0)} 
     to {transform: scale(1)}
 }
+
+.contactForm, .google-map {
+    flex: 1;
+    padding:3%;
+    padding-top: 1%;
+}
+.contactForm input[type="text"], input[type="email"], input[type="number"]{
+    background-color: #f0f0f0; 
+    border: 1px solid #ffffff; 
+    border-radius: 4px; 
+    padding: 2%; 
+    margin: 1% 0; 
+    width: calc(100% - 22px); 
+    box-sizing: border-box; 
+    font-size: 2vh; 
+}
+
+.google-map iframe {
+    height: 500px;
+    width: 800px;
+    left: 0;
+    top: 0;
+    border-radius: 4px; 
+    
+}
+.message-input {
+    height: 45%; 
+    resize: none; 
+}
+
 

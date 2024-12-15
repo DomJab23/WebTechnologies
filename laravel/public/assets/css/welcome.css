@@ -1,4 +1,4 @@
-/* Example responsive styles */
+
 .firstPicture, .aboutUsPicture, .map, .photo  {
     background-size: cover;
     background-position: center;
@@ -6,17 +6,17 @@
     min-height: 65vh;
 }
 .petCard{
-    display: flex; /* Allows flex properties within each card */
-    flex-direction: column; /* Stack content vertically (image, name, position, story) */
+    display: flex; 
+    flex-direction: column; 
     justify-content: top;
-    align-items: center; /* Center horizontally */
-    text-align:justify; /* Center text content */
-    background-color: #ffffff; /* White background for each card */
-    border-radius: 2%; /* Rounded corners */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for separation */
-    padding: 20px; /* Space inside each card */
-    width: 80%; /* Adjust width of each card */
-    width:50vh; /* Limit maximum width */
+    align-items: center; 
+    text-align:justify; 
+    background-color: #ffffff; 
+    border-radius: 2%; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    padding: 5%; 
+    width: 80%; 
+    width:50vh; 
     height: 50vh;
     overflow-y: clip;
 }
@@ -29,23 +29,23 @@
 }
 
 .firstPerson {
-    display: flex; /* Allows flex properties within each card */
-    flex-direction: column; /* Stack content vertically (image, name, position, story) */
+    display: flex; 
+    flex-direction: column; 
     justify-content: top;
-    align-items: center; /* Center horizontally */
-    text-align:justify; /* Center text content */
-    background-color: #ffffff; /* White background for each card */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 1vh 1.5vh rgba(0, 0, 0, 0.1); /* Subtle shadow for separation */
-    padding: 2%; /* Space inside each card */
-    width: 80%; /* Adjust width of each card */
-    max-width:600px; /* Limit maximum width */
+    align-items: center; 
+    text-align:justify; 
+    background-color: #ffffff; 
+    border-radius: 4px; 
+    box-shadow: 0 1vh 1.5vh rgba(0, 0, 0, 0.1); 
+    padding: 2%; 
+    width: 80%; 
+    max-width:600px; 
 } 
 
-/* General Body Styles */
+
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #f4f4f4; /* Optional: adds background color */
+    background-color: #f4f4f4; 
 }
 
 .ourteam{
@@ -56,20 +56,13 @@ body {
 
 .newsletter_section{
     min-height: 600px;
+
 }
 
-.container input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
 * {
     box-sizing: border-box;
 }
 
-/*All button on the website*/
 .button {
     background-color: orange;
     color: white;
@@ -86,8 +79,8 @@ body {
     width: 20vh;
 }
 
-.button:hover {
-    background-color:#e55b00;
+.button:hover, .animal-type:hover {
+    background-color:#ee6000;
     transition: all 0.1s ease;
 }
 
@@ -107,27 +100,25 @@ body {
     padding-bottom:1%;
 }
 .animal-selection-bar{
-    display: flex; /* Allows flex properties within each card */
-    flex-direction: row; /* Stack content vertically (image, name, position, story) */
-    justify-content: center; /* Center vertically */
-    align-items: center; /* Center horizontally */
-    text-align: center; /* Center text content */
+    display: flex; 
+    flex-direction: row; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
     gap:3%;
     padding-bottom: 1%;
 }
-.animal-size{
+.animal-type{
     justify-content: center;
     text-align: center;
-    gap:20px;
-    background-color: #ff9604;
-    border-radius:5px;
+    color:white;
+    gap:5%;
+    background-color: orange;
+    border-radius:4px;
     border: none;
     width: 10%;
     padding:1%;
     
-}
-.animal-size:hover{
-    background-color: orangered;
 }
 
 .flexContainer {
@@ -164,16 +155,15 @@ body {
 .newsletter_text {
     flex:1;
     text-align: left;
-    justify-content: left; /* Align items to the right */
-    align-items: left; /* Center items vertically */
+    justify-content: left; 
+    align-items: left; 
     padding-left: 30%;
     padding-right: 5%;
-    margin-left: 20%; /* Add padding */
-    /* Remove float and flex properties */
+    margin-left: 20%; 
 }
 
-.newsletter_input[type="text"] {
-    justify-content: center;  /* Horizontally center the content */
+.newsletter_input[type="email"] {
+    justify-content: center;  
     align-items: center; 
     width: 70%;
 }
@@ -186,11 +176,11 @@ body {
 
 .ourteam, .petsReadyForAdoption {
     display: flex;
-    flex-direction: row; /* Stack each person vertically */
-    align-items: center; /* Center content horizontally within each card */
-    gap: 3vh; /* Space between each person */
-    padding: 3vh; /* Add padding around the section */
-    background-color: #f9f9f9; /* Light background for the section */
+    flex-direction: row; 
+    align-items: center; 
+    gap: 3vh; 
+    padding: 3vh; 
+    background-color: #f9f9f9; 
     max-width: 100%;
     overflow-x: scroll;
 }
@@ -200,13 +190,13 @@ body {
     mask-image: linear-gradient(to bottom, white var(--fade-start), transparent);
 } 
 
-/* Styling for image */
+
 .firstPerson img, .secondPerson img, .thirdPerson img {
     width: 100%;
     height: 90%;
-    border-radius: 5%; /* Circular image */
-    object-fit: cover; /* Ensure proper scaling of image */
-    margin-bottom: 15px; /* Space below the image */
+    border-radius: 5%; 
+    object-fit: cover; 
+    margin-bottom: 1%; 
     
 }
 
@@ -215,71 +205,33 @@ body {
     font-size: 3vh;
     font-weight: bold;
     color: #000000;
-    margin: 1vh 0; /* Space above and below */
+    margin: 1vh 0; 
 }
 
 .position {
     font-size: 2vh;
-    color: #ff8c00;
+    color: orange;
 }
 
 .shortStory {
     font-size: 2.5vh;
     color: #000000;
     margin: 1% 0 0;
-    line-height: 1.5; /* Better readability for paragraphs */
+    line-height: 1.5; 
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    /* Reduce padding for smaller screens */
     .ourteam {
-        padding: 10px; /* Reduce padding for smaller screens */
+        padding: 10px; 
     }
-
+    /* Make cards full width */
     .firstPerson, .secondPerson, .thirdPerson {
-        width: 100%; /* Make cards full width */
+        width: 100%; 
     }
 }
-.contactForm, .google-map {
-    flex: 1;
-    padding:3%;
-    padding-top: 1%;
-}
-.contactForm input[type="text"], input[type="email"], input[type="number"]{
-    background-color: #f0f0f0; /* Light grey background */
-    border: 1px solid #ffffff; /* Light border */
-    border-radius: 5px; /* Rounded corners */
-    padding: 10px; /* Space inside the input fields */
-    margin: 5px 0; /* Space between the inputs */
-    width: calc(100% - 22px); /* Adjust width to fit the container */
-    box-sizing: border-box; /* Include padding and border in total width */
-    font-size: 16px; /* Adjust text size */
-}
 
-.google-map iframe {
-    height: 500px;
-    width: 800px;
-    left: 0;
-    top: 0;
-    border-radius: 5px; /* Rounded corners */
-    
-}
-.contactForm .message-input {
-    height: 230px; /* Increase height for the message box */
-    resize: none; /* Prevent resizing */
-}
-
-  .contact-section h4,
-  .newsletter-section h4 {
-    margin-bottom: 10px;
-    font-size: 18px;
-  }
-  
-  .contact-section p,
-  .newsletter-section p {
-    font-size: 14px;
-    margin-bottom: 8px;
-  }
 
 
 

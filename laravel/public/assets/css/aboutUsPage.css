@@ -43,7 +43,7 @@
 }
 
 .button-get-involved:hover {
-    background-color: rgb(255, 129, 2);
+    background-color: #ee6000;
     color: white;
     transform: scale(1.1);
 }

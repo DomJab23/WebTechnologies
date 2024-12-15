@@ -1,13 +1,13 @@
 
 input[type=text], input[type=password] {
-    padding: 12px 20px;
+    padding: 5% 10%;
     margin-left: 20%;
     margin-right: 20%;
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
     width: 80%;
-    font-size: 16px;
+    font-size: 2vh;
 }
 
 .centerBox {
@@ -35,23 +35,23 @@ input[type=text], input[type=password] {
     justify-content: center;
     padding-bottom: 5%;
 }
-.modalButton{
+.reg-button{
     align-content: center;
     background-color: orange;
     width: 30%;
     align-items: center;
     color: white;
-    padding: 14px 20px;
+    padding: 12px 14px;
     margin-left: 35%;
     margin-right: 35%;
     border: none;
     cursor: pointer;
-    border-radius: 5%; /* Optional: rounded corners */
+    border-radius: 5%; 
     font-size:2.5vh;
 
 }
-.modalButton:hover{
-    background-color:#e55b00;
+.reg-button:hover{
+    background-color:#ee6000;
     transition: all 0.1s ease;
 }
 .regLabel {
