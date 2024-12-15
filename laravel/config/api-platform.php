@@ -6,8 +6,8 @@ use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Auth\AuthenticationException;
 
 return [
-    'title' => 'API Platform',
-    'description' => 'My awesome API',
+    'title' => 'PetApp API',
+    'description' => 'PetApp Api ',
     'version' => '1.0.0',
 
     'routes' => [

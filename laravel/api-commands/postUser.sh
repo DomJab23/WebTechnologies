@@ -3,8 +3,8 @@ curl -X 'POST' \
   -H 'accept: application/ld+json' \
   -H 'Content-Type: application/ld+json' \
   -d '{
-  "uname": "pusia",
-  "createdAt": "2024-12-05T11:56:20.000000Z",
-  "updatedAt": "2024-12-05T11:56:20.000000Z"
-  "usertype": "user"
+  "uname": "Alina",
+  "createdAt": "2024-12-04T12:22:59.000000Z",
+  "updatedAt": "2024-12-04T12:22:59.000000Z",
+  "usertype": "valunteer"
 }'

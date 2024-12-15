@@ -9,7 +9,7 @@ use Illuminate\Notifications\Notifiable;
 use ApiPlatform\Metadata\ApiResource;
 
 #[ApiResource(extraProperties: ['rfc_7807_compliant_errors' => false])
-]
+    ]
 
 class User extends Authenticatable
 {
