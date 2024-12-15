@@ -20,12 +20,10 @@ class AuthController extends Controller
 
         if(Auth::attempt($credentials))
         {
-            if(Auth::user()->usertype =='employee'){
-                return redirect('/management');
+            if(Auth::user()->usertype =='admin'){
+                return redirect("/management");
             }elseif(Auth::user()->usertype=='volunteer'){
                 return redirect('/volunteer');
-            }elseif(Auth::user()->usertype=='admin'){
-                return redirect('/admin');
             }
         }
         else

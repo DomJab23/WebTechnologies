@@ -36,9 +36,7 @@ Route::post('/login', [AuthController::class, 'login'])->name('login');
 
 Route::get('/pet', [PetController::class, 'get_pet'])->name('onePet');
 
-
-/* Routes for the different user types */
-Route::middleware(['employee'])->group(function() {
+Route::middleware(['logged'])->group(function() {
     Route::get('/management', [PetController::class, 'get_pets']);
     Route::post('/managementadd', [PetController::class, 'add_pet'])->name('petAdd');
     Route::post('/managementupdate', [PetController::class, 'update_pet'])->name('petUpdate');
@@ -49,19 +47,12 @@ Route::middleware(['employee'])->group(function() {
     Route::post('/addimage', [ImageController::class, 'store_image'])->name('imageAdd');
     Route::post('/deleteimage', [ImageController::class, 'delete_image'])->name('imageDelete');
 });
-/* Routes for user types ends here */
-
 Route::post('/donate', [DonationController::class, 'processDonation'])->name('donate');
 
-Route::middleware(['volunteer'/* Rework so this functions for employee and admin too maybe */])->group(function() {
+Route::middleware(['volunteer'])->group(function() {
     Route::get('/volunteer', [PetController::class, 'get_volunteer_pets'])->name('volunteer');
     Route::post('/volunteer', [PetController::class, 'volunteer_pet'])->name('volunteerPet');
     Route::post('/unvolunteer', [PetController::class, 'unvolunteer_pet'])->name('unvolunteerPet');
     
 });
-Route::middleware(['admin'])->group(function() {
-    Route::get('/admin', [UserController::class, 'get_users']);
-});
-
-
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
