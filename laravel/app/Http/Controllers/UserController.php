@@ -47,14 +47,12 @@ class UserController extends Controller
     public function add_user(Request $request)
     {   
         $request->validate([
-            "uname" => "required",
-            "password" => "required"
+            "uname" => "required"
         ]);
         
         $user = new User;
 
         $user->uname=$request->uname;
-        $user->password=$request->password;
 
         $user->save();
         return(redirect("/admin"));
