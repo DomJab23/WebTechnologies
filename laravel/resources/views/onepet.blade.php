@@ -10,7 +10,15 @@
 <body>
     <section class="pet-settings">
     <div class="pet-description">
-        <a href="{{url()->previous()}}"><button>Back</button></a>
+        @auth
+            @if(Auth::user()->usertype=='admin'||Auth::user()->usertype=='employee')
+                <a href="/management"><button>Back</button></a>
+            @elseif(Auth::user()->usertype=='volunteer')
+                <a href="/volunteer"><button>Back</button></a>
+            @endif
+        @else
+            <a href="{{url()->previous()}}"><button>Back</button></a>
+        @endauth
         <h1>More About {{$pet->name}}</h1>
         <p><strong>Species:</strong> {{$pet->species}}</p>
         <p><strong>Breed:</strong> {{$pet->breed}}</p>
