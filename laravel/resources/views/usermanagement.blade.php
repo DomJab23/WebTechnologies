@@ -19,11 +19,11 @@
                 <label for="name">Username:</label><br>
                 <input type="text" placeholder="Username" name="uname" class="infoInput"/><br>
 
-                <label for="age">Code:</label><br>
-                <input type="number" placeholder="Age of the pet" name="age" class="infoInput"/><br>
+                <label for="code">Code:</label><br>
+                <input type="number" placeholder="Registration Code" name="code" class="infoInput"/><br>
 
-                <label for="species">Password:</label><br>
-                <input type="text" placeholder="Species of the pet" name="species" class="infoInput"/><br>
+                <label for="password">Password:</label><br>
+                <input type="text" placeholder="Password" name="password" class="infoInput"/><br>
 
                 <button>Add User</button>
             </form><br><br>
@@ -48,7 +48,6 @@
                 <th>Username</th>
                 <th>User Type</th>
                 <th>Password</th>
-                <!--<th></th>-->
             </thead>
             <tbody>
                 @foreach($users as $user)
@@ -57,27 +56,6 @@
                         <td>{{ $user->uname }}</td>
                         <td>{{ $user->usertype }}</td>
                         <td>{{ $user->password }}</td>
-                        {{--<!--<td>
-                            <input type="hidden" name="id" value="{{ $pet->id }}">
-                            <button 
-                                onclick="
-                                document.getElementById('updateForm').style.display='block';
-
-                                document.getElementById('petId').value='{{ $pet->id }}';
-                                document.getElementById('petName').value='{{ $pet->name }}';
-                                document.getElementById('petAge').value='{{ $pet->age }}';
-                                document.getElementById('petSpecies').value='{{ $pet->species }}';
-                                document.getElementById('petBreed').value='{{ $pet->breed }}';
-                                @if($pet->sterilized)
-                                document.getElementById('petSterilized').checked=true;
-                                @else
-                                document.getElementById('petSterilized').checked=false;
-                                @endif
-                                document.getElementById('petHealth').value='{{ $pet->health }}';
-                                document.getElementById('petDescriptions').value='{{ $pet->descriptions }}';
-                                " 
-                                style="width:auto;">Update</button>
-                        </td>-->--}}
                     </tr>
                 @endforeach
             </tbody>
@@ -86,22 +64,7 @@
     </div>
 
     </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-    
+        
 
     <!--Modal Delete Form-->
     <div id="deleteForm" class="modal">
