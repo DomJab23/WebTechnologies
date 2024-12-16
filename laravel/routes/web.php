@@ -7,6 +7,7 @@ use App\Http\Controllers\RegistrationController;
 use App\Http\Controllers\PetController;
 use App\Http\Controllers\ImageController;
 use App\Http\Controllers\DonationController;
+use App\Http\Controllers\UserController;
 
 
 Route::get('/', [PetController::class, 'get_pets_main']);
@@ -36,7 +37,9 @@ Route::post('/login', [AuthController::class, 'login'])->name('login');
 
 Route::get('/pet', [PetController::class, 'get_pet'])->name('onePet');
 
-Route::middleware(['logged'])->group(function() {
+
+/* Routes for the different user types */
+Route::middleware(['employee'])->group(function() {
     Route::get('/management', [PetController::class, 'get_pets']);
     Route::post('/managementadd', [PetController::class, 'add_pet'])->name('petAdd');
     Route::post('/managementupdate', [PetController::class, 'update_pet'])->name('petUpdate');
@@ -47,6 +50,7 @@ Route::middleware(['logged'])->group(function() {
     Route::post('/addimage', [ImageController::class, 'store_image'])->name('imageAdd');
     Route::post('/deleteimage', [ImageController::class, 'delete_image'])->name('imageDelete');
 });
+
 Route::post('/donate', [DonationController::class, 'processDonation'])->name('donate');
 
 Route::middleware(['volunteer'])->group(function() {
@@ -55,4 +59,15 @@ Route::middleware(['volunteer'])->group(function() {
     Route::post('/unvolunteer', [PetController::class, 'unvolunteer_pet'])->name('unvolunteerPet');
     
 });
+Route::middleware(['admin'])->group(function() {
+    Route::get('/admin', [UserController::class, 'get_users']);
+
+    Route::post('/adminadd', [UserController::class, 'add_user'])->name('userAdd');
+    Route::post('/admindelete', [UserController::class, 'delete_user'])->name('userDelete');
+
+    Route::get('/volunteermanager', [UserController::class, 'get_volunteers'])->name('volunteermanager');
+    Route::post('/volunteermanageraccept', [PetController::class, 'accept_volunteer'])->name('acceptVolunteer');
+});
+/* Routes for user types ends here */
+
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');

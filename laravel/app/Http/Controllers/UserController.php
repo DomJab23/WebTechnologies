@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Pet;
 use Illuminate\Support\Facades\Auth;
 
 
@@ -15,16 +16,16 @@ class UserController extends Controller
         return(view("usermanagement", ['users'=>$users]));
     }
 
-    public function get_user(Request $request)
+    public function get_volunteers()
     {
-        $user = User::find($request->id);
-        return(view("oneuser",['user'=>$user]));
+        $pets = Pet::all();
+        return(view("volunteeraccept", ['pets'=>$pets]));
     }
 
     public function delete_user(Request $request)
     {
         $request->validate([
-            "uname"=>"required",
+            "id"=>"required",
         ]);
         User::destroy($request->id);
         return(redirect("/admin"));

@@ -28,6 +28,12 @@
                 <button>Add User</button>
             </form><br><br>
             <p>Delete User:</p>
+            <form action="{{ route('userDelete') }}" method="POST">
+                @csrf
+                <input type="number" placeholder="Id of the user to delete" name="id" class="infoInput"/><br>
+                <button>Delete User</button>
+            </form><br><br>
+            <p>Delete User:</p>
                 
             <input type="number" placeholder="Id of the user to delete" name="id" class="infoInput"/><br>
             <button onclick="

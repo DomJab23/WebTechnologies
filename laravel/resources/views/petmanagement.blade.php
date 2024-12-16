@@ -46,6 +46,8 @@
             </form>
             <br><br>
         </div>
+
+        
         <div class="pet-table">
         <p>Pets in the shelter:</p>
 
