@@ -6,6 +6,7 @@
             <h1>Donate to Help Animals</h1>
             <p>Please enter your credit card details to make a donation.</p>
             <form id="paymentForm">
+                @csrf
                 <label for="cardNumber"><b>Credit Card Number</b></label>
                 <input class="text" type="number" id="cardNumber" placeholder="Enter Credit Card Number" name="cardNumber" maxlength="16" required>
 

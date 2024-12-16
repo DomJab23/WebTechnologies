@@ -156,6 +156,7 @@
             <p class="contact" >Subscribe to our newsletter for updates.</p>
             <br>
             <form class="newsletter-form" id="footerModal">
+            @csrf
                 <input class="newsletter_input" type="email" id="email" name="email" placeholder="Enter your e-mail here" required>
                 <button class="button" type="submit">Subscribe</button>
             </form>

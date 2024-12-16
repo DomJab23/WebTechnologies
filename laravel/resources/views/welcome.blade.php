@@ -63,6 +63,7 @@
         <h1 class="newsletter-main-heading">JOIN OUR NEWSLETTER</h1>
         <h2 class="newsletter-heading">Stay Up To Date With All The Latest News!</h2>
         <form id="newsletterForm">
+            @csrf
             <input class="newsletter_input" type="email" id="email" name="email" placeholder="Enter your e-mail here" required>
             <button class="button" type="submit">JOIN NOW!</button>
         </form>

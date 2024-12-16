@@ -10,10 +10,13 @@
         <div class="contactFormAndMap">
             <!-- Contact Form on left side of the page -->
             <div class="contactForm">
-                <form><input type="text" id="name" name="name" placeholder="Name"></form>
-                <form><input type="text" id="email" name="email" placeholder="E-mail"></form>
-                <form><input type="text" id="phone" name="phone" placeholder="Phone number"></form>
-                <form><input class="message-input" type="text" id="message" name="message" placeholder="Message" overflow-wrap: break-word;></form>
+            <form>
+                @csrf
+                <input type="text" id="name" name="name" placeholder="Name">
+                <input type="text" id="email" name="email" placeholder="E-mail">
+                <input type="text" id="phone" name="phone" placeholder="Phone number">
+                <input class="message-input" type="text" id="message" name="message" placeholder="Message" overflow-wrap: break-word;>
+            </form>
                 <a class="button" href="/">SEND!</a>
             </div>
              <!-- Google Maps map on right side of the page -->
