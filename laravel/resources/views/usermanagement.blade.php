@@ -46,6 +46,7 @@
             <thead style="font-size:20px">
                 <th>Id</th>
                 <th>Username</th>
+                <th>User Type</th>
                 <th>Password</th>
                 <!--<th></th>-->
             </thead>
@@ -54,6 +55,7 @@
                     <tr>
                         <td>{{ $user->id }}</td>
                         <td>{{ $user->uname }}</td>
+                        <td>{{ $user->usertype }}</td>
                         <td>{{ $user->password }}</td>
                         {{--<!--<td>
                             <input type="hidden" name="id" value="{{ $pet->id }}">
