@@ -33,7 +33,7 @@
             <br>
             <p class="thank-text">Your support helps make a difference in the lives of animals. We appreciate your kindness.</p>
             <br>
-            <button onclick="closeThankYouModal()">Go Back to Home</button>
+            <button class="modal-button onclick="closeThankYouModal()">Go Back to Home</button>
         </div>
     </div>
 </div>
