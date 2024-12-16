@@ -4,7 +4,7 @@
         <span class="close-x" id="closeModal">&times;</span>
         <h1>Welcome to our Newsletter!</h1>
         <br>
-        <p class="thank-text">Now you will now receive updates about our latest news and activities</p>
+        <p class="thank-text">Now you will receive updates about our latest news and activities</p>
         <br>
         <button class="modal-button" onclick="closeNewsletterModal()">Go Back to Home</button>
     </div>
