@@ -34,7 +34,7 @@ class AuthController extends Controller
             RateLimiter::increment('login:'.$request->uname);
             return redirect('/');
             
-            if(RateLimiter::tooManyAttempts('login'.$request->uname,10))
+            if(RateLimiter::tooManyAttempts('login'.$request->uname,4))
             {
                 return ('Too many attempts to log in for user, please wait and try again later.');
             }

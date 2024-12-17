@@ -12,9 +12,9 @@
     <div class="pet-description">
         @auth
             @if(Auth::user()->usertype=='admin'||Auth::user()->usertype=='employee')
-                <a href="/management"><button>Back</button></a>
+                <a href="/management"><button>Back to Management</button></a>
             @elseif(Auth::user()->usertype=='volunteer')
-                <a href="/volunteer"><button>Back</button></a>
+                <a href="/volunteer"><button>Back to Volunteer</button></a>
             @endif
         @else
             <a href="{{url()->previous()}}"><button>Back</button></a>
