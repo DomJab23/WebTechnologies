@@ -1,5 +1,5 @@
 curl -X 'POST' \
-  'http://127.0.0.1:8000/api/users?uname=a&password=a' \
+  'http://127.0.0.1:8000/api/users?uname=travis&password=travis' \
   -H 'accept: application/ld+json' \
   -H 'Content-Type: application/ld+json' \
   -d '{
