@@ -28,16 +28,18 @@ class AuthController extends Controller
             }elseif(Auth::user()->usertype=='admin'){
                 return redirect('/admin');
             }
+            RateLimiter::clear('login:'.$request->uname);
         }
         else
         {
             RateLimiter::increment('login:'.$request->uname);
-            return redirect('/');
             
-            if(RateLimiter::tooManyAttempts('login'.$request->uname,4))
+            if(RateLimiter::tooManyAttempts('login:'.$request->uname,4))
             {
                 return ('Too many attempts to log in for user, please wait and try again later.');
             }
+
+            return redirect('/');
         }
     }
 
