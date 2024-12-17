@@ -9,7 +9,7 @@ class AuthController extends Controller
 {
     public function login(Request $request)
     {
-        // Login logic here
+        // Validates whether the user is in a data base 
         $request->validate([
                 "uname" => "required",
                 "psw" => "required",
@@ -17,7 +17,8 @@ class AuthController extends Controller
 
         $credentials["uname"] = $request->uname;
         $credentials["password"] =$request->psw;
-
+        
+        //Checks the usertype, to direct them to the specific page.
         if(Auth::attempt($credentials))
         {
             if(Auth::user()->usertype =='employee'){

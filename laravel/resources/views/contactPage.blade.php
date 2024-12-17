@@ -3,5 +3,6 @@
 @extends('layout')
 
 @section('content')
-    @include('contactSection')
+    <x-contacts>
+    </x-contacts>
 @endsection

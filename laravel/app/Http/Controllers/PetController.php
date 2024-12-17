@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Pet;
-use Illuminate\Support\Facades\Auth;
 
 
 class PetController extends Controller
@@ -15,7 +14,7 @@ class PetController extends Controller
         return(view("petmanagement", ['pets'=>$pets]));
     }
     
-    public function get_pets_main()
+    public function load_pets_on_welcome()
     {
         $pets = Pet::all();
 
@@ -33,7 +32,7 @@ class PetController extends Controller
 
         return(view("welcome", ['pets'=>$pets]));
     }
-    public function get_pets_galery()
+    public function load_pets_gallery()
     {
         $pets = Pet::all();
 
@@ -52,7 +51,7 @@ class PetController extends Controller
         return(view("gallery", ['pets'=>$pets]));
     }
 
-    public function get_pet(Request $request)
+    public function load_single_pet(Request $request)
     {
         $pet = Pet::find($request->id);
         $images =$pet->images()->get();
@@ -112,49 +111,6 @@ class PetController extends Controller
 
         $pet->save();
         return(redirect("/management"));
-    }
-    public function get_volunteer_pets()
-    {
-        $pets = Pet::orderBy('id', 'asc')->get();
-        $volunteeringPets = Pet::where('volunteer_user_id', auth()->id())->get();
-        return view('volunteer', compact('pets', 'volunteeringPets'));
-    }
-    public function volunteer_pet(Request $request)
-    {
-        $pet = Pet::findOrFail($request->pet_id);
-    
-        if ($pet->status == 'AVAILABLE') {
-            $pet->status = 'PENDING';
-            $pet->volunteer_user_id = auth()->id();
-            $pet->save();
-        }
-
-        return redirect()->route('volunteer');
-    }
-
-    public function unvolunteer_pet(Request $request)
-    {
-        $pet = Pet::findOrFail($request->pet_id);
-
-        if ($pet->status === 'PENDING' && $pet->volunteer_user_id == auth()->id()) {
-            $pet->status = 'AVAILABLE';
-            $pet->volunteer_user_id = null;
-            $pet->save();
-        }
-
-        return redirect()->route('volunteer');
-    }
-    
-    public function accept_volunteer(Request $request)
-    {
-        $pet = Pet::findOrFail($request->pet_id);
-    
-        if ($pet->status == 'PENDING') {
-            $pet->status = 'MATCHED';
-            $pet->save();
-        }
-
-        return redirect()->route('volunteermanager');
     }
 
 }

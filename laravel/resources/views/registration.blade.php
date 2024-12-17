@@ -18,4 +18,5 @@
                     <button class="reg-button">Register</button>
                 </form>
             </div>
+        </div>
 @endsection

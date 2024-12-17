@@ -1,14 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>More about {{$pet->name}}</title>
-    <link rel="icon" href="../../assets/photos/PetApp-favicon.png" type="image/x-icon">
+@section('title', 'More about {{$pet->name}}')
+
+@extends('layout')
     <link rel="stylesheet" href="../../assets/css/onePet.css">
-</head>
-<body>
-    <section class="pet-settings">
+@section('content')
+<section class="pet-settings">
     <div class="pet-description">
         @auth
             @if(Auth::user()->usertype=='admin'||Auth::user()->usertype=='employee')
@@ -58,5 +53,4 @@
         </div>  
     </div>
 </section>
-</body>
-</html>
+@endsection

@@ -1,9 +1,7 @@
 @section('title', 'Welcome')
 
-
-<body>
-    @extends('layout')
-    @section('content')
+@extends('layout')
+@section('content')
     <!-- The first photo on the website with title and donation button -->
     <section class="firstPicture" style="background-image: url('{{ asset('assets/photos/dog_banner.png') }}'); color: white;">
         <div class="hero-container">
@@ -13,7 +11,8 @@
             <!-- Donation Button that triggers the modal -->
             <button class="button" href="javascript:void(0)" onclick="openDonationModal()">DONATE NOW!</button>
         </div>
-        @include('DonationModal')
+        <x-donationModal>
+        </x-donationModal>
     </section>
     <!-- The section to display pets which can be adopted -->
     <section class="petAdoption">
@@ -68,12 +67,13 @@
             <button class="button" type="submit">JOIN NOW!</button>
         </form>
     </div>
-    @include('NewsletterModal')
-</section>
+    <x-newsletterModal>
+    </x-newsletterModal>
+    </section>
     <!-- Headings -->
         <h1>OUR STAFF</h1>
         <h2>Team of Professionals</h2>
-     <!-- Boxes with picture and short description of each person in the team -->
+    <!-- Boxes with picture and short description of each person in the team -->
     <section class="ourteam">
          <!-- First Person -->
         <div class="firstPerson">
@@ -119,7 +119,8 @@
             </p>
         </div>
     </section>
-    @include('contactSection')
+    <x-contacts>
+    </x-contacts>
     <!--Footer-->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
@@ -144,6 +145,4 @@
         });
     </script>
 
-    @endsection
-</body>
-</html>
+@endsection

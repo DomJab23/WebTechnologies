@@ -1,18 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Volunteer</title>
-    <link rel="stylesheet" href="../../assets/css/volunteermanagement.css">
-</head>
-
 @extends('layout')
 
 @section('title', 'Volunteer')
 
 @section('content')
-
-<body>
-
     <div class="split right">
         <h2>Pets in the Shelter</h2>
         <table>
@@ -84,8 +74,4 @@
             }
         }
     </script>
-</body>
-
 @endsection
-
-</html>

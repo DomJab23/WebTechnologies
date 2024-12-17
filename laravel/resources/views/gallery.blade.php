@@ -21,7 +21,7 @@
                 <p class="petName">{{ $pet->name }}</p>
             </a>
         @endforeach
-</section>
+    </section>
     <section class="flexContainer-text">
         <div class="text">
             <p class="text-at-the-end">
@@ -31,4 +31,3 @@
         </div>
     </section>
 @endsection
-
