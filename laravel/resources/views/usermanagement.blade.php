@@ -33,12 +33,6 @@
                 <input type="number" placeholder="Id of the user to delete" name="id" class="infoInput"/><br>
                 <button>Delete User</button>
             </form><br><br>
-            <p>Delete User:</p>
-                
-            <input type="number" placeholder="Id of the user to delete" name="id" class="infoInput"/><br>
-            <button onclick="
-                document.getElementById('deleteForm').style.display='block';
-            ">Delete User</button>
             <br><br>
         </div>
         <div>
