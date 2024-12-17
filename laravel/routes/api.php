@@ -20,10 +20,6 @@ Route::get('/about', function () {
 Route::get('/contacts', function () {
     return view('contacts');
 });
-
-Route::get('/gallery', function () {
-});
-
 Route::get('/gallery', function () {
     return view('gallery');
 });
