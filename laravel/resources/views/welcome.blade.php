@@ -100,12 +100,12 @@
         <!-- Third Person -->
         <div class="firstPerson">
             <img src="{{ asset('assets/photos/pet-shelter-worker.png') }}" alt="PETAPP Logo" class="footer-logo">
-            <h1 class="name">Jordan Belfort</h1>
+            <h1 class="name">John Johnson</h1>
             <h2 class="position">Worker</h2>
             <p class="shortStory">
-                Jordan Belfort is a compassionate pet shelter worker dedicated to 
+                John Johnson is a compassionate pet shelter worker dedicated to 
                 rescuing and rehoming animals. With exceptional care and empathy, 
-                Jordan ensures pets find loving, forever homes.
+                John ensures pets find loving, forever homes.
             </p>
         </div>
         <div class="firstPerson">
